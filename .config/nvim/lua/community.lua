@@ -11,6 +11,8 @@ return {
   { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
   -- Editing support
   { import = "astrocommunity.editing-support.suda-vim" },
+  -- Project
+  { import = "astrocommunity.project.projectmgr-nvim"},
   -- Motion plugins
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.motion.mini-surround" },
