@@ -10,6 +10,12 @@ return {
           ["<A-j>"] = { ":m .+1<CR>==", desc = "Move line up" },
           ["<A-k>"] = { ":m .-2<CR>==", desc = "Move line down" },
 
+          -- Switch between Tmux window
+          ["<C-h>"] = {"<cmd> TmuxNavigateLeft<CR>", desc = "Move to left window"},
+          ["<C-l>"] = {"<cmd> TmuxNavigateRight<CR>", desc = "Move to right window"},
+          ["<C-j>"] = {"<cmd> TmuxNavigateDown<CR>", desc = "Move to down window"},
+          ["<C-k>"] = {"<cmd> TmuxNavigateUp<CR>", desc = "Move to up window"},
+
           -- Move cursor to the beginning||end
           ["H"] = { "^", desc = "Move cursor to the beginning of line" },
           ["L"] = { "$", desc = "Move cursor to the end of line" },

@@ -21,6 +21,8 @@ return {
   { import = "astrocommunity.pack.python" },
   -- Completion
   { import = "astrocommunity.completion.codeium-nvim" },
+  -- Terminal Integration
+  { import = "astrocommunity.terminal-integration.vim-tmux-navigator" },
   -- File explorer
   { import = "astrocommunity.file-explorer.oil-nvim" },
   -- Extras
