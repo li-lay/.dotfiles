@@ -21,4 +21,7 @@ alias c="clear"
 alias ls="lsd"
 alias lsa="lsd -a"
 
+# SETUP: First install flatpak, brew, zoxide, topgrade and BlackBox Terminal then run this alias
+alias Install-Personal-Packages="sudo dnf install bat fish vim neovim tmux ncdu task lsd fzf stow -y"
+
 zoxide init --cmd cd fish | source
