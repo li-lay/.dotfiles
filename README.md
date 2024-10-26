@@ -15,7 +15,7 @@ To use this dotfiles you need to install GNU [stow](https://www.gnu.org/software
 
 ```sh
 sudo dnf install stow -y
-git clone 
+git clone git@github.com:li-lay/dotfiles.git
 cd dotfiles
 stow .
 ```
