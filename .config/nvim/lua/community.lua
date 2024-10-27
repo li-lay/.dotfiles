@@ -21,13 +21,19 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.html-css" },
+  { import = "astrocommunity.pack.cmake" },
   -- Completion
   { import = "astrocommunity.completion.codeium-nvim" },
   -- Terminal Integration
   { import = "astrocommunity.terminal-integration.vim-tmux-navigator" },
+  -- Code runner
+  -- { import = "astrocommunity.code-runner.compiler-nvim"},
   -- File explorer
-  { import = "astrocommunity.file-explorer.oil-nvim" },
+  -- { import = "astrocommunity.file-explorer.oil-nvim" },
   -- Extras
+  { import = "astrocommunity.scrolling.mini-animate" },
+  { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   { import = "astrocommunity.keybinding.nvcheatsheet-nvim" },
   { import = "astrocommunity.scrolling.neoscroll-nvim" },
 }
