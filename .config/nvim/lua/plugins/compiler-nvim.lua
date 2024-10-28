@@ -6,8 +6,8 @@ return {
       opts = {
         task_list = { -- this refers to the window that shows the result
           direction = "bottom",
-          min_height = 15,
-          max_height = 15,
+          min_height = 10,
+          max_height = 10,
           default_detail = 1,
           bindings = {
             ["q"] = function() vim.cmd "OverseerClose" end,

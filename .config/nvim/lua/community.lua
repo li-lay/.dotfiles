@@ -15,14 +15,17 @@ return {
   { import = "astrocommunity.project.projectmgr-nvim" },
   -- Motion plugins
   { import = "astrocommunity.motion.leap-nvim" },
-  { import = "astrocommunity.motion.mini-surround" },
+  { import = "astrocommunity.motion.nvim-surround" },
   { import = "astrocommunity.motion.tabout-nvim" },
+  { import = "astrocommunity.motion.mini-ai" },
   -- lsp
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.cmake" },
+  -- File Explorer
+  { import = "astrocommunity.file-explorer.oil-nvim" },
   -- Completion
   -- { import = "astrocommunity.completion.codeium-nvim" },
   { import = "astrocommunity.completion.supermaven-nvim" },
@@ -30,11 +33,10 @@ return {
   { import = "astrocommunity.terminal-integration.vim-tmux-navigator" },
   -- Code runner
   -- { import = "astrocommunity.code-runner.compiler-nvim"},
-  -- File explorer
-  -- { import = "astrocommunity.file-explorer.oil-nvim" },
   -- Extras
   { import = "astrocommunity.scrolling.mini-animate" },
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   { import = "astrocommunity.keybinding.nvcheatsheet-nvim" },
   { import = "astrocommunity.scrolling.neoscroll-nvim" },
+  { import = "astrocommunity.workflow.hardtime-nvim"}
 }

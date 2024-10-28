@@ -17,6 +17,12 @@ return {
           ["<A-j>"] = { ":m .+1<CR>==", desc = "Move line up" },
           ["<A-k>"] = { ":m .-2<CR>==", desc = "Move line down" },
 
+          -- Oil
+          ["<Leader>e"] = { "<cmd>Oil<cr>", desc = "Oil" },
+
+          -- Neo-tree
+          ["<Leader>O"] = { "<cmd>Neotree toggle<cr>", desc = "File explorer" },
+
           -- Switch between Tmux window
           ["<C-h>"] = {"<cmd> TmuxNavigateLeft<CR>", desc = "Move to left window"},
           ["<C-l>"] = {"<cmd> TmuxNavigateRight<CR>", desc = "Move to right window"},
