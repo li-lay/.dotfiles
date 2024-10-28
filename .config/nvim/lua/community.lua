@@ -12,7 +12,7 @@ return {
   -- Editing support
   { import = "astrocommunity.editing-support.suda-vim" },
   -- Project
-  { import = "astrocommunity.project.projectmgr-nvim"},
+  { import = "astrocommunity.project.projectmgr-nvim" },
   -- Motion plugins
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.motion.mini-surround" },
@@ -24,7 +24,8 @@ return {
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.cmake" },
   -- Completion
-  { import = "astrocommunity.completion.codeium-nvim" },
+  -- { import = "astrocommunity.completion.codeium-nvim" },
+  { import = "astrocommunity.completion.supermaven-nvim" },
   -- Terminal Integration
   { import = "astrocommunity.terminal-integration.vim-tmux-navigator" },
   -- Code runner
