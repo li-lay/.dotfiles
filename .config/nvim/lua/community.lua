@@ -7,6 +7,9 @@ return {
   "AstroNvim/astrocommunity",
   -- Themes
   { import = "astrocommunity.colorscheme.gruvbox-nvim" },
+  { import = "astrocommunity.colorscheme.oldworld-nvim" },
+  { import = "astrocommunity.colorscheme.vim-moonfly-colors" },
+  { import = "astrocommunity.colorscheme.poimandres-nvim" },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
   { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
   -- Editing support
@@ -32,7 +35,7 @@ return {
   -- Terminal Integration
   { import = "astrocommunity.terminal-integration.vim-tmux-navigator" },
   -- Code runner
-  -- { import = "astrocommunity.code-runner.compiler-nvim"},
+  { import = "astrocommunity.code-runner.compiler-nvim"},
   -- Extras
   { import = "astrocommunity.scrolling.mini-animate" },
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
