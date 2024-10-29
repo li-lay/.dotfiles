@@ -21,12 +21,16 @@ return {
   { import = "astrocommunity.motion.nvim-surround" },
   { import = "astrocommunity.motion.tabout-nvim" },
   { import = "astrocommunity.motion.mini-ai" },
+  { import = "astrocommunity.motion.harpoon" },
   -- lsp
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.html-css" },
-  { import = "astrocommunity.pack.cmake" },
+  { import = "astrocommunity.pack.java"},
+  { import = "astrocommunity.pack.php"},
+  { import = "astrocommunity.pack.rust"},
+  { import = "astrocommunity.pack.typescript"},
   -- File Explorer
   { import = "astrocommunity.file-explorer.oil-nvim" },
   -- Completion
@@ -37,9 +41,7 @@ return {
   -- Code runner
   { import = "astrocommunity.code-runner.compiler-nvim"},
   -- Extras
-  { import = "astrocommunity.scrolling.mini-animate" },
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   { import = "astrocommunity.keybinding.nvcheatsheet-nvim" },
-  { import = "astrocommunity.scrolling.neoscroll-nvim" },
   { import = "astrocommunity.workflow.hardtime-nvim"}
 }
