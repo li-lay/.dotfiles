@@ -24,6 +24,7 @@ exec --no-startup-id xrdb -merge ~/.Xresources
 # Autostart Applications
 exec flatpak run io.github.zen_browser.zen
 exec flatpak run org.telegram.desktop
+exec i3-msg "workspace 2; exec kitty -e tmux new -s lilay"
 
 # Automatically putting clients on specific workspaces
 assign [class="^TelegramDesktop$"] 10
