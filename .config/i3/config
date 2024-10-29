@@ -18,6 +18,17 @@ exec --no-startup-id dex --autostart --environment i3
 # Start dunst for notifications
 exec --no-startup-id dunst
 
+# Xresources
+exec --no-startup-id xrdb -merge ~/.Xresources
+
+# Autostart Applications
+exec flatpak run io.github.zen_browser.zen
+exec flatpak run org.telegram.desktop
+
+# Automatically putting clients on specific workspaces
+assign [class="^TelegramDesktop$"] 10
+# assign [class="^zen-alpha$"] 1
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
