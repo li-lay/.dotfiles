@@ -68,8 +68,8 @@ bindsym $mod+b exec flatpak run io.github.zen_browser.zen
 # start a terminal
 bindsym $mod+Return exec kitty
 
-# start ranger
-bindsym $mod+e exec kitty ranger
+# start thunar
+bindsym $mod+e exec thunar
 
 # kill focused window
 bindsym $mod+q kill
