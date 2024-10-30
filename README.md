@@ -1,12 +1,12 @@
 # LILAY Dotfiles
 
-The **Fedora Linux** & **neovim** dotfiles!
+My **Fedora I3** & **neovim** dotfiles!
 
 ## Information
 
 - **OS:** [Fedora Linux](https://fedoraproject.org/)
-- **DE:** [Gnome](https://www.gnome.org/)
-- **Terminal:** [BlackBox](https://gitlab.gnome.org/raggesilver/blackbox)
+- **WM:** [I3](https://i3wm.org/)
+- **Terminal:** [Kitty](https://github.com/kovidgoyal/kitty)
 - **Shell:** [fish](https://fishshell.com/)
 
 ## Automatic installation
