@@ -9,9 +9,6 @@ return {
   { import = "astrocommunity.colorscheme.gruvbox-nvim" },
   { import = "astrocommunity.colorscheme.gruvbox-baby" },
   { import = "astrocommunity.colorscheme.oldworld-nvim" },
-  { import = "astrocommunity.colorscheme.vim-moonfly-colors" },
-  { import = "astrocommunity.colorscheme.poimandres-nvim" },
-  { import = "astrocommunity.colorscheme.tokyonight-nvim" },
   { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
   { import = "astrocommunity.colorscheme.tokyodark-nvim" },
   -- Editing support
@@ -41,5 +38,5 @@ return {
   -- Extras
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   { import = "astrocommunity.keybinding.nvcheatsheet-nvim" },
-  { import = "astrocommunity.workflow.hardtime-nvim"}
+  { import = "astrocommunity.workflow.hardtime-nvim" },
 }
