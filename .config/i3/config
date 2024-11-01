@@ -1,5 +1,5 @@
 # Package required
-# ["i3", "maim", "brightnessctl", "feh", "kitty", "flameshot", "xclip", "rofi", "ranger", "picom", "fastfetch", "polybar", "dunst"]
+# ["i3", "maim", "brightnessctl", "feh", "kitty", "flameshot", "udiskie", "xclip", "rofi", "ranger", "picom", "fastfetch", "polybar", "dunst"]
 # I3 Configuration
 set $mod Mod4
 
@@ -17,6 +17,9 @@ exec --no-startup-id dex --autostart --environment i3
 
 # Start dunst for notifications
 exec --no-startup-id dunst
+
+# Start udiskie for mounting removable devices
+exec --no-startup-id udiskie &
 
 # Xresources
 exec --no-startup-id xrdb -merge ~/.Xresources
@@ -257,4 +260,4 @@ client.background       #ffffff
 
 # Autostart
 exec_always ~/.config/polybar/launch.sh &
-exec_always feh --bg-fill ~/.config/i3/images/wallpaper.png
+exec_always feh --bg-fill ~/.config/i3/images/river.png

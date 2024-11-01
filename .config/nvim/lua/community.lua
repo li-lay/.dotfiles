@@ -7,11 +7,13 @@ return {
   "AstroNvim/astrocommunity",
   -- Themes
   { import = "astrocommunity.colorscheme.gruvbox-nvim" },
+  { import = "astrocommunity.colorscheme.gruvbox-baby" },
   { import = "astrocommunity.colorscheme.oldworld-nvim" },
   { import = "astrocommunity.colorscheme.vim-moonfly-colors" },
   { import = "astrocommunity.colorscheme.poimandres-nvim" },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
   { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
+  { import = "astrocommunity.colorscheme.tokyodark-nvim" },
   -- Editing support
   { import = "astrocommunity.editing-support.suda-vim" },
   -- Project
@@ -21,7 +23,6 @@ return {
   { import = "astrocommunity.motion.nvim-surround" },
   { import = "astrocommunity.motion.tabout-nvim" },
   { import = "astrocommunity.motion.mini-ai" },
-  { import = "astrocommunity.motion.harpoon" },
   -- lsp
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.cpp" },
@@ -29,7 +30,6 @@ return {
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.java"},
   { import = "astrocommunity.pack.php"},
-  { import = "astrocommunity.pack.rust"},
   { import = "astrocommunity.pack.typescript"},
   -- File Explorer
   { import = "astrocommunity.file-explorer.oil-nvim" },
@@ -38,8 +38,6 @@ return {
   { import = "astrocommunity.completion.supermaven-nvim" },
   -- Terminal Integration
   { import = "astrocommunity.terminal-integration.vim-tmux-navigator" },
-  -- Code runner
-  { import = "astrocommunity.code-runner.compiler-nvim"},
   -- Extras
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   { import = "astrocommunity.keybinding.nvcheatsheet-nvim" },
