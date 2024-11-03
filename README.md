@@ -1,11 +1,11 @@
 # LILAY Dotfiles
 
-My **Fedora I3** & **neovim** dotfiles!
+My **I3wm / Hyprland** & **neovim** dotfiles!
 
 ## Information
 
-- **OS:** [Fedora Linux](https://fedoraproject.org/)
-- **WM:** [I3](https://i3wm.org/)
+- **OS:** Fedora/Arch
+- **WM:** I3wm/Hyprland
 - **Terminal:** [Kitty](https://github.com/kovidgoyal/kitty)
 - **Shell:** [fish](https://fishshell.com/)
 
