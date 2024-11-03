@@ -55,8 +55,8 @@
 
 
   "cpu": {
-      "interval": 15,
-      "format": "  {}%",
+      "interval": 10,
+      "format": "  {usage}%",
       "max-length": 10,
       "on-click":"kitty -- btop"
   },
