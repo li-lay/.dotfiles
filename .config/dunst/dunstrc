@@ -9,6 +9,7 @@
 
 # gruvboxy
 [global]
+	timeout = 4
 	monitor = 0
 	follow = keyboard
 	# these should be in sync with dwm gaps
@@ -72,7 +73,7 @@
 	background = "#282828"
 	foreground = "#928374"
 	frame_color= "#83a598"
-	timeout = 4
+	timeout = 5
 [urgency_normal]
 	background = "#458588"
 	foreground = "#1d2021"
@@ -82,7 +83,7 @@
 	background = "#1d2021"
 	foreground = "#ebdbb2"
 	frame_color= "#fb4934"
-	timeout = 0
+	timeout = 5
 
 # Scripting
 [spotify]
