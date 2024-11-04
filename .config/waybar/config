@@ -34,6 +34,8 @@
 
 
   "battery": {
+      "bat": "BAT1",
+      "interval": 30,
       "states": {
           "full": 100,
           "good": 95,
@@ -42,9 +44,11 @@
           "critical": 20
       },
       "format": "{icon}  {capacity}%",
+      "format-icons": ["", "", "", ""],
       "format-time": "{H} h {M} min",
+      "format-charging": " {capacity}%",
+      "format-discharging": "{icon}  {capacity}%",
       "format-alt": "{icon} {time}",
-      "format-icons": [" ", " ", " ", " ", " "]
   },
 
 
