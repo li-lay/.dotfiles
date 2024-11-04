@@ -38,5 +38,4 @@ return {
   -- Extras
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   { import = "astrocommunity.keybinding.nvcheatsheet-nvim" },
-  { import = "astrocommunity.workflow.hardtime-nvim" },
 }
