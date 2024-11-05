@@ -1,6 +1,8 @@
 # Remove welcome message
 set fish_greeting ""
 
+afetch
+
 # Enable Vim
 # fish_vi_key_bindings
 
