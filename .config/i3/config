@@ -24,6 +24,9 @@ exec --no-startup-id udiskie &
 # Xresources
 exec --no-startup-id xrdb -merge ~/.Xresources
 
+# i3 auth polkit
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
 # Autostart Applications
 exec zen-browser
 exec flatpak run org.telegram.desktop
