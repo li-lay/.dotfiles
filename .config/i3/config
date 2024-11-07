@@ -25,7 +25,7 @@ exec --no-startup-id udiskie &
 exec --no-startup-id xrdb -merge ~/.Xresources
 
 # Autostart Applications
-exec flatpak run io.github.zen_browser.zen
+exec zen-browser
 exec flatpak run org.telegram.desktop
 exec i3-msg "workspace 2; exec kitty -e tmux new -s lilay"
 
@@ -65,14 +65,14 @@ floating_modifier $mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
-# start flatpak zen
-bindsym $mod+b exec flatpak run io.github.zen_browser.zen
+# start zen
+bindsym $mod+b exec zen-browser
 
 # start a terminal
 bindsym $mod+Return exec kitty
 
 # start thunar
-bindsym $mod+e exec thunar
+bindsym $mod+e exec kitty -e yazi
 
 # kill focused window
 bindsym $mod+q kill
@@ -240,13 +240,13 @@ bindsym Ctrl+Shift+Print exec maim --select | xclip -selection clipboard -t imag
 # Borders
 default_border pixel 3
 default_floating_border normal
-hide_edge_borders smart
+# hide_edge_borders smart
 
 # Gaps
 # smart_gaps on
 # 5 and 3 are the default values
-gaps inner 0
-gaps outer 0
+gaps inner 4
+gaps outer 8
 
 # Colorscheme
 # class                 border  backgr. text    indicator child_border
@@ -260,4 +260,4 @@ client.background       #ffffff
 
 # Autostart
 exec_always ~/.config/polybar/launch.sh &
-exec_always feh --bg-fill ~/Pictures/wallpapers/wallpaper.png
+exec_always feh --bg-fill ~/Pictures/wallpapers/gruvbox-tux.png
