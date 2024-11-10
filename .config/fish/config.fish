@@ -9,6 +9,7 @@ afetch
 # Add path
 fish_add_path ~/.local/bin
 fish_add_path /home/linuxbrew/.linuxbrew/bin
+fish_add_path /home/lilay/Documents/Projects/cpp_build_tool
 
 #Alias
 alias tmnew="tmux new -s lilay"
