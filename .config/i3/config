@@ -263,4 +263,4 @@ client.background       #ffffff
 
 # Autostart
 exec_always ~/.config/polybar/launch.sh &
-exec_always feh --bg-fill ~/Pictures/wallpapers/linux.png
+exec_always feh --bg-fill ~/Pictures/wallpapers/Gruvbox.jpg
