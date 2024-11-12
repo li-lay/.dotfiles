@@ -30,7 +30,8 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Autostart Applications
 exec firefox
 exec flatpak run org.telegram.desktop
-exec i3-msg "workspace 2; exec kitty -e tmux new -s lilay"
+# exec i3-msg "workspace 2; exec kitty -e tmux new -s lilay"
+exec i3-msg "workspace 2; exec kitty"
 
 # Automatically putting clients on specific workspaces
 assign [class="^TelegramDesktop$"] 10
@@ -227,7 +228,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m '(S)uspend, (L)ogout, (R)eboo
 bindsym $mod+Mod1+l exec i3lock -i ~/.config/i3/images/lock.png
 
 # Picom
-exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
+# exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 
 # PrintScreen
 bindsym Shift+Print exec "flameshot gui"
