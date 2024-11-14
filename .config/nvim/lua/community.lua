@@ -31,7 +31,6 @@ return {
   -- File Explorer
   { import = "astrocommunity.file-explorer.oil-nvim" },
   -- Completion
-  { import = "astrocommunity.completion.codeium-nvim" },
   { import = "astrocommunity.completion.supermaven-nvim" },
   -- Terminal Integration
   { import = "astrocommunity.terminal-integration.vim-tmux-navigator" },

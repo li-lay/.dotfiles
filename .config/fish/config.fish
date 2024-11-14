@@ -14,7 +14,6 @@ fish_add_path /home/lilay/Documents/Projects/cpp_build_tool
 #Alias
 alias tmnew="tmux new -s lilay"
 alias tmssh="tmux new -s ssh"
-alias vim="nvim"
 alias fetch="fastfetch"
 alias tm="tmux"
 alias tma="tmux a -t"
