@@ -25,7 +25,7 @@ exec --no-startup-id udiskie &
 exec --no-startup-id xrdb -merge ~/.Xresources
 
 # i3 auth polkit
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
 
 # Autostart Applications
 exec firefox
@@ -69,8 +69,8 @@ floating_modifier $mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
-# start zen
-bindsym $mod+b exec zen-browser
+# start firefox
+bindsym $mod+b exec firefox
 
 # start a terminal
 bindsym $mod+Return exec kitty
