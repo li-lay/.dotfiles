@@ -32,3 +32,13 @@ function y
 	end
 	rm -f -- "$tmp"
 end
+
+function brightness
+    if not set -q argv[1]
+        echo "Usage: brightness <value>"
+        return 1
+    end
+    
+    set value (math "max(0.5, min(1, $argv[1]))") # Clamp the value between 0.5 and 1
+    xrandr --output DVI-D-0 --brightness $value
+end
