@@ -1,5 +1,6 @@
 # Package required
-# ["i3", "maim", "brightnessctl", "feh", "kitty", "flameshot", "udiskie", "xclip", "rofi", "ranger", "picom", "fastfetch", "polybar", "dunst"]
+# i3 zsh brightnessctl feh kitty flameshot udiskie xclip rofi ranger picom fastfetch polybar dunst lxappearance
+
 # I3 Configuration
 set $mod Mod4
 set $alt Mod1
@@ -238,7 +239,7 @@ mode "powerMode" {
 
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m '(S)uspend, (L)ogout, (R)eboot, (P)oweroff'"; mode "powerMode"
 # bindsym $mod+Shift+e mode "powerMode"
-bindsym $mod+$alt+l exec i3lock -i ~/.config/i3/images/lock.png
+bindsym $mod+$alt+l exec i3lock -i ~/Pictures/wallpapers/lock.png
 
 # Picom
 exec_always --no-startup-id picom --config ~/.config/i3/picom.conf

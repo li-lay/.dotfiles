@@ -10,33 +10,46 @@ CASE_SENSITIVE="false"
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
 # zstyle ':omz:update' mode auto      # update automatically without asking
-zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
 # zstyle ':omz:update' frequency 13
 
+# Install zsh-autosuggestions and zsh-syntax-highlighting
+# git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
 # Plugins
-plugins=(aliases vi-mode zoxide themes)
+plugins=(aliases vi-mode zoxide themes zsh-autosuggestions zsh-syntax-highlighting)
 
 # VI mode
 bindkey -v
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
 VI_MODE_SET_CURSOR=true
-MODE_INDICATOR="%F{white}+%f"
-INSERT_MODE_INDICATOR="%F{yellow}+%f"
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
 export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 export EDITOR="nvim"
+export MANPAGER="nvim +Man!"
 
+# History
 HISTFILE=~/.history
-HISTSIZE=10000
-SAVEHIST=50000
+HISTSIZE=5000
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
 
 # Aliases
 alias vim="nvim"
@@ -60,5 +73,6 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-# Zoxide
+# Shell Integration
+eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
