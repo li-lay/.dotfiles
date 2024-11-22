@@ -1,5 +1,5 @@
 # Package required
-# i3 zsh brightnessctl feh kitty flameshot udiskie xclip rofi ranger picom fastfetch polybar dunst lxappearance
+# i3 zsh brightnessctl maim feh kitty flameshot udiskie xclip rofi ranger picom fastfetch polybar dunst lxappearance
 
 # I3 Configuration
 set $mod Mod4
@@ -84,7 +84,8 @@ bindsym $mod+b exec firefox
 bindsym $mod+Return exec kitty
 
 # start thunar
-bindsym $mod+e exec kitty -e yazi
+# bindsym $mod+e exec kitty -e yazi
+bindsym $mod+e exec thunar
 
 # kill focused window
 bindsym $mod+q kill
@@ -258,12 +259,21 @@ bindsym Ctrl+Shift+Print exec maim --select | xclip -selection clipboard -t imag
 # Borders
 default_border pixel 3
 default_floating_border normal
-# hide_edge_borders smart
+hide_edge_borders smart
 
 # Gaps
-# smart_gaps on
+smart_gaps on
 gaps inner 6
 gaps outer 6
+
+bindsym $mod+Shift+g mode "ToggleGaps"
+
+mode "ToggleGaps" {
+    bindsym 1 mode "default", gaps inner all set 6, gaps outer all set 6
+    bindsym 0 mode "default", gaps inner all set 0, gaps outer all set 0
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
 
 # Colorscheme
 # class                 border  backgr. text    indicator child_border
