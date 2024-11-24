@@ -68,7 +68,8 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Add keyboard layouts
-exec "setxkbmap -layout us,kh"
+exec "setxkbmap -layout us,km"
+exec "setxkbmap -option 'grp:ctrl_alt_toggle'"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
