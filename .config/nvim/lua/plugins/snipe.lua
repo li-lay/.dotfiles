@@ -1,3 +1,4 @@
+-- NOTE: Snipe is a quick buffer switcher (<Leader>b)
 return {
   "leath-dub/snipe.nvim",
   keys = {

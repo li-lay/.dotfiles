@@ -22,7 +22,6 @@ return {
   { import = "astrocommunity.motion.mini-move" },
   { import = "astrocommunity.motion.mini-surround" },
   { import = "astrocommunity.motion.marks-nvim" },
-  -- { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.motion.tabout-nvim" },
   -- lsp
   { import = "astrocommunity.pack.lua" },
