@@ -135,10 +135,10 @@ bindsym $mod+w layout tabbed
 bindsym $mod+Shift+s layout toggle split # exit stack or tab
 
 # Make the currently focused window a scratchpad
-bindsym $alt+l move scratchpad
+# bindsym $alt+l move scratchpad
 
 # Show the first scratchpad window
-bindsym $alt+s scratchpad show
+# bindsym $alt+s scratchpad show
 
 # toggle tiling / floating
 bindsym $mod+Shift+f floating toggle
