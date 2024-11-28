@@ -18,6 +18,10 @@ return {
       astrodark = { -- a table of overrides/changes when applying the astrotheme theme
         -- Normal = { bg = "#000000" },
       },
+      gruvbox= { -- a table of overrides/changes when applying the gruvbox theme
+        Normal = { bg = "#1F1F1F" },
+        -- Normal = { bg = "#000000" },
+      },
     },
     -- Icons can be configured throughout the interface
     icons = {

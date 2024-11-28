@@ -52,6 +52,7 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # Aliases
+alias please="sudo"
 alias vim="nvim"
 alias tmnew="tmux new -s lilay"
 alias tmssh="tmux new -s ssh"
