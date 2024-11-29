@@ -10,9 +10,6 @@ return {
           -- CheatSheet
           ["<Leader>H"] = { function() require("nvcheatsheet").toggle() end, desc = "CheatSheet" },
 
-          -- Code Runner
-          ["<Leader>M"] = {"<cmd>CompilerOpen<cr>", desc="Code Runner"},
-
           -- Move lines up&&down (use mini-move instead now)
           -- ["<A-j>"] = { ":m .+1<CR>==", desc = "Move line up" },
           -- ["<A-k>"] = { ":m .-2<CR>==", desc = "Move line down" },
