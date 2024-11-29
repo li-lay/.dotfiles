@@ -8,7 +8,7 @@ return {
   { import = "astrocommunity.recipes.disable-tabline" },
   -- Themes
   { import = "astrocommunity.colorscheme.gruvbox-nvim" },
-  { import = "astrocommunity.colorscheme.gruvbox-baby" },
+  { import = "astrocommunity.colorscheme.miasma-nvim" },
   { import = "astrocommunity.colorscheme.oldworld-nvim" },
   { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
   { import = "astrocommunity.colorscheme.tokyodark-nvim" },

@@ -9,7 +9,7 @@ return {
   ---@type AstroUIOpts
   opts = {
     -- change colorscheme
-    colorscheme = "gruvbox",
+    colorscheme = "miasma",
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     highlights = {
       init = { -- this table overrides highlights in all themes
@@ -19,6 +19,10 @@ return {
         -- Normal = { bg = "#000000" },
       },
       gruvbox= { -- a table of overrides/changes when applying the gruvbox theme
+        Normal = { bg = "#1F1F1F" },
+        -- Normal = { bg = "#000000" },
+      },
+      miasma= { -- a table of overrides/changes when applying the miasma theme
         Normal = { bg = "#1F1F1F" },
         -- Normal = { bg = "#000000" },
       },
