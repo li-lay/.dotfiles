@@ -9,6 +9,10 @@ My **I3wm / Hyprland** & **neovim** dotfiles!
 - **Terminal:** [Kitty](https://github.com/kovidgoyal/kitty)
 - **Shell:** [fish](https://fishshell.com/)
 
+## Preview
+
+![Preview Image](https://raw.githubusercontent.com/li-lay/dotfiles/refs/heads/main/Pictures/preview/preview.png)
+
 ## Automatic installation
 
 To use this dotfiles you need to install GNU [stow](https://www.gnu.org/software/stow/stow.html) for managing your symlinks.
