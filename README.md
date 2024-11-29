@@ -7,7 +7,7 @@ My **I3wm / Hyprland** & **neovim** dotfiles!
 - **OS:** [Arch](https://archlinux.org/)
 - **WM:** [I3wm](https://i3wm.org/)/[Hyprland](https://hyprland.org/)
 - **Terminal:** [Kitty](https://github.com/kovidgoyal/kitty)
-- **Shell:** [fish](https://fishshell.com/)
+- **Shell:** [zsh](https://www.zsh.org/)
 
 ## Preview
 
