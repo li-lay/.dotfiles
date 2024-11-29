@@ -16,6 +16,8 @@ My **I3wm / Hyprland** & **neovim** dotfiles!
 ## Installation
 
 First back up your configs.
+> [!TIP]
+> I recommends you to backup your configs first to avoid any conflicts. :)
 
 ```sh
 mv .zshrc .zshrc.bak
@@ -42,4 +44,3 @@ cd dotfiles
 stow .
 ```
 
-> Note: Ensure you've removed all the local configs first to prevent override.
