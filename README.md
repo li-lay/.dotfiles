@@ -11,7 +11,7 @@ My **I3wm / Hyprland** & **neovim** dotfiles!
 
 ## Preview
 
-![Preview Image](https://raw.githubusercontent.com/li-lay/dotfiles/refs/heads/main/Pictures/preview/preview.png)
+![Preview Image](https://github.com/li-lay/dotfiles/blob/main/Pictures/preview/preview.png)
 
 ## Automatic installation
 
