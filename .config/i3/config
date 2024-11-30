@@ -32,8 +32,8 @@ exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
 # Autostart Applications
 exec firefox
 exec flatpak run org.telegram.desktop
-# exec i3-msg "workspace 2; exec kitty -e tmux new -s lilay"
-exec i3-msg "workspace 2; exec kitty"
+exec i3-msg "workspace 2; exec kitty -e tmux new -s lilay"
+# exec i3-msg "workspace 2; exec kitty"
 
 # Automatically putting clients on specific workspaces
 assign [class="^TelegramDesktop$"] 10
