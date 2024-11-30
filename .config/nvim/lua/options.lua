@@ -27,6 +27,3 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank { higroup = 'IncSearch', timeout = 100 }
   end,
 })
-
--- HighlightColors 1
-vim.cmd([[autocmd VimEnter * HighlightColors 1]])
