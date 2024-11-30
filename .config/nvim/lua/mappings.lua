@@ -22,3 +22,6 @@ vim.keymap.set("n", "<leader>c", "<Cmd>bd<CR>")
 
 -- Clear highlight
 vim.keymap.set("n", "<leader>hc", "<Cmd>noh<CR>")
+
+-- Open Nvim-Tree
+vim.keymap.set("n", "<leader>O", "<Cmd>NvimTreeToggle<CR>")

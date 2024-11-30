@@ -15,7 +15,8 @@ return {
 		local wk = require("which-key")
 		wk.add({
 			{ "<leader>c", desc = "Close current buffer", mode = "n" },
-			{ "<leader>e", desc = "File explorer", mode = "n" },
+			{ "<leader>e", desc = "File explorer (Oil)", mode = "n" },
+			{ "<leader>O", desc = "File explorer (Nvim-Tree)", mode = "n" },
 
 			{ "<leader>s", desc = "Search forward", mode = "n" },
 			{ "<leader>S", desc = "Search backward", mode = "n" },
