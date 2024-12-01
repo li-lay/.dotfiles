@@ -2,16 +2,21 @@ return {
 	"folke/which-key.nvim",
 	event = "VeryLazy",
 	opts = {},
-	keys = {
-		{
-			"<leader>?",
-			function()
-				require("which-key").show({ global = false })
-			end,
-			desc = "All Local Keymaps (which-key)",
-		},
-	},
+	-- keys = {
+	-- 	{
+	-- 		"<leader>?",
+	-- 		function()
+	-- 			require("which-key").show({ global = false })
+	-- 		end,
+	-- 		desc = "All Local Keymaps (which-key)",
+	-- 	},
+	-- },
 	config = function()
+		require("which-key").setup({
+			icons = {
+				mappings = false, -- Disable all mapping icons
+			},
+		})
 		local wk = require("which-key")
 		wk.add({
 			{ "<leader>c", desc = "Close current buffer", mode = "n" },
@@ -19,8 +24,12 @@ return {
 			{ "<leader>O", desc = "File explorer (Nvim-Tree)", mode = "n" },
 			{ "<leader>M", desc = "Markdown preview", mode = "n" },
 
+			{ "<leader>b", desc = "Switch Buffer", mode = "n" },
+
 			{ "<leader>s", desc = "Search forward", mode = "n" },
 			{ "<leader>S", desc = "Search backward", mode = "n" },
+
+			{ "<leader>d", group = "Debugger" }, -- group
 
 			{ "<leader>f", group = "Telescope" }, -- group
 			{ "<leader>ff", desc = "Find File", mode = "n" },
