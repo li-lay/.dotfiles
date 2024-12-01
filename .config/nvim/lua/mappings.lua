@@ -25,3 +25,15 @@ vim.keymap.set("n", "<leader>hc", "<Cmd>noh<CR>")
 
 -- Open Nvim-Tree
 vim.keymap.set("n", "<leader>O", "<Cmd>NvimTreeToggle<CR>")
+
+-- Markdown preview
+vim.keymap.set("n", "<leader>M", "<Cmd>MarkdownPreviewToggle<CR>")
+
+-- Telescope
+vim.keymap.set("n", "<leader>ff", "<Cmd>Telescope find_files<CR>")
+vim.keymap.set("n", "<leader>fb", "<Cmd>Telescope buffers<CR>")
+vim.keymap.set("n", "<leader>fH", "<Cmd>Telescope help_tags<CR>")
+vim.keymap.set("n", "<leader>f'", "<Cmd>Telescope marks<CR>")
+vim.keymap.set("n", "<leader>fr", "<Cmd>Telescope oldfiles<CR>")
+vim.keymap.set("n", "<leader>fg", "<Cmd>Telescope live_grep<CR>")
+vim.keymap.set("n", "<leader>ft", "<Cmd>Telescope current_buffer_fuzzy_find<CR>")
