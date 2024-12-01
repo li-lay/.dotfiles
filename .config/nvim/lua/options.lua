@@ -12,18 +12,20 @@ vim.g.mapleader = " "
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.wrap = true
-vim.opt.clipboard = 'unnamedplus'
-vim.opt.mouse = 'a'
+vim.opt.clipboard = "unnamedplus"
+vim.opt.mouse = "a"
 vim.opt.termguicolors = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.smartindent = true
+vim.opt.scrolloff = 19
 
 -- Highlight yank
-vim.api.nvim_create_autocmd('TextYankPost', {
-  group = vim.api.nvim_create_augroup('highlight_yank', {}),
-  desc = 'Hightlight selection on yank',
-  pattern = '*',
-  callback = function()
-    vim.highlight.on_yank { higroup = 'IncSearch', timeout = 100 }
-  end,
+vim.api.nvim_create_autocmd("TextYankPost", {
+    group = vim.api.nvim_create_augroup("highlight_yank", {}),
+    desc = "Hightlight selection on yank",
+    pattern = "*",
+    callback = function()
+        vim.highlight.on_yank({ higroup = "IncSearch", timeout = 100 })
+    end,
 })
