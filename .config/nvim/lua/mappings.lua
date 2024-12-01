@@ -21,7 +21,11 @@ vim.keymap.set("n", "<leader>q", "<Cmd>wq<CR>")
 vim.keymap.set("n", "<leader>c", "<Cmd>bd<CR>")
 
 -- Clear highlight
-vim.keymap.set("n", "<leader>hc", "<Cmd>noh<CR>")
+-- vim.keymap.set("n", "<leader>hc", "<Cmd>noh<CR>")
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
+-- Diagnostic keymaps
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 -- Open Nvim-Tree
 vim.keymap.set("n", "<leader>O", "<Cmd>NvimTreeToggle<CR>")

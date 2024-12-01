@@ -28,8 +28,6 @@ return {
 			{ "<leader>fg", desc = "Grep", mode = "n" },
 			{ "<leader>fc", desc = "Format code", mode = "n" },
 
-			{ "<leader>h", group = "Highlight" }, -- group
-			{ "<leader>hc", desc = "Clear Highlight", mode = "n" },
 			-- { "<leader>f1", hidden = true }, -- hide this keymap
 			{
 				-- Nested mappings are allowed and can be added in any order
