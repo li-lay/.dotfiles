@@ -1,24 +1,14 @@
 -- This include all the mini-nvim I use
 return {
-  {
-    "echasnovski/mini.ai",
-    opts = {},
-    config = function()
-      require("mini.ai").setup()
-    end,
-  },
-  {
-    "echasnovski/mini.move",
-    opts = {},
-    config = function()
-      require("mini.move").setup()
-    end,
-  },
-  {
-    "echasnovski/mini.surround",
-    opts = {},
-    config = function()
-      require("mini.surround").setup()
-    end,
-  },
+	{
+		"echasnovski/mini.nvim",
+		opts = {},
+		config = function()
+			require("mini.ai").setup()
+			require("mini.surround").setup()
+			require("mini.comment").setup()
+			require("mini.pairs").setup()
+			require("mini.move").setup()
+		end,
+	},
 }
