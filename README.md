@@ -15,25 +15,8 @@ My **I3wm / Hyprland** & **neovim** dotfiles!
 
 ## Installation
 
-First back up your configs.
 > [!TIP]
-> I recommends you to backup your configs first to avoid any conflicts. :)
-
-```sh
-mv .zshrc .zshrc.bak
-mv .tmux.conf .tmux.conf.bak
-mv .config/i3 .config/i3.bak
-mv .config/hypr .config/hypr.bak
-mv .config/nvim .config/nvim.bak
-mv .config/kitty .config/kitty.bak
-mv .config/polybar .config/polybar.bak
-mv .config/waybar .config/waybar.bak
-mv .config/rofi .config/rofi.bak
-mv .config/dunst .config/dunst.bak
-mv .config/yazi .config/yazi.bak
-mv .config/ranger .config/ranger.bak
-mv .config/fastfetch .config/fastfetch.bak
-```
+> I recommends you to backup your configs first to avoid any conflicts.
 
 To use this dotfiles you need to install GNU [stow](https://www.gnu.org/software/stow/stow.html) for managing your symlinks.
 
@@ -43,4 +26,3 @@ git clone git@github.com:li-lay/dotfiles.git
 cd dotfiles
 stow .
 ```
-
