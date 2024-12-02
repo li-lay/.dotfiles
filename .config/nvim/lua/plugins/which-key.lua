@@ -26,6 +26,7 @@ return {
 
 			{ "<leader>d", group = "Debugger" }, -- group
 			{ "<leader>p", group = "Project" }, -- group
+			{ "<leader>fv", group = "Python Venv" }, -- group
 
 			{ "<leader>f", group = "Telescope" }, -- group
 			{ "<leader>fc", desc = "Format code", mode = "n" },
