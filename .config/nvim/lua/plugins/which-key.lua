@@ -19,22 +19,15 @@ return {
 		})
 		local wk = require("which-key")
 		wk.add({
-			{ "<leader>c", desc = "Close current buffer", mode = "n" },
-			{ "<leader>e", desc = "File explorer (Oil)", mode = "n" },
-			{ "<leader>O", desc = "File explorer (Nvim-Tree)", mode = "n" },
-			{ "<leader>M", desc = "Markdown preview", mode = "n" },
-
 			{ "<leader>b", desc = "Switch Buffer", mode = "n" },
 
 			{ "<leader>s", desc = "Search forward", mode = "n" },
 			{ "<leader>S", desc = "Search backward", mode = "n" },
 
 			{ "<leader>d", group = "Debugger" }, -- group
+			{ "<leader>p", group = "Project" }, -- group
 
 			{ "<leader>f", group = "Telescope" }, -- group
-			{ "<leader>ff", desc = "Find File", mode = "n" },
-			{ "<leader>fb", desc = "Find buffers", mode = "n" },
-			{ "<leader>fg", desc = "Grep", mode = "n" },
 			{ "<leader>fc", desc = "Format code", mode = "n" },
 
 			-- { "<leader>f1", hidden = true }, -- hide this keymap
