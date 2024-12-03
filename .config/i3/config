@@ -1,5 +1,5 @@
 # Package required
-# i3 zsh brightnessctl maim feh kitty flameshot udiskie xclip rofi ranger picom fastfetch polybar dunst lxappearance
+# i3 zsh brightnessctl maim feh kitty flameshot udiskie xclip rofi ranger picom fastfetch polybar dunst lxappearance lxpolkit
 
 # I3 Configuration
 set $mod Mod4
@@ -27,7 +27,7 @@ exec --no-startup-id udiskie &
 exec --no-startup-id xrdb -merge ~/.Xresources
 
 # i3 auth polkit
-exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
+exec --no-startup-id lxpolkit &
 
 # Autostart Applications
 exec firefox
