@@ -42,7 +42,7 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # Aliases
-alias lvim='NVIM_APPNAME="lazyvim" nvim'
+alias docker="podman"
 alias please="sudo"
 alias vim="nvim"
 alias tmnew="tmux new -s lilay"
@@ -72,3 +72,11 @@ function y() {
 # Shell Integration
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+# pnpm
+export PNPM_HOME="/home/lilay/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
