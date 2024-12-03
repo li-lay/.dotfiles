@@ -1,11 +1,11 @@
 # LILAY Dotfiles
 
-My **I3wm / Hyprland** & **neovim** dotfiles!
+My **I3wm** & **neovim** dotfiles!
 
 ## Information
 
 - **OS:** [Arch](https://archlinux.org/)
-- **WM:** [I3wm](https://i3wm.org/)/[Hyprland](https://hyprland.org/)
+- **WM:** [I3wm](https://i3wm.org/)
 - **Terminal:** [Kitty](https://github.com/kovidgoyal/kitty)
 - **Shell:** [zsh](https://www.zsh.org/)
 
