@@ -1,7 +1,7 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="steeef"
+ZSH_THEME="minimal"
 
 CASE_SENSITIVE="false"
 
@@ -42,6 +42,7 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # Aliases
+alias lvim='NVIM_APPNAME="lazyvim" nvim'
 alias please="sudo"
 alias vim="nvim"
 alias tmnew="tmux new -s lilay"
