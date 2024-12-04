@@ -43,6 +43,7 @@ setopt hist_find_no_dups
 
 # Aliases
 alias docker="podman"
+alias db="distrobox"
 alias please="sudo"
 alias vim="nvim"
 alias tmnew="tmux new -s lilay"
