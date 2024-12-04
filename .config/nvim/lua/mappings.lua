@@ -27,12 +27,6 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 -- Diagnostic keymaps
 vim.keymap.set("n", "<leader>fq", vim.diagnostic.setloclist, { desc = "Open quickfix diagnostic" })
 
--- Open Nvim-Tree
-vim.keymap.set("n", "<leader>O", "<Cmd>NvimTreeToggle<CR>", {desc = "File explorer (Nvim-Tree)"})
-
--- Markdown preview
-vim.keymap.set("n", "<leader>M", "<Cmd>MarkdownPreviewToggle<CR>", {desc = "Markdown preview"})
-
 -- Telescope
 vim.keymap.set("n", "<leader>ff", "<Cmd>Telescope find_files<CR>", { desc = "Find File" })
 vim.keymap.set("n", "<leader>fb", "<Cmd>Telescope buffers<CR>", { desc = "Find buffers" })
@@ -41,10 +35,8 @@ vim.keymap.set("n", "<leader>f'", "<Cmd>Telescope marks<CR>", { desc = "Find mar
 vim.keymap.set("n", "<leader>fr", "<Cmd>Telescope oldfiles<CR>", { desc = "Find recent files" })
 vim.keymap.set("n", "<leader>fg", "<Cmd>Telescope live_grep<CR>", { desc = "Grep" })
 vim.keymap.set("n", "<leader>ft", "<Cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Fuzzy find" })
-
--- Dap
-vim.keymap.set("n", "<leader>db", "<Cmd>DapToggleBreakpoint<CR>", { desc = "Add breakpoint" })
-vim.keymap.set("n", "<leader>dr", "<Cmd>DapContinue<CR>", { desc = "Start/Continue the debugger" })
+vim.keymap.set("n", "<leader>fk", "<Cmd>Telescope keymaps<CR>", { desc = "Find keymap" })
+vim.keymap.set("n", "<leader>fd", "<Cmd>Telescope diagnostics<CR>", { desc = "Find diagnostics" })
 
 -- Project
 vim.keymap.set("n", "<leader>pf", "<Cmd>NeovimProjectDiscover<CR>", { desc = "Search Project" })
