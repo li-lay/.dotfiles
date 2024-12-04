@@ -89,7 +89,7 @@
             "type": "memory"
         },
         {
-            "key": "Local IP     ",
+            "key": "Leaked IP    ",
             "keyColor": "red",
             "type": "localip",
             "compact": true
