@@ -23,6 +23,9 @@ vim.keymap.set("n", "<leader>c", "<Cmd>bd<CR>", { desc = "Close current buffer" 
 -- Clear highlight
 vim.keymap.set("n", "<CR>", "<cmd>nohlsearch<CR>")
 
+-- ZenMode
+vim.keymap.set("n", "<leader>Z", "<cmd>ZenMode<CR>")
+
 -- Diagnostic keymaps
 vim.keymap.set("n", "<leader>fq", vim.diagnostic.setloclist, { desc = "Open quickfix diagnostic" })
 

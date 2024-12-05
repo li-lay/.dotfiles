@@ -19,7 +19,6 @@ return {
 		})
 		local wk = require("which-key")
 		wk.add({
-			{ "<leader>b", desc = "Switch Buffer", mode = "n" },
 
 			{ "<leader>s", desc = "Search forward", mode = "n" },
 			{ "<leader>S", desc = "Search backward", mode = "n" },
