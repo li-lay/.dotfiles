@@ -16,9 +16,12 @@ return {
 					"lua_ls",
 					"clangd",
 					"html",
+					"cssls",
+					"jsonls",
 					"jdtls",
 					"marksman",
 					"basedpyright",
+					"ts_ls",
 				},
 			})
 		end,
@@ -35,7 +38,8 @@ return {
 
 			local function setup_servers()
 				-- List of servers you want to auto-setup
-				local servers = { "html", "basedpyright", "cssls", "clangd", "jsonls", "jdtls", "lua_ls", "marksman" }
+				local servers =
+					{ "html", "basedpyright", "cssls", "clangd", "jsonls", "jdtls", "lua_ls", "marksman", "ts_ls" }
 
 				for _, server in ipairs(servers) do
 					lspconfig[server].setup({
