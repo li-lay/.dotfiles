@@ -27,7 +27,10 @@ exec --no-startup-id udiskie &
 exec --no-startup-id xrdb -merge ~/.Xresources
 
 # i3 auth polkit
+# Fedora
 exec --no-startup-id lxpolkit &
+# Arch
+exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1 &
 
 # Autostart Applications
 exec firefox
