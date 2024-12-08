@@ -21,6 +21,7 @@ return {
       { "<leader>u", group = "UI" }, -- group
       { "<leader>w", group = "Window" }, -- group
       { "<leader>x", group = "Lists" }, -- group
+      { "<leader>d", group = "Debugger" }, -- group
     })
   end,
 }
