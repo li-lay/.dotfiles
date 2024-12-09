@@ -2,8 +2,11 @@
 vim.keymap.set("i", "jk", "<ESC>")
 vim.keymap.set("i", "kj", "<ESC>")
 
+vim.keymap.set("n", "<leader>e", "<Cmd>Oil<CR>", { desc = "Explorer Oil" })
 vim.keymap.set("n", "<leader>W", "<Cmd>SudaWrite<CR>", { desc = "Sudo Write", remap = true })
 vim.keymap.set("n", "<leader>f'", "<Cmd>Telescope marks<CR>", { desc = "Find marks" })
+vim.keymap.set("n", "<leader>fp", "<Cmd>Telescope projects<CR>", { desc = "Find projects" })
+vim.keymap.set("n", "<leader>E", "<Cmd>NeoTree<CR>", { desc = "Explorer NeoTree" })
 
 -- ZenMode
 vim.keymap.set("n", "<leader>z", "<cmd>ZenMode<CR>")
