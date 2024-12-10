@@ -37,6 +37,7 @@ return {
       excluded_filetypes = {
         "qf",
         "NvimTree",
+        "Neotree",
         "toggleterm",
         "TelescopePrompt",
         "alpha",
