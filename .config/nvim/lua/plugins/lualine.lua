@@ -11,7 +11,7 @@ return {
       -- theme = "codedark",
       component_separators = "",
       section_separators = "",
-      disabled_filetypes = { "NvimTree" },
+      disabled_filetypes = { "NvimTree", "Neotree" },
     },
     sections = {
       lualine_a = { "mode" },
