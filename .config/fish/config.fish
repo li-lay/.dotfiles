@@ -1,7 +1,5 @@
 # Fish greeting
-#function fish_greeting
-#    fastfetch
-#end
+set fish_greeting ""
 
 # Format man pages
 set -x MANROFFOPT -c
