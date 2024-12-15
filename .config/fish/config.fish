@@ -89,3 +89,6 @@ eval "$(fzf --fish)"
 
 # Zoxide
 zoxide init --cmd cd fish | source
+
+# Brew
+fish_add_path /home/linuxbrew/.linuxbrew/bin

@@ -29,18 +29,16 @@ exec --no-startup-id xrdb -merge ~/.Xresources
 # i3 auth polkit
 # Fedora
 exec --no-startup-id lxpolkit &
-# Arch
-exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1 &
 
 # Autostart Applications
-exec firefox
+# exec firefox
+exec brave-browser
 exec flatpak run org.telegram.desktop
 exec i3-msg "workspace 2; exec kitty -e tmux new -s lilay"
 # exec i3-msg "workspace 2; exec kitty"
 
 # Automatically putting clients on specific workspaces
 assign [class="^TelegramDesktop$"] 10
-# assign [class="^zen-alpha$"] 1
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -81,8 +79,9 @@ floating_modifier $mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
-# start firefox
-bindsym $mod+b exec firefox
+# start browser
+# bindsym $mod+b exec firefox
+bindsym $mod+b exec brave-browser
 
 # start a terminal
 bindsym $mod+Return exec kitty
@@ -263,11 +262,11 @@ bindsym Ctrl+Shift+Print exec maim --select | xclip -selection clipboard -t imag
 # Borders
 default_border pixel 3
 default_floating_border normal
-# hide_edge_borders smart
-hide_edge_borders none
+hide_edge_borders smart
+# hide_edge_borders none
 
 # Gaps
-smart_gaps off
+smart_gaps on
 gaps inner 6
 gaps outer 6
 
