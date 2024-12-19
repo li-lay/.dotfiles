@@ -246,7 +246,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m '(S)uspend, (L)ogout, (R)eboo
 bindsym $mod+$alt+l exec i3lock -i ~/Pictures/wallpapers/lock.png
 
 # Picom
-exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
+# exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 
 # PrintScreen
 bindsym Shift+Print exec "flameshot gui"
@@ -262,13 +262,13 @@ bindsym Ctrl+Shift+Print exec maim --select | xclip -selection clipboard -t imag
 # Borders
 default_border pixel 3
 default_floating_border normal
-hide_edge_borders smart
-# hide_edge_borders none
+# hide_edge_borders smart
+hide_edge_borders none
 
 # Gaps
-smart_gaps on
-gaps inner 6
-gaps outer 6
+# smart_gaps on
+gaps inner 8
+gaps outer 10
 
 # Colorscheme
 # class                 border  backgr. text    indicator child_border
@@ -282,4 +282,4 @@ client.background       #ffffff
 
 # Autostart
 exec_always ~/.config/polybar/launch.sh &
-exec_always feh --bg-fill ~/Pictures/wallpapers/linux.png
+exec_always feh --bg-fill ~/Pictures/wallpapers/Mountain.jpg
