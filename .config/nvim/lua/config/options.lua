@@ -33,7 +33,7 @@ opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus" -- Sync with system clip
 opt.completeopt = "menu,menuone,noselect"
 opt.conceallevel = 2 -- Hide * markup for bold and italic, but not markers with substitutions
 opt.confirm = true -- Confirm to save changes before exiting modified buffer
-opt.cursorline = false -- highlighting of the current line
+opt.cursorline = true -- highlighting of the current line
 opt.expandtab = true -- Use spaces instead of tabs
 opt.fillchars = {
   foldopen = "",
@@ -85,6 +85,8 @@ opt.virtualedit = "block" -- Allow cursor to move where there is no text in visu
 opt.wildmode = "longest:full,full" -- Command-line completion mode
 opt.winminwidth = 5 -- Minimum window width
 opt.wrap = false -- Disable line wrap
+
+vim.g.snacks_animate = false -- Disable scroll animation
 
 if vim.fn.has("nvim-0.10") == 1 then
   opt.smoothscroll = true
