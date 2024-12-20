@@ -7,9 +7,6 @@ vim.keymap.set("n", "<leader>W", "<Cmd>SudaWrite<CR>", { desc = "Sudo Write", re
 vim.keymap.set("n", "<leader>f'", "<Cmd>Telescope marks<CR>", { desc = "Find marks" })
 vim.keymap.set("n", "<leader>E", "<Cmd>Neotree<CR>", { desc = "Explorer NeoTree" })
 
--- ZenMode
-vim.keymap.set("n", "<leader>z", "<cmd>ZenMode<CR>")
-
 -- Tmux
 vim.keymap.set("n", "<C-h>", "<Cmd>NvimTmuxNavigateLeft<CR>", {})
 vim.keymap.set("n", "<C-j>", "<Cmd>NvimTmuxNavigateDown<CR>", {})
