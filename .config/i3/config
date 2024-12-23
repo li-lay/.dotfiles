@@ -17,7 +17,8 @@ exec --no-startup-id dunst
 exec --no-startup-id udiskie &
 
 exec_always ~/.config/polybar/launch.sh &
-exec_always feh --bg-fill ~/Pictures/wallpapers/Mountain.jpg
+exec_always feh --bg-fill ~/Pictures/wallpapers/japan_anime_city.jpg
+exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 
 # Autostart Applications
 exec brave-browser
@@ -190,9 +191,6 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m '(S)uspend, (L)ogout, (R)eboo
 
 # Lock Screen
 bindsym $mod+$alt+l exec i3lock -i ~/Pictures/wallpapers/lock.png
-
-# Picom
-# exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 
 # Screenshots
 bindsym Shift+Print exec "flameshot gui"
