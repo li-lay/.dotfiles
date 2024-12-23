@@ -1,57 +1,34 @@
 # Package required
 # i3 zsh brightnessctl maim feh kitty flameshot udiskie xclip rofi ranger picom fastfetch polybar dunst lxappearance lxpolkit
 
-# I3 Configuration
+# Welcome to i3
 set $mod Mod4
 set $alt Mod1
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
+# Font for window titles.
 font Roboto 14
 
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-# font pango:Fira Code 8
-
-# Start XDG autostart .desktop files using dex. See also
-# https://wiki.archlinux.org/index.php/XDG_Autostart
+# Initial Startup
 exec --no-startup-id dex --autostart --environment i3
-
-# Start dunst for notifications
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -i ~/Pictures/wallpapers/lock.png --nofork
+exec --no-startup-id nm-applet
+exec --no-startup-id lxpolkit &
 exec --no-startup-id dunst
-
-# Start udiskie for mounting removable devices
 exec --no-startup-id udiskie &
 
-# Xresources
-exec --no-startup-id xrdb -merge ~/.Xresources
-
-# i3 auth polkit
-# Fedora
-exec --no-startup-id lxpolkit &
+exec_always ~/.config/polybar/launch.sh &
+exec_always feh --bg-fill ~/Pictures/wallpapers/Mountain.jpg
 
 # Autostart Applications
-# exec firefox
 exec brave-browser
 exec flatpak run org.telegram.desktop
 exec i3-msg "workspace 2; exec kitty -e tmux new -s lilay"
-# exec i3-msg "workspace 2; exec kitty"
 
 # Automatically putting clients on specific workspaces
 assign [class="^TelegramDesktop$"] 10
+assign [class="^vesktop$"] 9
 
-# The combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
-
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -i ~/Pictures/wallpapers/lock.png --nofork
-
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
-
-# Use pactl to adjust volume in PulseAudio.
+# Audio controls
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
@@ -72,39 +49,28 @@ bindsym XF86AudioPrev exec playerctl previous
 exec "setxkbmap -layout us,km"
 exec "setxkbmap -option 'grp:ctrl_alt_toggle'"
 
-# Use Mouse+$mod to drag floating windows to their wanted position
+# Hold Mod to drag floating windows
 floating_modifier $mod
-
-# move tiling windows via drag & drop by left-clicking into the title bar,
-# or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
-# start browser
-# bindsym $mod+b exec firefox
+# Application keybinds
 bindsym $mod+b exec brave-browser
 
-# start a terminal
 bindsym $mod+Return exec kitty
 
-# start thunar
-# bindsym $mod+e exec kitty -e yazi
 bindsym $mod+e exec thunar
 
-# kill focused window
-bindsym $mod+q kill
-
-# start dmenu (a program launcher)
 bindsym $alt+space exec --no-startup-id rofi -show drun -display-drun "Application:" -show-icons -icon-theme "Papirus"
 bindsym $mod+Tab exec --no-startup-id rofi -show window
-# bindsym $alt+space exec --no-startup-id dmenu_run
+
+# Close window
+bindsym $mod+q kill
 
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
@@ -115,8 +81,6 @@ bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -128,31 +92,19 @@ bindsym $alt+h split h
 # split in vertical orientation
 bindsym $alt+v split v
 
-# enter fullscreen mode for the focused container
+# Fullscreen mode
 bindsym $mod+f fullscreen toggle
 
-# change container layout (stacked, tabbed, toggle split)
+# container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+Shift+s layout toggle split # exit stack or tab
-
-# Make the currently focused window a scratchpad
-# bindsym $alt+l move scratchpad
-
-# Show the first scratchpad window
-# bindsym $alt+s scratchpad show
+bindsym $mod+Shift+s layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+f floating toggle
 
 # change focus between tiling / floating windows
 bindsym $alt+Tab focus mode_toggle
-
-# focus the parent container
-# bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -197,17 +149,10 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym l resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
         bindsym j resize shrink height 10 px or 10 ppt
@@ -242,22 +187,23 @@ mode "powerMode" {
 }
 
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m '(S)uspend, (L)ogout, (R)eboot, (P)oweroff'"; mode "powerMode"
-# bindsym $mod+Shift+e mode "powerMode"
+
+# Lock Screen
 bindsym $mod+$alt+l exec i3lock -i ~/Pictures/wallpapers/lock.png
 
 # Picom
 # exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 
-# PrintScreen
+# Screenshots
 bindsym Shift+Print exec "flameshot gui"
 bindsym Print exec maim "/home/$USER/Pictures/$(date).jpg"
 bindsym $mod+Print exec maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date).jpg"
 #bindsym Shift+Print exec maim --select "/home/$USER/Pictures/$(date).jpg"
 
-## Clipboard Screenshots
-bindsym Ctrl+Print exec maim | xclip -selection clipboard -t image/png
+# Screenshots to clipboard
+bindsym Ctrl+Shift+Print exec maim | xclip -selection clipboard -t image/png
 bindsym Ctrl+$mod+Print exec maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
-bindsym Ctrl+Shift+Print exec maim --select | xclip -selection clipboard -t image/png
+bindsym Ctrl+Print exec maim --select | xclip -selection clipboard -t image/png
 
 # Borders
 default_border pixel 3
@@ -279,7 +225,3 @@ client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
-
-# Autostart
-exec_always ~/.config/polybar/launch.sh &
-exec_always feh --bg-fill ~/Pictures/wallpapers/Mountain.jpg
