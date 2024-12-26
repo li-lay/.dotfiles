@@ -19,9 +19,9 @@ end
 fish_vi_key_bindings
 
 # Fish command history
-function history
-    builtin history --show-time='%F %T '
-end
+#function history
+#    builtin history --show-time='%F %T '
+#end
 
 function backup --argument filename
     cp $filename $filename.bak
@@ -73,6 +73,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias hw='hwinfo --short' # Hardware Info
+alias linutil="curl -fsSL https://christitus.com/linux | sh"
 
 # Yazi
 function y
