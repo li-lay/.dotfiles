@@ -13,6 +13,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -i ~/Pictures/wallpapers/lock.png --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id lxpolkit &
+exec --no-startup-id lxqt-policykit-agent &
 exec --no-startup-id dunst
 exec --no-startup-id udiskie &
 
