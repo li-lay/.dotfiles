@@ -57,7 +57,6 @@ alias tmssh="tmux new -s ssh"
 alias fetch="fastfetch"
 alias tm="tmux"
 alias tma="tmux a -t"
-alias cat="bat"
 alias c="clear"
 alias tarnow='tar -acf '
 alias untar='tar -zxvf '
