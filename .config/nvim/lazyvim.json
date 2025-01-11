@@ -2,6 +2,7 @@
   "extras": [
     "lazyvim.plugins.extras.ai.codeium",
     "lazyvim.plugins.extras.ai.supermaven",
+    "lazyvim.plugins.extras.editor.leap",
     "lazyvim.plugins.extras.formatting.prettier",
     "lazyvim.plugins.extras.lang.clangd",
     "lazyvim.plugins.extras.lang.json",
