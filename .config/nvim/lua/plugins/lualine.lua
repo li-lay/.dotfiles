@@ -6,9 +6,9 @@ return {
     options = {
       icons_enabled = true,
       -- theme = "seoul256",
-      theme = "gruvbox",
+      -- theme = "gruvbox",
+      theme = "codedark",
       -- theme = "gruvbox-material",
-      -- theme = "codedark",
       component_separators = "",
       section_separators = "",
       disabled_filetypes = { "NvimTree", "Neotree" },

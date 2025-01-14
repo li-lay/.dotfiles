@@ -5,7 +5,7 @@ vim.keymap.set("i", "kj", "<ESC>")
 vim.keymap.set("n", "<leader>e", "<Cmd>Oil<CR>", { desc = "Explorer Oil" })
 vim.keymap.set("n", "<leader>W", "<Cmd>SudaWrite<CR>", { desc = "Sudo Write", remap = true })
 vim.keymap.set("n", "<leader>f'", "<Cmd>Telescope marks<CR>", { desc = "Find marks" })
-vim.keymap.set("n", "<leader>E", "<Cmd>Neotree<CR>", { desc = "Explorer NeoTree" })
+-- vim.keymap.set("n", "<leader>E", "<Cmd>Neotree<CR>", { desc = "Explorer NeoTree" })
 
 -- Tmux
 vim.keymap.set("n", "<C-h>", "<Cmd>NvimTmuxNavigateLeft<CR>", {})
