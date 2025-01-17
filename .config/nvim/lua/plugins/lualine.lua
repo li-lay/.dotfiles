@@ -5,9 +5,8 @@ return {
   opts = {
     options = {
       icons_enabled = true,
-      -- theme = "seoul256",
-      -- theme = "gruvbox",
-      theme = "codedark",
+      theme = "gruvbox",
+      -- theme = "codedark",
       -- theme = "gruvbox-material",
       component_separators = "",
       section_separators = "",
