@@ -1,0 +1,43 @@
+{
+  "theme": "Gruvbox Dark Hard",
+  "vim_mode": true,
+  "base_keymap": "VSCode",
+  "buffer_font_family": "Iosevka Nerd Font",
+  "ui_font_size": 18,
+  "buffer_font_size": 20,
+  "relative_line_numbers": true,
+  "cursor_blink": false,
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false
+  },
+  "scrollbar": {
+    "show": "never"
+  },
+  "tabs": {
+    "file_icons": true
+  },
+  "terminal": {
+    "font_family": "Iosevka Nerd Font",
+    "font_size": 20,
+    "detect_venv": {
+      "on": {
+        "directories": [".env", "env", ".venv", "venv"],
+        "activate_script": "default"
+      }
+    },
+    "theme": {
+      "mode": "system",
+      "light": "Gruvbox Light Hard",
+      "dark": "Gruvbox Dark Hard"
+    },
+    "auto_install_extensions": {},
+    "telemetry": {
+      "diagnostics": false,
+      "metrics": false
+    }
+  },
+  "features": {
+    "inline_completion_provider": "supermaven"
+  }
+}

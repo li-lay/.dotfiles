@@ -1,0 +1,43 @@
+[
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "ctrl-enter": "workspace::ToggleBottomDock",
+      "space j": "terminal_panel::ToggleFocus",
+      "shift-k": "editor::Hover",
+      "space l a": "editor::ToggleCodeActions",
+      "space l r": "editor::Rename",
+      "space l f": "editor::Format",
+      "space l l": "diagnostics::Deploy",
+      "g c c": "editor::ToggleComments",
+      "space f": "file_finder::Toggle",
+      "space o": "tab_switcher::Toggle",
+      "space e": "workspace::ToggleLeftDock",
+      "space p": "outline::Toggle",
+      "space v": "editor::GoToDefinitionSplit"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      "k j": ["vim::SwitchMode", "Normal"]
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-enter": "workspace::ToggleBottomDock",
+      "space k": "terminal_panel::ToggleFocus",
+      "ctrl-w": "pane::CloseActiveItem",
+      "ctrl-n": "workspace::NewTerminal"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !menu",
+    "bindings": {
+      "ctrl-w": "pane::CloseActiveItem",
+      "ctrl-h": "pane::ActivatePrevItem",
+      "ctrl-l": "pane::ActivateNextItem"
+    }
+  }
+]
