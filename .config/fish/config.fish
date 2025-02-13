@@ -6,7 +6,7 @@ set -gx EDITOR nvim
 
 # Format man pages
 set -x MANROFFOPT -c
-set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+set -x MANPAGER "sh -c 'col -bx | batcat -l man -p'"
 
 # Add ~/.local/bin to PATH
 if test -d ~/.local/bin
