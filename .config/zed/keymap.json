@@ -20,7 +20,7 @@
   {
     "context": "Editor && vim_mode == insert && !menu",
     "bindings": {
-      "k j": ["vim::SwitchMode", "Normal"]
+      "k j": "vim::NormalBefore"
     }
   },
   {

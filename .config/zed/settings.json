@@ -5,7 +5,7 @@
   "buffer_font_family": "Iosevka Nerd Font",
   "tab_size": 2,
   "ui_font_size": 18,
-  "buffer_font_size": 20,
+  "buffer_font_size": 29.0,
   "relative_line_numbers": true,
   "cursor_blink": false,
   "toolbar": {
@@ -39,12 +39,12 @@
     }
   },
   "features": {
-    "inline_completion_provider": "supermaven"
+    "edit_prediction_provider": "zed"
   },
   "assistant": {
     "default_model": {
-      "provider": "ollama",
-      "model": "deepseek-r1:1.5b"
+      "provider": "deepseek",
+      "model": "deepseek-chat"
     },
     "version": "2"
   }
