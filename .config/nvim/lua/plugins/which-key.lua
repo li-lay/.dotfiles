@@ -22,7 +22,6 @@ return {
       { "<leader>w", group = "Window" }, -- group
       { "<leader>x", group = "Lists" }, -- group
       { "<leader>d", group = "Debugger" }, -- group
-      { "<leader>a", group = "AI" }, -- group
     })
   end,
 }
