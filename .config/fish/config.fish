@@ -72,8 +72,15 @@ eval "$(fzf --fish)"
 # Zoxide
 zoxide init --cmd cd fish | source
 
+# Yazi File Manager
+function y
+    set tmp (mktemp -t "yazi-cwd.XXXXXX")
+    yazi $argv --cwd-file="$tmp"
+    if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+        builtin cd -- "$cwd"
+    end
+    rm -f -- "$tmp"
+end
+
 # Brew
 fish_add_path /home/linuxbrew/.linuxbrew/bin
-
-# Cargo bin
-fish_add_path /home/lilay/.cargo/bin

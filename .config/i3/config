@@ -1,5 +1,5 @@
-# Package required
-# i3 zsh brightnessctl maim feh kitty flameshot udiskie xclip rofi ranger picom fastfetch polybar dunst lxappearance lxpolkit
+# Personal Package
+# i3 tmux neovim zoxide brightnessctl maim feh kitty flameshot udiskie xclip rofi ranger picom fastfetch polybar dunst lxappearance lxpolkit
 
 # Welcome to i3
 set $mod Mod4
@@ -18,17 +18,16 @@ exec --no-startup-id dunst
 exec --no-startup-id udiskie &
 
 exec_always ~/.config/polybar/launch.sh &
-exec_always feh --bg-fill ~/Pictures/wallpapers/Mountain.jpg
+exec_always feh --bg-fill ~/Pictures/wallpapers/wallhaven-yxz87k.png
 exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 
 # Autostart Applications
-exec brave-browser
+exec flatpak run app.zen_browser.zen
 exec flatpak run org.telegram.desktop
 exec i3-msg "workspace 2; exec kitty -e tmux new -s lilay"
 
 # Automatically putting clients on specific workspaces
 assign [class="^TelegramDesktop$"] 10
-assign [class="^vesktop$"] 9
 
 # Audio controls
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -48,8 +47,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Add keyboard layouts
-exec "setxkbmap -layout us,km"
-exec "setxkbmap -option 'grp:ctrl_alt_toggle'"
+exec --no-startup-id "setxkbmap -layout us,kh -option 'grp:alt_shift_toggle'"
 
 # Hold Mod to drag floating windows
 floating_modifier $mod
