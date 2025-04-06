@@ -54,7 +54,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # Application keybinds
-bindsym $mod+b exec brave-browser
+bindsym $mod+b exec flatpak run app.zen_browser.zen
 
 bindsym $mod+Return exec kitty
 
