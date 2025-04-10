@@ -58,7 +58,7 @@ bindsym $mod+b exec flatpak run app.zen_browser.zen
 
 bindsym $mod+Return exec kitty
 
-bindsym $mod+e exec thunar
+bindsym $mod+e exec nautilus
 
 bindsym $alt+space exec --no-startup-id rofi -show drun -display-drun "Application:" -show-icons -icon-theme "Papirus"
 bindsym $mod+Tab exec --no-startup-id rofi -show window
