@@ -47,6 +47,7 @@ alias please="sudo" # LOL
 alias vim="nvim" # Best editor
 alias tmnew="tmux new -s lilay" # My default tmux session
 alias tmssh="tmux new -s ssh" # Session for ssh
+alias tmcode="tmux new -s code" # Session for coding
 alias fetch="fastfetch"
 alias tm="tmux"
 alias tma="tmux a -t"
