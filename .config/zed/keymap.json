@@ -4,7 +4,6 @@
     "bindings": {
       "ctrl-enter": "workspace::ToggleBottomDock",
       "space j": "terminal_panel::ToggleFocus",
-      "shift-k": "editor::Hover",
       "space l a": "editor::ToggleCodeActions",
       "space l r": "editor::Rename",
       "space l f": "editor::Format",
@@ -14,7 +13,8 @@
       "space o": "tab_switcher::Toggle",
       "space e": "workspace::ToggleLeftDock",
       "space p": "outline::Toggle",
-      "space v": "editor::GoToDefinitionSplit"
+      "space v": "editor::GoToDefinitionSplit",
+      "space a": "workspace::ToggleRightDock"
     }
   },
   {
@@ -36,7 +36,7 @@
     "context": "Editor && vim_mode == normal && !menu",
     "bindings": {
       "ctrl-w": "pane::CloseActiveItem",
-      "ctrl-h": "pane::ActivatePrevItem",
+      "ctrl-h": "pane::ActivatePreviousItem",
       "ctrl-l": "pane::ActivateNextItem"
     }
   }
