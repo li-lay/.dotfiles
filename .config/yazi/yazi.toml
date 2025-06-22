@@ -1,4 +1,4 @@
-[manager]
+[mgr]
 sort_by        = "none"
 linemode       = "size"
 show_hidden    = true
