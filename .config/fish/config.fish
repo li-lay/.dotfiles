@@ -6,7 +6,7 @@ set -gx EDITOR nvim
 
 # Format man pages
 set -x MANROFFOPT -c
-set -x MANPAGER "sh -c 'col -bx | batcat -l man -p'"
+set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
 # Add ~/.local/bin to PATH
 if test -d ~/.local/bin
@@ -66,6 +66,10 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias linutil="curl -fsSL https://christitus.com/linux | sh" # Cool utility
+alias ports='nmap localhost'
+alias hg='history | grep $1' # Search history
+alias gs='git status'
+alias gl='git log'
 
 # Fzf
 eval "$(fzf --fish)"
