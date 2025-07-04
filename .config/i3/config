@@ -22,7 +22,7 @@ exec_always feh --bg-fill ~/Pictures/wallpapers/wallhaven-yxz87k.png
 exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 
 # Autostart Applications
-exec flatpak run app.zen_browser.zen
+exec firefox
 exec flatpak run org.telegram.desktop
 exec i3-msg "workspace 2; exec kitty -e tmux new -s lilay"
 
@@ -54,7 +54,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # Application keybinds
-bindsym $mod+b exec flatpak run app.zen_browser.zen
+bindsym $mod+b exec firefox
 
 bindsym $mod+Return exec kitty
 
