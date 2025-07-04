@@ -6,7 +6,7 @@ set -gx EDITOR nvim
 
 # Format man pages
 set -x MANROFFOPT -c
-set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+set -x MANPAGER "sh -c 'col -bx | bat --theme='gruvbox-dark' -l man -p'"
 
 # Add ~/.local/bin to PATH
 if test -d ~/.local/bin
@@ -52,6 +52,7 @@ alias fetch="fastfetch"
 alias tm="tmux"
 alias tma="tmux a -t"
 alias c="clear"
+alias cat="bat --theme='gruvbox-dark'"
 alias tarnow='tar -acf '
 alias untar='tar -zxvf '
 alias wget='wget -c '
