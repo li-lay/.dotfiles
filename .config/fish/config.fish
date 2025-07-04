@@ -55,21 +55,15 @@ alias c="clear"
 alias tarnow='tar -acf '
 alias untar='tar -zxvf '
 alias wget='wget -c '
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
-alias ......='cd ../../../../..'
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
 alias linutil="curl -fsSL https://christitus.com/linux | sh" # Cool utility
 alias ports='nmap localhost'
 alias hg='history | grep $1' # Search history
+
+# Git
 alias gs='git status'
-alias gl='git log'
+alias gl='git log --graph --pretty=oneline -n 10'
+alias gco='git checkout'
 
 # Fzf
 eval "$(fzf --fish)"
