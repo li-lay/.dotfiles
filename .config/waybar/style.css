@@ -14,11 +14,13 @@
     Arial,
     sans-serif;
   font-size: 14px;
+  padding: 0px;
+  margin: 0px;
 }
 
 #waybar {
-  background-color: @bg_hard; /* Dark background */
-  color: @fg; /* Foreground text color */
+  background-color: @bg_hard;
+  color: @fg;
 }
 
 /* Module styling */
@@ -48,11 +50,16 @@
 #pulseaudio,
 #language,
 #backlight,
-#window,
-#tray {
+#window {
   color: @fg; /* Module text color */
   padding: 0 5px;
   margin: 0 5px;
+  border-radius: 0px;
+}
+
+#tray {
+  color: @fg; /* Module text color */
+  margin-right: 10px;
   border-radius: 0px;
 }
 
