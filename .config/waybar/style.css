@@ -48,8 +48,8 @@
 #network,
 #battery,
 #pulseaudio,
-#language,
 #backlight,
+#privacy,
 #window {
   color: @fg; /* Module text color */
   padding: 0 5px;
