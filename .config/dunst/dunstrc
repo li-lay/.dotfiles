@@ -9,12 +9,12 @@
 
 # gruvboxy
 [global]
-	timeout = 4
+	timeout = 3
 	monitor = 0
 	follow = keyboard
 	# these should be in sync with dwm gaps
 	origin = top-right
-	offset = 5x30
+	offset = 10x10
 	width = 320
 	height = 220
 	indicate_hidden = true
@@ -22,7 +22,7 @@
 	separator_height = 2
 	padding = 0
 	horizontal_padding = 8
-	frame_width = 2
+	frame_width = 3
 	# Define a color for the separator.
 	# possible values are:
 	#  * auto: dunst tries to find a color fitting to the background;
@@ -66,8 +66,8 @@
 	always_run_script = true
 	title = Dunst
 	class = Dunst
-	corner_radius = 14
-	progress_bar_corner_radius = 4
+	corner_radius = 0
+	progress_bar_corner_radius = 0
 	force_xinerama = false
 [urgency_low]
 	background = "#282828"
