@@ -1,41 +1,27 @@
 return {
-  {
-    "echasnovski/mini.comment",
-  },
-  {
-    "echasnovski/mini.ai",
+    'echasnovski/mini.nvim',
+    version = '*',
     config = function()
-      require('mini.ai').setup()
+      require('mini.ai').setup({})
+      require('mini.comment').setup({})
+      require('mini.sessions').setup({})
+      require('mini.pairs').setup({
+        modes = { insert = true, command = true, terminal = false },
+        skip_next = [=[[%w%%%'%[%"%.%`%$]]=],
+        skip_ts = { "string" },
+        skip_unbalanced = true,
+        markdown = true,
+      })
+      require('mini.surround').setup({
+        mappings = {
+          add = 'sa',
+          delete = 'sd',
+          find = 'sf',
+          find_left = 'sF',
+          highlight = 'sh',
+          replace = 'sr',
+          update_n_lines = 'sn',
+        },
+      })
     end
-  },
-  {
-    "echasnovski/mini.sessions",
-    config = function()
-      require('mini.sessions').setup()
-    end
-  },
-  {
-    "echasnovski/mini.pairs",
-    opts = {
-      modes = { insert = true, command = true, terminal = false },
-      skip_next = [=[[%w%%%'%[%"%.%`%$]]=],
-      skip_ts = { "string" },
-      skip_unbalanced = true,
-      markdown = true,
-    },
-  },
-  {
-    "echasnovski/mini.surround",
-    opts = {
-      mappings = {
-        add = 'sa',            -- Add surrounding in Normal and Visual modes
-        delete = 'sd',         -- Delete surrounding
-        find = 'sf',           -- Find surrounding (to the right)
-        find_left = 'sF',      -- Find surrounding (to the left)
-        highlight = 'sh',      -- Highlight surrounding
-        replace = 'sr',        -- Replace surrounding
-        update_n_lines = 'sn', -- Update `n_lines`
-      },
-    }
-  }
 }
