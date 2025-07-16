@@ -10,18 +10,11 @@ return {
     })
     local wk = require("which-key")
     wk.add({
-
-      { "<leader>b", group = "Buffer" }, -- group
-      { "<leader>c", group = "Code" }, -- group
       { "<leader>h", group = "Harpoon" }, -- group
       { "<leader>f", group = "Telescope" }, -- group
-      { "<leader>g", group = "Git" }, -- group
-      { "<leader>q", group = "Session" }, -- group
-      { "<leader>s", group = "Search" }, -- group
-      { "<leader>u", group = "UI" }, -- group
-      { "<leader>w", group = "Window" }, -- group
-      { "<leader>x", group = "Lists" }, -- group
-      { "<leader>d", group = "Debugger" }, -- group
+      { "<leader>b", group = "Buffer" }, -- group
+      { "<leader>w", group = "Save" }, -- group
     })
   end,
 }
+

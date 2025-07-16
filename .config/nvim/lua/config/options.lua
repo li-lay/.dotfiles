@@ -1,102 +1,78 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+-- Basic settings
+vim.opt.number = true -- Line numbers
+vim.opt.relativenumber = true -- Relative line numbers
+vim.opt.cursorline = true -- Highlight current line
+vim.opt.wrap = false -- Don't wrap lines
+vim.opt.scrolloff = 10 -- Keep 10 lines above/below cursor
+vim.opt.sidescrolloff = 8 -- Keep 8 columns left/right of cursor
 
--- LazyVim auto format
-vim.g.autoformat = true
+-- Indentation
+vim.opt.tabstop = 2 -- Tab width
+vim.opt.shiftwidth = 2 -- Indent width
+vim.opt.softtabstop = 2 -- Soft tab stop
+vim.opt.expandtab = true -- Use spaces instead of tabs
+vim.opt.smartindent = true -- Smart auto-indenting
+vim.opt.autoindent = true -- Copy indent from current line
 
--- LazyVim picker to use.
--- Can be one of: telescope, fzf
--- Leave it to "auto" to automatically use the picker
--- enabled with `:LazyExtras`
-vim.g.lazyvim_picker = "auto"
+-- Search settings
+vim.opt.ignorecase = true -- Case insensitive search
+vim.opt.smartcase = true -- Case sensitive if uppercase in search
+vim.opt.hlsearch = false -- Don't highlight search results
+vim.opt.incsearch = true -- Show matches as you type
 
--- LazyVim root dir detection
--- Each entry can be:
--- * the name of a detector function like `lsp` or `cwd`
--- * a pattern or array of patterns like `.git` or `lua`.
--- * a function with signature `function(buf) -> string|string[]`
-vim.g.root_spec = { "lsp", { ".git", "lua" }, "cwd" }
+-- Visual settings
+vim.opt.termguicolors = true -- Enable 24-bit colors
+vim.opt.signcolumn = "no" -- Always show sign column
+vim.opt.showmatch = true -- Highlight matching brackets
+vim.opt.matchtime = 2 -- How long to show matching bracket
+vim.opt.cmdheight = 1 -- Command line height
+vim.opt.completeopt = "menuone,noinsert,noselect" -- Completion options
+vim.opt.showmode = false -- Don't show mode in command line
+vim.opt.pumheight = 10 -- Popup menu height
+vim.opt.pumblend = 10 -- Popup menu transparency
+vim.opt.winblend = 0 -- Floating window transparency
+vim.opt.conceallevel = 0 -- Don't hide markup
+vim.opt.concealcursor = "" -- Don't hide cursor line markup
+vim.opt.lazyredraw = true -- Don't redraw during macros
+vim.opt.synmaxcol = 300 -- Syntax highlighting limit
 
--- Hide deprecation warnings
-vim.g.deprecation_warnings = false
+-- File handling
+vim.opt.backup = false -- Don't create backup files
+vim.opt.writebackup = false -- Don't create backup before writing
+vim.opt.swapfile = false -- Don't create swap files
+vim.opt.undofile = true -- Persistent undo
+vim.opt.undodir = vim.fn.expand("~/.vim/undodir") -- Undo directory
+vim.opt.updatetime = 300 -- Faster completion
+vim.opt.timeoutlen = 500 -- Key timeout duration
+vim.opt.ttimeoutlen = 0 -- Key code timeout
+vim.opt.autoread = true -- Auto reload files changed outside vim
+vim.opt.autowrite = false -- Don't auto save
 
--- Show the current document symbols location from Trouble in lualine
--- You can disable this for a buffer by setting `vim.b.trouble_lualine = false`
-vim.g.trouble_lualine = true
+-- Behavior settings
+vim.opt.hidden = true -- Allow hidden buffers
+vim.opt.errorbells = false -- No error bells
+vim.opt.backspace = "indent,eol,start" -- Better backspace behavior
+vim.opt.autochdir = false -- Don't auto change directory
+vim.opt.iskeyword:append("-") -- Treat dash as part of word
+vim.opt.path:append("**") -- include subdirectories in search
+vim.opt.selection = "exclusive" -- Selection behavior
+vim.opt.mouse = "a" -- Enable mouse support
+vim.opt.clipboard:append("unnamedplus") -- Use system clipboard
+vim.opt.modifiable = true -- Allow buffer modifications
+vim.opt.encoding = "UTF-8" -- Set encoding
 
-local opt = vim.opt
+-- Split behavior
+vim.opt.splitbelow = true -- Horizontal splits go below
+vim.opt.splitright = true -- Vertical splits go right
 
-opt.autowrite = true -- Enable auto write
--- only set clipboard if not in ssh, to make sure the OSC 52
--- integration works automatically. Requires Neovim >= 0.10.0
-opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus" -- Sync with system clipboard
-opt.completeopt = "menu,menuone,noselect"
-opt.conceallevel = 2 -- Hide * markup for bold and italic, but not markers with substitutions
-opt.confirm = true -- Confirm to save changes before exiting modified buffer
-opt.cursorline = true -- highlighting of the current line
-opt.expandtab = true -- Use spaces instead of tabs
-opt.fillchars = {
-  foldopen = "",
-  foldclose = "",
-  fold = " ",
-  foldsep = " ",
-  diff = "╱",
-  eob = " ",
-}
-opt.foldlevel = 99
-opt.formatexpr = "v:lua.require'lazyvim.util'.format.formatexpr()"
-opt.formatoptions = "jcroqlnt" -- tcqj
-opt.grepformat = "%f:%l:%c:%m"
-opt.grepprg = "rg --vimgrep"
-opt.ignorecase = true -- Ignore case
-opt.inccommand = "nosplit" -- preview incremental substitute
-opt.jumpoptions = "view"
-opt.laststatus = 3 -- global statusline
-opt.linebreak = true -- Wrap lines at convenient points
-opt.list = true -- Show some invisible characters (tabs...
-opt.mouse = "a" -- Enable mouse mode
-opt.number = true -- Print line number
-opt.pumblend = 10 -- Popup blend
-opt.pumheight = 10 -- Maximum number of entries in a popup
-opt.relativenumber = true -- Relative line numbers
-opt.ruler = false -- Disable the default ruler
-opt.scrolloff = 8 -- Lines of context
-opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp", "folds" }
-opt.shiftround = true -- Round indent
-opt.shiftwidth = 2 -- Size of an indent
-opt.tabstop = 2 -- Number of spaces tabs count for
-opt.shortmess:append({ W = true, I = true, c = true, C = true })
-opt.showmode = false -- Dont show mode since we have a statusline
-opt.sidescrolloff = 8 -- Columns of context
-opt.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift the text each time
-opt.smartcase = true -- Don't ignore case with capitals
-opt.smartindent = true -- Insert indents automatically
-opt.spelllang = { "en" }
-opt.splitbelow = true -- Put new windows below current
-opt.splitkeep = "screen"
-opt.splitright = true -- Put new windows right of current
-opt.statuscolumn = [[%!v:lua.require'snacks.statuscolumn'.get()]]
-opt.termguicolors = true -- True color support
-opt.timeoutlen = vim.g.vscode and 1000 or 300 -- Lower than default (1000) to quickly trigger which-key
-opt.undofile = true
-opt.undolevels = 10000
-opt.updatetime = 200 -- Save swap file and trigger CursorHold
-opt.virtualedit = "block" -- Allow cursor to move where there is no text in visual block mode
-opt.wildmode = "longest:full,full" -- Command-line completion mode
-opt.winminwidth = 5 -- Minimum window width
-opt.wrap = true
+-- Highlight yanked text
+vim.api.nvim_create_autocmd("TextYankPost", {
+	group = augroup,
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+})
 
-vim.g.snacks_animate = false -- Disable scroll animation
-
-if vim.fn.has("nvim-0.10") == 1 then
-  opt.smoothscroll = true
-  opt.foldexpr = "v:lua.require'lazyvim.util'.ui.foldexpr()"
-  opt.foldmethod = "expr"
-  opt.foldtext = ""
-else
-  opt.foldmethod = "indent"
-  opt.foldtext = "v:lua.require'lazyvim.util'.ui.foldtext()"
-end
-
--- Fix markdown indentation settings
-vim.g.markdown_recommended_style = 0
+-- Performance improvements
+vim.opt.redrawtime = 10000
+vim.opt.maxmempattern = 20000

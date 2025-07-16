@@ -32,4 +32,3 @@ return {
     end, { desc = "Switch to 5" })
   end,
 }
- 

@@ -1,3 +1,4 @@
+-- NOTE: Lualine is a statusline
 return {
   "nvim-lualine/lualine.nvim",
   event = "VeryLazy",

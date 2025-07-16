@@ -1,9 +1,5 @@
 -- This file consist of various plugins
 return {
-  -- Help SSH copy to clipboard
-  {
-    "ojroques/vim-oscyank",
-  },
   -- SudaWrite
   {
     "lambdalisue/suda.vim",

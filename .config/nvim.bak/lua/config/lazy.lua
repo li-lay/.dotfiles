@@ -16,8 +16,26 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
-    -- import your plugins
+    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     { import = "plugins" },
   },
-  change_detection = { notify = false },
+  defaults = {
+    lazy = false,
+    version = false, -- always use the latest git commit
+  },
+  checker = {
+    enabled = true, -- check for plugin updates periodically
+    notify = true, -- notify on update
+  },
+  performance = {
+    rtp = {
+      disabled_plugins = {
+        "gzip",
+        "tarPlugin",
+        "tohtml",
+        "tutor",
+        "zipPlugin",
+      },
+    },
+  },
 })
