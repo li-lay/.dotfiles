@@ -10,6 +10,10 @@ vim.keymap.set("n", "<leader>f'", "<Cmd>Telescope marks<CR>", { desc = "Find mar
 vim.keymap.set("n", "<leader>ww", "<Cmd>w<CR>", { desc = "Save" })
 vim.keymap.set('n', '<Leader>qw', ':wq<CR>', { desc = 'Quit and save' })
 vim.keymap.set('n', '<Leader>qq', ':q!<CR>', { desc = 'Quit without saving' })
+vim.keymap.set("n", "<leader>fD", function()
+  local new_config = not vim.diagnostic.config().virtual_text
+  vim.diagnostic.config({ virtual_text = new_config })
+end, { desc = "Toggle diagnostics virtual text" })
 
 -- Tmux
 vim.keymap.set("n", "<C-h>", "<Cmd>NvimTmuxNavigateLeft<CR>", {})
