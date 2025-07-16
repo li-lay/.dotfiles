@@ -4,9 +4,10 @@ return {
     opts = ...,
     config = function()
       require("gruvbox").setup({
-	contrast = "hard",
+        contrast = "hard",
       })
       vim.cmd.colorscheme "gruvbox"
+      vim.cmd("highlight SignColumn guibg=NONE")
     end
   },
 }

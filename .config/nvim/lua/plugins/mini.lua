@@ -16,7 +16,6 @@ return {
   },
   {
     "echasnovski/mini.pairs",
-    event = "VeryLazy",
     opts = {
       modes = { insert = true, command = true, terminal = false },
       skip_next = [=[[%w%%%'%[%"%.%`%$]]=],
@@ -27,7 +26,6 @@ return {
   },
   {
     "echasnovski/mini.surround",
-    event = "VeryLazy",
     opts = {
       mappings = {
         add = 'sa',            -- Add surrounding in Normal and Visual modes

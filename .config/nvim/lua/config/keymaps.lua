@@ -8,6 +8,8 @@ vim.keymap.set("n", "<leader>e", vim.cmd.Oil, { desc = 'File Explorer' })
 vim.keymap.set("n", "<leader>wW", "<Cmd>SudaWrite<CR>", { desc = "Sudo Write", remap = true })
 vim.keymap.set("n", "<leader>f'", "<Cmd>Telescope marks<CR>", { desc = "Find marks" })
 vim.keymap.set("n", "<leader>ww", "<Cmd>w<CR>", { desc = "Save" })
+vim.keymap.set('n', '<Leader>qw', ':wq<CR>', { desc = 'Quit and save' })
+vim.keymap.set('n', '<Leader>qq', ':q!<CR>', { desc = 'Quit without saving' })
 
 -- Tmux
 vim.keymap.set("n", "<C-h>", "<Cmd>NvimTmuxNavigateLeft<CR>", {})

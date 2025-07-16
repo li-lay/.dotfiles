@@ -12,6 +12,6 @@ return {
     vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = 'List all diagnostics' })
     vim.keymap.set('n', '<leader>fk', builtin.keymaps, { desc = 'Find keymaps' })
     vim.keymap.set('n', '<leader>fc', builtin.colorscheme, { desc = 'Colorscheme' })
-    vim.keymap.set('n', '<leader>fr', builtin.registers, { desc = 'Inspect Vim registers.' })
+    vim.keymap.set('n', '<leader>fy', builtin.registers, { desc = 'Inspect Vim registers.' })
   end
 }

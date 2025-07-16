@@ -15,6 +15,7 @@ return {
       { "<leader>b", group = "Buffer" },    -- group
       { "<leader>w", group = "Save" },      -- group
       { "<leader>s", group = "Session" },   -- group
+      { "<leader>q", group = "Quit" },      -- group
     })
   end,
 }
