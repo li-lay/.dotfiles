@@ -59,6 +59,7 @@ vim.opt.selection = "exclusive"        -- Selection behavior
 vim.opt.mouse = "a"                    -- Enable mouse support
 vim.opt.modifiable = true              -- Allow buffer modifications
 vim.opt.encoding = "UTF-8"             -- Set encoding
+vim.opt.clipboard = "unnamedplus"      -- Default yank/paste use system clipboard
 
 -- Split behavior
 vim.opt.splitbelow = true -- Horizontal splits go below

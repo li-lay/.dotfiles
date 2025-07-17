@@ -55,3 +55,7 @@ end, { nargs = 1, desc = 'Save session with a given name' })
 vim.api.nvim_create_user_command('LoadSession', function(opts)
   require('mini.sessions').read(opts.fargs[1])
 end, { nargs = 1, desc = 'Load session with a given name' })
+
+-- OSC Yank
+vim.keymap.set('n', '<leader>y', '<Plug>OSCYankOperator', { desc = "OSCYank the given text" })
+vim.keymap.set('v', '<leader>y', '<Plug>OSCYankVisual', { desc = "OSCYank current selection" })
