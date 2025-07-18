@@ -2,6 +2,7 @@ return {
   -- Mason LSP manager
   {
     "mason-org/mason.nvim",
+    event = { 'BufReadPre', 'BufNewFile' },
     opts = {
       ui = {
         icons = {

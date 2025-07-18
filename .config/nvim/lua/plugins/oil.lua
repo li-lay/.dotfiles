@@ -3,6 +3,7 @@ return {
   ---@module 'oil'
   ---@type oil.SetupOpts
   opts = {},
+  event = 'VeryLazy',
   config = function()
     require("oil").setup({
       view_options = {

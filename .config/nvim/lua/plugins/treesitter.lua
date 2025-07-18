@@ -7,7 +7,7 @@ return {
       highlight = { enable = true },
       indent = { enable = true },
       autotag = { enable = true },
-      ensure_installed = { "javascript", "typescript", "tsx", "json", "css", "html", "yaml", "lua", "dockerfile", "gitignore", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
+      ensure_installed = { "javascript", "typescript", "tsx", "json", "yaml", "dockerfile", "lua" },
       auto_install = false,
     })
   end
