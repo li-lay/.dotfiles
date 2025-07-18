@@ -47,6 +47,7 @@ vim.opt.timeoutlen = 500                          -- Key timeout duration
 vim.opt.ttimeoutlen = 0                           -- Key code timeout
 vim.opt.autoread = true                           -- Auto reload files changed outside vim
 vim.opt.autowrite = false                         -- Don't auto save
+vim.opt.confirm = true                            -- Confirm on exit
 
 -- Behavior settings
 vim.opt.hidden = true                  -- Allow hidden buffers
