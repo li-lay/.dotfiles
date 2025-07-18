@@ -16,6 +16,7 @@ return {
       { "<leader>w", group = "Save" },      -- group
       { "<leader>s", group = "Session" },   -- group
       { "<leader>q", group = "Quit" },      -- group
+      { "<leader>y", group = "Yank" },      -- group
     })
   end,
 }
