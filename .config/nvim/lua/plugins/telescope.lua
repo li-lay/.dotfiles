@@ -9,10 +9,14 @@ return {
         buffers = { theme = 'dropdown' },
         help_tags = { theme = 'dropdown' },
         keymaps = { theme = 'dropdown' },
-        colorscheme = { theme = 'dropdown' },
+        colorscheme = { theme = 'dropdown', enable_preview = true, },
         diagnostics = { theme = 'ivy', previewer = false },
+        current_buffer_fuzzy_find = { theme = 'dropdown' },
+        registers = { theme = 'dropdown' },
+        marks = { theme = 'dropdown' },
       },
     }
+
     local builtin = require('telescope.builtin')
     vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
     vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
@@ -23,8 +27,8 @@ return {
     vim.keymap.set('n', '<leader>fk', builtin.keymaps, { desc = 'Find keymaps' })
     vim.keymap.set('n', '<leader>fc', builtin.colorscheme, { desc = 'Colorscheme' })
     vim.keymap.set('n', '<leader>fy', builtin.registers, { desc = 'Inspect Vim registers.' })
-    vim.keymap.set('n', '<leader>ft', builtin.treesitter, { desc = 'Lists Function names, variables, from Treesitter!' })
-    vim.keymap.set("n", "<leader>f'", "<Cmd>Telescope marks<CR>", { desc = "Find marks" })
+    vim.keymap.set('n', '<leader>fv', builtin.treesitter, { desc = 'Lists Function names, variables, from Treesitter!' })
+    vim.keymap.set("n", "<leader>f'", builtin.marks, { desc = "Find marks" })
 
     vim.keymap.set("n", "<leader>fp", function()
       local new_config = not vim.diagnostic.config().virtual_text

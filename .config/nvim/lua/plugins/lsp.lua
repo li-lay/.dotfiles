@@ -26,21 +26,32 @@ return {
   -- lsp config
   {
     'neovim/nvim-lspconfig',
-    dependencies = {
-      'saghen/blink.cmp',
-      {
-        "folke/lazydev.nvim",
-        ft = "lua",
-        opts = {
-          library = {
-            { path = "${3rd}/luv/library", words = { "vim%.uv" } },
-          },
-        },
-      },
-    },
+    dependencies = { 'saghen/blink.cmp' },
     config = function()
       local capabilities = require('blink.cmp').get_lsp_capabilities()
-      require("lspconfig").lua_ls.setup { capabilites = capabilities }
+      require("lspconfig").lua_ls.setup {
+        capabilities = capabilities,
+        settings = {
+          Lua = {
+            runtime = {
+              -- Tell the language server which version of Lua you're using
+              version = 'LuaJIT',
+            },
+            diagnostics = {
+              -- Make the server aware of Neovim globals
+              globals = { 'vim' },
+            },
+            workspace = {
+              -- Make the server aware of Neovim runtime files
+              library = vim.api.nvim_get_runtime_file("", true),
+            },
+            -- Do not send telemetry data containing a randomized but unique identifier
+            telemetry = {
+              enable = false,
+            },
+          },
+        },
+      }
 
       -- Configure visual diagnostics
       vim.diagnostic.config({

@@ -7,7 +7,6 @@ vim.keymap.set("i", "kj", "<ESC>")
 
 -- Stuff I want --
 vim.keymap.set("n", "<leader>e", vim.cmd.Oil, { desc = 'File Explorer' })
-vim.keymap.set("n", "<leader>wW", "<Cmd>SudaWrite<CR>", { desc = "Sudo Write", remap = true })
 vim.keymap.set("n", "<leader>ww", "<Cmd>w<CR>", { desc = "Save" })
 vim.keymap.set('n', '<Leader>qw', ':wq<CR>', { desc = 'Quit and save' })
 vim.keymap.set('n', '<Leader>qq', ':q!<CR>', { desc = 'Quit without saving' })
@@ -20,8 +19,8 @@ vim.keymap.set("n", "<C-l>", "<Cmd>NvimTmuxNavigateRight<CR>", {})
 
 -- Yank --
 -- OSC Yank
-vim.keymap.set('n', '<leader>Y', '<Plug>OSCYankOperator', { desc = "OSCYank the given text" })
-vim.keymap.set('v', '<leader>Y', '<Plug>OSCYankVisual', { desc = "OSCYank current selection" })
+vim.keymap.set('n', '<leader>yo', '<Plug>OSCYankOperator', { desc = "OSCYank the given text" })
+vim.keymap.set('v', '<leader>yo', '<Plug>OSCYankVisual', { desc = "OSCYank current selection" })
 -- To delete without yanking to any register (the black hole register)
 vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete without yanking" })
 -- Yank current file path/name

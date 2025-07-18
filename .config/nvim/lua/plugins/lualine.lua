@@ -19,7 +19,7 @@ return {
       -- lualine_x = { "encoding", "fileformat", "filetype" },
       lualine_x = { "filetype" },
       lualine_y = { "progress" },
-      lualine_z = { { "datetime", style = "%I:%M" } },
+      lualine_z = { { "datetime", style = "%I:%M %p" } },
     },
   },
 }
