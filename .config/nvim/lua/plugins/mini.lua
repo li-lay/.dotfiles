@@ -1,45 +1,49 @@
 return {
-  'echasnovski/mini.nvim',
-  version = '*',
+  "echasnovski/mini.nvim",
+  version = "*",
   config = function()
-    require('mini.ai').setup({})
-    require('mini.comment').setup({})
-    require('mini.sessions').setup({})
-    require('mini.icons').setup({})
-    require('mini.indentscope').setup({ symbol = '╎', })
-    require('mini.notify').setup({})
-    require('mini.pairs').setup({
+    require("mini.ai").setup({})
+    require("mini.comment").setup({})
+    require("mini.sessions").setup({})
+    require("mini.icons").setup({})
+    require("mini.indentscope").setup({ symbol = "╎" })
+    require("mini.notify").setup({})
+    require("mini.git").setup({})
+
+    require("mini.pairs").setup({
       modes = { insert = true, command = true, terminal = false },
       skip_next = [=[[%w%%%'%[%"%.%`%$]]=],
       skip_ts = { "string" },
       skip_unbalanced = true,
       markdown = true,
     })
-    require('mini.surround').setup({
+
+    require("mini.surround").setup({
       mappings = {
-        add = 'sa',
-        delete = 'sd',
-        find = 'sf',
-        find_left = 'sF',
-        highlight = 'sh',
-        replace = 'sr',
-        update_n_lines = 'sn',
+        add = "sa",
+        delete = "sd",
+        find = "sf",
+        find_left = "sF",
+        highlight = "sh",
+        replace = "sr",
+        update_n_lines = "sn",
       },
     })
-    require('mini.animate').setup({
+
+    require("mini.animate").setup({
       cursor = { enable = false },
-      scroll = { timing = require('mini.animate').gen_timing.linear({ duration = 150, unit = 'total' }) }
+      scroll = { timing = require("mini.animate").gen_timing.linear({ duration = 150, unit = "total" }) },
     })
-    require('mini.git').setup({})
-    require('mini.diff').setup({
+
+    require("mini.diff").setup({
       view = {
-        style = 'sign',
-        signs = { add = '+', change = '|', delete = '-' },
-      }
+        style = "sign",
+        signs = { add = "+", change = "|", delete = "-" },
+      },
     })
+
     -- Mini Clue (which-key replacement)
     local miniclue = require("mini.clue")
-
     miniclue.setup({
       triggers = {
         { mode = "n", keys = "<Leader>" },
@@ -67,5 +71,36 @@ return {
         { mode = "n", keys = "<Leader>y", desc = "Yank" },
       },
     })
-  end
+
+    -- statusline
+    require("mini.statusline").setup({
+      content = {
+        active = function()
+          local MiniStatusline = require "mini.statusline"
+          local mode, mode_hl = MiniStatusline.section_mode { trunc_width = 120 }
+          local git = MiniStatusline.section_git { trunc_width = 40 }
+          local filename = MiniStatusline.section_filename { trunc_width = 2000 } -- with long cause I want short filename
+          local diagnostics = MiniStatusline.section_diagnostics { trunc_width = 75 }
+          local time = os.date("%I:%M%p")
+          return MiniStatusline.combine_groups {
+            { hl = mode_hl,                 strings = { mode:upper() } },
+            { hl = "MiniStatuslineDevinfo", strings = { git, diagnostics } },
+            "%<", -- Mark general truncate point
+            { hl = "MiniStatuslineFilename", strings = { filename } },
+            "%=", -- End left alignment
+            {
+              hl = "MiniStatuslineFileinfo",
+              strings = {
+                vim.bo.filetype ~= ""
+                and require("mini.icons").get("filetype", vim.bo.filetype) .. " " .. vim.bo.filetype,
+              },
+            },
+            -- { hl = mode_hl,                  strings = { "%l:%v" } },
+            { hl = mode_hl,                  strings = { time } },
+          }
+        end,
+      },
+      use_icons = true,
+    })
+  end,
 }
