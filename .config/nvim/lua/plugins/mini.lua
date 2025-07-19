@@ -1,7 +1,7 @@
 return {
   "echasnovski/mini.nvim",
   version = "*",
-  event = 'VeryLazy',
+  event = "VeryLazy",
   config = function()
     require("mini.ai").setup({})
     require("mini.comment").setup({})
@@ -10,6 +10,9 @@ return {
     require("mini.indentscope").setup({ symbol = "╎" })
     require("mini.notify").setup({})
     require("mini.git").setup({})
+    require("mini.bracketed").setup({})
+    require("mini.cursorword").setup({})
+    require("mini.trailspace").setup({})
 
     require("mini.pairs").setup({
       modes = { insert = true, command = true, terminal = false },
@@ -77,13 +80,13 @@ return {
     require("mini.statusline").setup({
       content = {
         active = function()
-          local MiniStatusline = require "mini.statusline"
-          local mode, mode_hl = MiniStatusline.section_mode { trunc_width = 120 }
-          local git = MiniStatusline.section_git { trunc_width = 40 }
-          local filename = MiniStatusline.section_filename { trunc_width = 2000 } -- with long cause I want short filename
-          local diagnostics = MiniStatusline.section_diagnostics { trunc_width = 75 }
+          local MiniStatusline = require("mini.statusline")
+          local mode, mode_hl = MiniStatusline.section_mode({ trunc_width = 120 })
+          local git = MiniStatusline.section_git({ trunc_width = 40 })
+          local filename = MiniStatusline.section_filename({ trunc_width = 4000 }) -- with long cause I want short filename
+          local diagnostics = MiniStatusline.section_diagnostics({ trunc_width = 75 })
           local time = os.date("%I:%M%p")
-          return MiniStatusline.combine_groups {
+          return MiniStatusline.combine_groups({
             { hl = mode_hl,                 strings = { mode:upper() } },
             { hl = "MiniStatuslineDevinfo", strings = { git, diagnostics } },
             "%<", -- Mark general truncate point
@@ -93,25 +96,28 @@ return {
               hl = "MiniStatuslineFileinfo",
               strings = {
                 vim.bo.filetype ~= ""
-                and require("mini.icons").get("filetype", vim.bo.filetype) .. " " .. vim.bo.filetype,
+                and require("mini.icons").get("filetype", vim.bo.filetype)
+                .. " "
+                .. vim.bo.filetype,
               },
             },
             -- { hl = mode_hl,                  strings = { "%l:%v" } },
             { hl = mode_hl,                  strings = { time } },
-          }
+          })
         end,
       },
       use_icons = true,
     })
 
-    local hipatterns = require('mini.hipatterns')
+    -- Colorizer
+    local hipatterns = require("mini.hipatterns")
     hipatterns.setup({
       highlighters = {
         -- Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'
-        fixme     = { pattern = '%f[%w]()FIXME()%f[%W]', group = 'MiniHipatternsFixme' },
-        hack      = { pattern = '%f[%w]()HACK()%f[%W]', group = 'MiniHipatternsHack' },
-        todo      = { pattern = '%f[%w]()TODO()%f[%W]', group = 'MiniHipatternsTodo' },
-        note      = { pattern = '%f[%w]()NOTE()%f[%W]', group = 'MiniHipatternsNote' },
+        fixme = { pattern = "%f[%w]()FIXME()%f[%W]", group = "MiniHipatternsFixme" },
+        hack = { pattern = "%f[%w]()HACK()%f[%W]", group = "MiniHipatternsHack" },
+        todo = { pattern = "%f[%w]()TODO()%f[%W]", group = "MiniHipatternsTodo" },
+        note = { pattern = "%f[%w]()NOTE()%f[%W]", group = "MiniHipatternsNote" },
 
         -- Highlight hex color strings (`#rrggbb`) using that color
         hex_color = hipatterns.gen_highlighter.hex_color(),

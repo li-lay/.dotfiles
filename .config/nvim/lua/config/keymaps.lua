@@ -13,10 +13,28 @@ vim.keymap.set('n', '<Leader>qf', ':q!<CR>', { desc = 'Quit without saving' })
 vim.keymap.set('n', '<Leader>qq', ':q<CR>', { desc = 'Quit' })
 
 -- Tmux --
-vim.keymap.set("n", "<C-h>", "<Cmd>NvimTmuxNavigateLeft<CR>", {})
-vim.keymap.set("n", "<C-j>", "<Cmd>NvimTmuxNavigateDown<CR>", {})
-vim.keymap.set("n", "<C-k>", "<Cmd>NvimTmuxNavigateUp<CR>", {})
-vim.keymap.set("n", "<C-l>", "<Cmd>NvimTmuxNavigateRight<CR>", {})
+local function move_or_tmux(key)
+  local dir_map = {
+    ["<C-h>"] = { win_cmd = "h", tmux_cmd = "L" },
+    ["<C-j>"] = { win_cmd = "j", tmux_cmd = "D" },
+    ["<C-k>"] = { win_cmd = "k", tmux_cmd = "U" },
+    ["<C-l>"] = { win_cmd = "l", tmux_cmd = "R" },
+  }
+
+  return function()
+    local current_win = vim.api.nvim_get_current_win()
+    vim.cmd("wincmd " .. dir_map[key].win_cmd)
+
+    if vim.api.nvim_get_current_win() == current_win then
+      -- Didn't move in Neovim, fallback to tmux
+      vim.fn.system({ "tmux", "select-pane", "-" .. dir_map[key].tmux_cmd })
+    end
+  end
+end
+vim.keymap.set("n", "<C-h>", move_or_tmux("<C-h>"), { noremap = true, silent = true })
+vim.keymap.set("n", "<C-j>", move_or_tmux("<C-j>"), { noremap = true, silent = true })
+vim.keymap.set("n", "<C-k>", move_or_tmux("<C-k>"), { noremap = true, silent = true })
+vim.keymap.set("n", "<C-l>", move_or_tmux("<C-l>"), { noremap = true, silent = true })
 
 -- Yank --
 -- OSC Yank
@@ -38,6 +56,30 @@ vim.keymap.set('n', '<leader>bd', ':bd<CR>', { noremap = true, silent = true, de
 
 -- Move lines up/down --
 vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move line down" })
+local function move_or_tmux(key)
+  local dir_map = {
+    ["<C-h>"] = { win_cmd = "h", tmux_cmd = "L" },
+    ["<C-j>"] = { win_cmd = "j", tmux_cmd = "D" },
+    ["<C-k>"] = { win_cmd = "k", tmux_cmd = "U" },
+    ["<C-l>"] = { win_cmd = "l", tmux_cmd = "R" },
+  }
+
+  return function()
+    local current_win = vim.api.nvim_get_current_win()
+    vim.cmd("wincmd " .. dir_map[key].win_cmd)
+
+    if vim.api.nvim_get_current_win() == current_win then
+      -- Didn't move in Neovim, fallback to tmux
+      vim.fn.system({ "tmux", "select-pane", "-" .. dir_map[key].tmux_cmd })
+    end
+  end
+end
+
+-- Bind the keys
+vim.keymap.set("n", "<C-h>", move_or_tmux("<C-h>"), { noremap = true, silent = true })
+vim.keymap.set("n", "<C-j>", move_or_tmux("<C-j>"), { noremap = true, silent = true })
+vim.keymap.set("n", "<C-k>", move_or_tmux("<C-k>"), { noremap = true, silent = true })
+vim.keymap.set("n", "<C-l>", move_or_tmux("<C-l>"), { noremap = true, silent = true })
 vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move line up" })
 vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
 vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })

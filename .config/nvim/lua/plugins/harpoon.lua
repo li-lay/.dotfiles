@@ -4,7 +4,7 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
   },
-  event = 'VeryLazy',
+  event = "VeryLazy",
   config = function()
     local harpoon = require("harpoon").setup()
 
@@ -33,4 +33,3 @@ return {
     end, { desc = "Switch to 5" })
   end,
 }
- 
