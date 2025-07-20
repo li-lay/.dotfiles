@@ -144,7 +144,7 @@ return {
         yaml = { "prettierd", "prettier" },
         python = { "ruff" },
         lua = { "stylua" },
-        markdown = { "marksman" },
+        markdown = { "prettierd", "prettier" },
       },
       format_on_save = {
         timeout_ms = 2500,
