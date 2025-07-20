@@ -132,7 +132,6 @@ return {
   -- Formatter
   {
     "stevearc/conform.nvim",
-    event = { "BufWritePre" },
     opts = {
       formatters_by_ft = {
         html = { "prettierd", "prettier" },
@@ -148,7 +147,7 @@ return {
         markdown = { "marksman" },
       },
       format_on_save = {
-        timeout_ms = 500,
+        timeout_ms = 2500,
         lsp_fallback = true,
       },
     },
