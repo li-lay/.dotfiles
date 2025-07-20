@@ -2,8 +2,7 @@
 return {
   "folke/noice.nvim",
   -- event = "VeryLazy",
-  opts = {
-  },
+  opts = {},
   dependencies = {
     "MunifTanjim/nui.nvim",
   },
@@ -15,6 +14,12 @@ return {
           ["vim.lsp.util.stylize_markdown"] = true,
         },
       },
+      routes = {
+        {
+          view = "virtualtext",
+          filter = { event = "msg_showmode" },
+        },
+      },
     })
-  end
+  end,
 }
