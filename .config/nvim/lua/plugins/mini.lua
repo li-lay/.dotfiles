@@ -8,7 +8,6 @@ return {
     require("mini.sessions").setup({})
     require("mini.icons").setup({})
     require("mini.indentscope").setup({ symbol = "╎" })
-    require("mini.notify").setup({})
     require("mini.git").setup({})
     require("mini.bracketed").setup({})
     require("mini.cursorword").setup({})

@@ -30,7 +30,7 @@ vim.opt.pumblend = 10                    -- Popup menu transparency
 vim.opt.winblend = 0                     -- Floating window transparency
 vim.opt.conceallevel = 0                 -- Don't hide markup
 vim.opt.concealcursor = ""               -- Don't hide cursor line markup
-vim.opt.lazyredraw = true                -- Don't redraw during macros
+vim.opt.lazyredraw = false               -- Don't redraw during macros
 vim.opt.synmaxcol = 300                  -- Syntax highlighting limit
 
 -- File handling
