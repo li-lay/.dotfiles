@@ -5,7 +5,6 @@ return {
   config = function()
     require("mini.ai").setup({})
     require("mini.comment").setup({})
-    require("mini.sessions").setup({})
     require("mini.icons").setup({})
     require("mini.indentscope").setup({ symbol = "╎" })
     require("mini.git").setup({})
@@ -64,7 +63,6 @@ return {
         { mode = "n", keys = "<Leader>f", desc = "Telescope" },
         { mode = "n", keys = "<Leader>b", desc = "Buffer" },
         { mode = "n", keys = "<Leader>w", desc = "Save" },
-        { mode = "n", keys = "<Leader>s", desc = "Session" },
         { mode = "n", keys = "<Leader>q", desc = "Quit" },
         { mode = "n", keys = "<Leader>y", desc = "Yank" },
       },
