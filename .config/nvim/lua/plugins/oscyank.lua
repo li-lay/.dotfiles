@@ -1,4 +1,5 @@
 return {
-  -- Help SSH copy to clipboard
-  "ojroques/vim-oscyank",
+	-- Help SSH copy to clipboard
+	"ojroques/vim-oscyank",
+	event = "VeryLazy",
 }
