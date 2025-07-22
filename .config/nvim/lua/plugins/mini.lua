@@ -11,6 +11,7 @@ return {
     require("mini.bracketed").setup({})
     require("mini.cursorword").setup({})
     require("mini.trailspace").setup({})
+    require("mini.notify").setup({})
 
     require("mini.pairs").setup({
       modes = { insert = true, command = true, terminal = false },

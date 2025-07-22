@@ -63,14 +63,6 @@ vim.opt.clipboard = "unnamedplus"      -- Default yank/paste use system clipboar
 vim.opt.splitbelow = true -- Horizontal splits go below
 vim.opt.splitright = true -- Vertical splits go right
 
--- Highlight yanked text
-vim.api.nvim_create_autocmd("TextYankPost", {
-  group = augroup,
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-})
-
 -- Performance improvements
 vim.opt.redrawtime = 10000
 vim.opt.maxmempattern = 20000

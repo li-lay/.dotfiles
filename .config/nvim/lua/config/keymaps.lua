@@ -11,6 +11,8 @@ vim.keymap.set("n", "<leader>ww", "<Cmd>w<CR>", { desc = "Save" })
 vim.keymap.set('n', '<Leader>qw', ':wq<CR>', { desc = 'Quit and save' })
 vim.keymap.set('n', '<Leader>qf', ':q!<CR>', { desc = 'Quit without saving' })
 vim.keymap.set('n', '<Leader>qq', ':q<CR>', { desc = 'Quit' })
+vim.keymap.set('n', 'H', '^')
+vim.keymap.set('n', 'L', '$')
 
 -- Tmux --
 local function move_or_tmux(key)
