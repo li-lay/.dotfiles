@@ -9,9 +9,13 @@ return {
 		require("mini.indentscope").setup({ symbol = "╎" })
 		require("mini.git").setup({})
 		require("mini.bracketed").setup({})
-		require("mini.cursorword").setup({})
 		require("mini.trailspace").setup({})
 		require("mini.notify").setup({})
+		require("mini.move").setup({})
+
+		require("mini.animate").setup({
+			scroll = { enable = false },
+		})
 
 		require("mini.pairs").setup({
 			modes = { insert = true, command = true, terminal = false },
@@ -63,7 +67,7 @@ return {
 				{ mode = "n", keys = "<Leader>h", desc = "Harpoon" },
 				{ mode = "n", keys = "<Leader>f", desc = "Telescope" },
 				{ mode = "n", keys = "<Leader>b", desc = "Buffer" },
-				{ mode = "n", keys = "<Leader>w", desc = "Save" },
+				{ mode = "n", keys = "<Leader>w", desc = "Window" },
 				{ mode = "n", keys = "<Leader>q", desc = "Quit" },
 				{ mode = "n", keys = "<Leader>y", desc = "Yank" },
 			},
