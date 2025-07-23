@@ -1,6 +1,3 @@
--- Set Insert cursor to block
-vim.opt.guicursor = "n-v-c-sm:block,i:block,r-cr-o:hor20,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor"
-
 -- Basic settings
 vim.opt.number = true -- Line numbers
 vim.opt.relativenumber = true -- Relative line numbers

@@ -16,8 +16,9 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-a>", "gg<S-v>G")
 
--- LazyGit
-vim.keymap.set("n", "<leader>fl", ":LazyGit<CR>", { desc = "LazyGit" })
+-- Lazy --
+vim.keymap.set("n", "<leader>lg", ":LazyGit<CR>", { desc = "LazyGit" })
+vim.keymap.set("n", "<leader>ll", ":Lazy<CR>", { desc = "Lazy" })
 
 -- Go to first char and last char of line --
 vim.keymap.set("n", "H", "^")
@@ -26,10 +27,10 @@ vim.keymap.set("n", "L", "$")
 -- Split window --
 vim.keymap.set("n", "<leader>wa", ":split<CR>", { desc = "Split horizontally" })
 vim.keymap.set("n", "<leader>wf", ":vsplit<CR>", { desc = "Split vertically" })
-vim.keymap.set("n", "<leader>wl", "<C-w><", { desc = "Resize" })
-vim.keymap.set("n", "<leader>wh", "<C-w>>", { desc = "Resize" })
-vim.keymap.set("n", "<leader>wk", "<C-w>+", { desc = "Resize" })
-vim.keymap.set("n", "<leader>wj", "<C-w>-", { desc = "Resize" })
+vim.keymap.set("n", "<leader>wl", "<cmd>vertical resize -10<cr>", { desc = "Resize left" })
+vim.keymap.set("n", "<leader>wh", "<cmd>vertical resize +10<cr>", { desc = "Resize right" })
+vim.keymap.set("n", "<leader>wk", "<cmd>resize +5<cr>", { desc = "Resize up" })
+vim.keymap.set("n", "<leader>wj", "<cmd>resize -5<cr>", { desc = "Resize down" })
 
 -- Tmux --
 local function move_or_tmux(key)
