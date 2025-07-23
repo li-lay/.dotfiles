@@ -16,6 +16,9 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-a>", "gg<S-v>G")
 
+-- LazyGit
+vim.keymap.set("n", "<leader>fl", ":LazyGit<CR>", { desc = "LazyGit" })
+
 -- Go to first char and last char of line --
 vim.keymap.set("n", "H", "^")
 vim.keymap.set("n", "L", "$")
