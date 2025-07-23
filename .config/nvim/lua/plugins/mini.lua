@@ -11,10 +11,6 @@ return {
 		require("mini.move").setup({})
 		require("mini.pairs").setup({})
 
-		require("mini.animate").setup({
-			scroll = { enable = false },
-		})
-
 		require("mini.surround").setup({
 			mappings = {
 				add = "sa",

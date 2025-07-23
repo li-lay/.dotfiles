@@ -5,17 +5,7 @@ return {
 		opts = {
 			patterns = {
 				{
-					file_pattern = ".env*",
-					cloak_pattern = "=.+",
-					replace = nil,
-				},
-				{
-					file_pattern = "auth.json",
-					cloak_pattern = ":.+",
-					replace = nil,
-				},
-				{
-					file_pattern = ".dev.vars",
+					file_pattern = { ".env*", ".dev.vars" },
 					cloak_pattern = "=.+",
 					replace = nil,
 				},
