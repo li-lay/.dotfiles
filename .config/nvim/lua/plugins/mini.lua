@@ -7,22 +7,12 @@ return {
 		require("mini.comment").setup({})
 		require("mini.icons").setup({})
 		require("mini.indentscope").setup({ symbol = "╎" })
-		require("mini.git").setup({})
-		require("mini.bracketed").setup({})
-		require("mini.trailspace").setup({})
 		require("mini.notify").setup({})
 		require("mini.move").setup({})
+		require("mini.pairs").setup({})
 
 		require("mini.animate").setup({
 			scroll = { enable = false },
-		})
-
-		require("mini.pairs").setup({
-			modes = { insert = true, command = true, terminal = false },
-			skip_next = [=[[%w%%%'%[%"%.%`%$]]=],
-			skip_ts = { "string" },
-			skip_unbalanced = true,
-			markdown = true,
 		})
 
 		require("mini.surround").setup({

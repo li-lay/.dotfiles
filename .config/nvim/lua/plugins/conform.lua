@@ -1,7 +1,7 @@
 -- Formatter
 return {
 	"stevearc/conform.nvim",
-	event = "VeryLazy",
+	event = "BufReadPre",
 	opts = {
 		formatters_by_ft = {
 			html = { "prettier" },
