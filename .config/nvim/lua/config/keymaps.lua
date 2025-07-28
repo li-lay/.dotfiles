@@ -16,10 +16,6 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-a>", "gg<S-v>G")
 
--- Lazy --
-vim.keymap.set("n", "<leader>lg", ":LazyGit<CR>", { desc = "LazyGit" })
-vim.keymap.set("n", "<leader>ll", ":Lazy<CR>", { desc = "Lazy" })
-
 -- Go to first char and last char of line --
 vim.keymap.set("n", "H", "^")
 vim.keymap.set("n", "L", "$")
@@ -57,10 +53,6 @@ vim.keymap.set("n", "<C-k>", move_or_tmux("<C-k>"), { noremap = true, silent = t
 vim.keymap.set("n", "<C-l>", move_or_tmux("<C-l>"), { noremap = true, silent = true })
 
 -- Yank --
--- OSC Yank
-vim.keymap.set("n", "<leader>yo", "<Plug>OSCYankOperator", { desc = "OSCYank the given text" })
-vim.keymap.set("v", "<leader>yo", "<Plug>OSCYankVisual", { desc = "OSCYank current selection" })
-
 -- Yank current file path/name
 vim.keymap.set("n", "<leader>yf", ":let @+=expand('%')<CR>", { desc = "Yank file path" })
 vim.keymap.set("n", "<leader>yF", ":let @+=expand('%:p')<CR>", { desc = "Yank full file path" })
