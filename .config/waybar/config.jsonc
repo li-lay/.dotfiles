@@ -1,8 +1,12 @@
 {
   "layer": "top", // Waybar at top layer
-  "position": "bottom", // Waybar position (top|bottom|left|right)
-  "height": 20, // Waybar height (to be removed for auto height)
+  "position": "top", // Waybar position (top|bottom|left|right)
+  "height": 26, // Waybar height (to be removed for auto height)
   "spacing": 4, // Gaps between modules (4px)
+  "margin-top": 10,
+  "margin-bottom": 0,
+  "margin-left": 10,
+  "margin-right": 10,
   "modules-left": [
     "hyprland/workspaces",
     "hyprland/window"
@@ -72,12 +76,12 @@
     "format-kh": "kh",
   },
   "hyprland/workspaces": {
-    "format": "{icon}",
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
   },
   "hyprland/window": {
     "separate-outputs": true,
+    "format": ">  {title}",
   },
   "bluetooth": {
     "format": " {status}",
