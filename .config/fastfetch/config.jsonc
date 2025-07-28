@@ -30,7 +30,8 @@
         {
             "key": "OS           ",
             "keyColor": "red",
-            "type": "os"
+            "type": "os",
+            "format": "AngkorOS (Coder Edition) x86_64"
         },
         {
             "key": "Machine      ",
