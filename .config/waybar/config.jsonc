@@ -14,6 +14,8 @@
   "modules-center": [],
   "modules-right": [
     "privacy",
+    "cpu",
+    "memory",
     "bluetooth",
     "pulseaudio",
     "hyprland/language",
@@ -150,5 +152,17 @@
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
     "on-click": "kitty nmtui",
+  },
+  "cpu": {
+    "interval": 10,
+    "format": "{usage}%  ",
+    "max-length": 10,
+    "on-click": "kitty btop",
+  },
+  "memory": {
+    "interval": 30,
+    "format": " {used}G  ",
+    "max-length": 10,
+    "on-click": "kitty btop",
   },
 }
