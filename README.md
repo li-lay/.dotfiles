@@ -1,5 +1,3 @@
-# LILAY Dotfiles
-
 My day to day setup!
 
 ## Information
