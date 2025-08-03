@@ -51,7 +51,7 @@ return {
 				miniclue.gen_clues.g(),
 				miniclue.gen_clues.registers(),
 				miniclue.gen_clues.z(),
-				{ mode = "n", keys = "<Leader>h", desc = "Harpoon" },
+				-- { mode = "n", keys = "<Leader>h", desc = "Harpoon" },
 				{ mode = "n", keys = "<Leader>f", desc = "Telescope" },
 				{ mode = "n", keys = "<Leader>b", desc = "Buffer" },
 				{ mode = "n", keys = "<Leader>w", desc = "Window" },
