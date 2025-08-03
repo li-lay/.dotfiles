@@ -24,6 +24,8 @@ vim.opt.termguicolors = true -- Enable 24-bit colors
 vim.opt.signcolumn = "yes" -- Always show sign column
 vim.opt.showmatch = true -- Highlight matching brackets
 vim.opt.completeopt = "menuone,noinsert" -- Completion options
+vim.o.background = "dark" -- Set background color
+vim.cmd("colorscheme retrobox") -- Set colorscheme
 
 -- File handling
 vim.opt.backup = false -- Don't create backup files

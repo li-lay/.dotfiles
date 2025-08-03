@@ -6,6 +6,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
+-- LSP
 vim.api.nvim_create_autocmd("LspAttach", {
 	group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
 	callback = function(event)
