@@ -51,3 +51,11 @@ vim.opt.splitright = true -- Vertical splits go right
 -- Performance improvements
 vim.opt.redrawtime = 10000
 vim.opt.maxmempattern = 20000
+
+-- Highlight yanked text
+vim.api.nvim_create_autocmd("TextYankPost", {
+	group = augroup,
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+})

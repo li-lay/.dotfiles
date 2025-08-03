@@ -7,7 +7,6 @@ return {
 		require("mini.comment").setup({})
 		require("mini.icons").setup({})
 		require("mini.indentscope").setup({ symbol = "╎" })
-		require("mini.notify").setup({})
 		require("mini.move").setup({})
 		require("mini.pairs").setup({})
 		require("mini.jump").setup({})
