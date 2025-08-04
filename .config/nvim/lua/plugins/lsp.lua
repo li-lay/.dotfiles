@@ -40,7 +40,6 @@ return {
 		}
 
 		vim.api.nvim_create_autocmd("LspAttach", {
-			"pyright",
 			group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
 			callback = function(event)
 				local map = function(keys, func, desc, mode)
