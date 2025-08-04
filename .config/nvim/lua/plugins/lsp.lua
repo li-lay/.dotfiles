@@ -17,13 +17,18 @@ return {
 		-- Ensure the servers and tools installed
 		local ensure_installed = vim.tbl_keys(servers or {})
 		vim.list_extend(ensure_installed, {
-			"clangd",
+
+			-- LSP
 			"lua-language-server",
-			"stylua",
 			"typescript-language-server",
 			"tailwindcss-language-server",
-			"prettier",
+			"yaml-language-server",
+			"json-lsp",
 			"pyright",
+
+			-- Formatters
+			"stylua",
+			"prettier",
 			"black",
 			"isort",
 		})
@@ -35,6 +40,7 @@ return {
 		}
 
 		vim.api.nvim_create_autocmd("LspAttach", {
+			"pyright",
 			group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
 			callback = function(event)
 				local map = function(keys, func, desc, mode)
