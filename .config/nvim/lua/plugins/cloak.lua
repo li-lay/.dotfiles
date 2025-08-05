@@ -5,7 +5,7 @@ return {
 		opts = {
 			patterns = {
 				{
-					file_pattern = { ".env*", ".dev.vars" },
+					file_pattern = { ".env*", ".dev.vars", "terraform.tfvars" },
 					cloak_pattern = "=.+",
 					replace = nil,
 				},
