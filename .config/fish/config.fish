@@ -49,6 +49,7 @@ alias tmnew="tmux new -s lilay" # My default tmux session
 alias tmssh="tmux new -s ssh" # Session for ssh
 alias tmcode="tmux new -s code" # Session for coding
 alias fetch="fastfetch"
+alias lg="lazygit"
 alias tm="tmux"
 alias tma="tmux a -t"
 alias c="clear"
