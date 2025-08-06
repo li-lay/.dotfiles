@@ -3,20 +3,9 @@ return {
 	tag = "0.1.8",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
-		{
-			-- Provide telescope with native fzf (faster)
-			"nvim-telescope/telescope-fzf-native.nvim",
-			build = "make",
-			cond = function()
-				return vim.fn.executable("make") == 1
-			end,
-		},
 	},
 	event = "VimEnter",
 	config = function()
-		-- Enable Telescope extensions if they are installed
-		pcall(require("telescope").load_extension, "fzf")
-
 		require("telescope").setup({
 			pickers = {
 				find_files = { theme = "dropdown" },
@@ -40,16 +29,17 @@ return {
 		vim.keymap.set("n", "<leader>fD", builtin.diagnostics, { desc = "List all diagnostics" })
 		vim.keymap.set("n", "<leader>fk", builtin.keymaps, { desc = "Find keymaps" })
 		vim.keymap.set("n", "<leader>fc", builtin.colorscheme, { desc = "Colorscheme" })
-		vim.keymap.set("n", "<leader>fy", builtin.registers, { desc = "Inspect Vim registers." })
+		vim.keymap.set("n", "<leader>fr", builtin.registers, { desc = "Inspect Vim registers" })
+		vim.keymap.set("n", "<leader>fp", builtin.resume, { desc = "Resume last Telescope" })
 		vim.keymap.set(
 			"n",
-			"<leader>fv",
+			"<leader>ft",
 			builtin.treesitter,
 			{ desc = "Lists Function names, variables, from Treesitter!" }
 		)
 		vim.keymap.set("n", "<leader>f'", builtin.marks, { desc = "Find marks" })
 
-		vim.keymap.set("n", "<leader>fp", function()
+		vim.keymap.set("n", "<leader>fv", function()
 			local new_config = not vim.diagnostic.config().virtual_text
 			vim.diagnostic.config({ virtual_text = new_config })
 		end, { desc = "Toggle diagnostics virtual text" })

@@ -21,7 +21,7 @@ return {
 			lsp_fallback = true,
 		},
 	},
-	vim.keymap.set({ "n", "x" }, "<leader>fm", function()
+	vim.keymap.set({ "n", "x" }, "<leader>bf", function()
 		require("conform").format({ bufnr = vim.api.nvim_get_current_buf() })
 	end, { desc = "Format current buffer" }),
 }

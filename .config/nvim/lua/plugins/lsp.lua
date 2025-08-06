@@ -55,7 +55,7 @@ return {
 				map("gf", vim.diagnostic.open_float, "Open Diagnostic Float")
 				map("K", vim.lsp.buf.hover, "Hover Documentation")
 				map("gs", vim.lsp.buf.signature_help, "Signature Documentation")
-				map("<leader>fa", vim.lsp.buf.code_action, "Code Action")
+				-- map("<leader>fa", vim.lsp.buf.code_action, "Code Action")
 
 				-- This function resolves a difference between neovim nightly (version 0.11) and stable (version 0.10)
 				---@param client vim.lsp.Client
