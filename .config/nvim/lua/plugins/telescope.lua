@@ -41,7 +41,7 @@ return {
 		vim.keymap.set("n", "<leader>fp", builtin.resume, { desc = "Resume last Telescope" })
 		vim.keymap.set(
 			"n",
-			"<leader>ft",
+			"<leader>fs",
 			builtin.treesitter,
 			{ desc = "Lists Function names, variables, from Treesitter!" }
 		)

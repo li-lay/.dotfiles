@@ -55,4 +55,4 @@ local toggle_terminal = function()
 end
 
 vim.api.nvim_create_user_command("MyTerminal", toggle_terminal, {})
-vim.keymap.set({ "n", "t" }, "<C-_>", toggle_terminal, { desc = "Toggle floating Terminal" })
+vim.keymap.set({ "n", "t" }, "<Leader>ft", toggle_terminal, { desc = "Toggle floating Terminal" })
