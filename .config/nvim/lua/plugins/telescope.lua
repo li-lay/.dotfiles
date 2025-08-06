@@ -9,13 +9,21 @@ return {
 		require("telescope").setup({
 			pickers = {
 				find_files = { theme = "dropdown" },
-				buffers = { theme = "dropdown" },
+				buffers = {
+					theme = "dropdown",
+					initial_mode = "normal",
+					mappings = {
+						n = {
+							["dd"] = require("telescope.actions").delete_buffer,
+						},
+					},
+				},
 				help_tags = { theme = "dropdown" },
 				keymaps = { theme = "dropdown" },
-				colorscheme = { theme = "dropdown", enable_preview = true },
+				colorscheme = { theme = "dropdown", enable_preview = true, initial_mode = "normal" },
 				diagnostics = { theme = "ivy", previewer = false },
 				current_buffer_fuzzy_find = { theme = "dropdown" },
-				registers = { theme = "dropdown" },
+				registers = { theme = "dropdown", initial_mode = "normal" },
 				marks = { theme = "dropdown" },
 			},
 		})
