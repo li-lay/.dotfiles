@@ -25,6 +25,7 @@ return {
 			"yaml-language-server",
 			"json-lsp",
 			"pyright",
+			"gopls",
 
 			-- Formatters
 			"stylua",
