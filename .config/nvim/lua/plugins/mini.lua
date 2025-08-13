@@ -10,6 +10,7 @@ return {
 		require("mini.move").setup({})
 		require("mini.pairs").setup({})
 		require("mini.jump").setup({})
+		require("mini.notify").setup({})
 
 		require("mini.surround").setup({
 			mappings = {
