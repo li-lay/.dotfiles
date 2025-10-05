@@ -57,6 +57,7 @@ return {
 				{ mode = "n", keys = "<Leader>w", desc = "Window" },
 				{ mode = "n", keys = "<Leader>q", desc = "Quit" },
 				{ mode = "n", keys = "<Leader>y", desc = "Yank" },
+				{ mode = "n", keys = "<Leader>a", desc = "Avante" },
 			},
 		})
 

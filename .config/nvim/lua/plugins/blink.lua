@@ -4,6 +4,7 @@ return {
 		event = "InsertEnter",
 		dependencies = {
 			"rafamadriz/friendly-snippets",
+			"Kaiser-Yang/blink-cmp-avante",
 		},
 		version = "*",
 		config = function()
@@ -15,10 +16,15 @@ return {
 					nerd_font_variant = "normal",
 				},
 				sources = {
-					default = { "lsp", "path", "snippets", "buffer" },
+					default = { "avante", "lsp", "path", "snippets", "buffer" },
 					providers = {
 						cmdline = {
 							min_keyword_length = 2,
+						},
+						avante = {
+							module = "blink-cmp-avante",
+							name = "Avante",
+							opts = {},
 						},
 					},
 				},
