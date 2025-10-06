@@ -1,4 +1,5 @@
 return {
+	"github/copilot.vim", -- :Copilot setup
 	"yetone/avante.nvim",
 	-- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
 	-- ⚠️ must add this setting! ! !
@@ -24,7 +25,7 @@ return {
 		"nvim-lua/plenary.nvim",
 		"MunifTanjim/nui.nvim",
 		--- The below dependencies are optional,
-		"nvim-mini/mini.pick", -- for file_selector provider mini.pick
 		"nvim-telescope/telescope.nvim", -- for file_selector provider telescope
+		"echasnovski/mini.icons",
 	},
 }
