@@ -32,6 +32,9 @@ return {
 			"prettier",
 			"black",
 			"isort",
+
+			-- Spell Checking
+			"typos-lsp",
 		})
 
 		-- Custom language servers configs
