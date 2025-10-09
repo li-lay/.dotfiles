@@ -1,5 +1,27 @@
 return {
-	{ "github/copilot.vim", event = "InsertEnter" }, -- :Copilot setup
+	{
+		"supermaven-inc/supermaven-nvim",
+		config = function()
+			require("supermaven-nvim").setup({
+				keymaps = {
+					accept_suggestion = "<Tab>",
+					clear_suggestion = "<C-]>",
+					accept_word = "<C-j>",
+				},
+				ignore_filetypes = { "cpp" },
+				color = {
+					suggestion_color = "#7c6f64",
+					cterm = 244,
+				},
+				log_level = "info",
+				disable_inline_completion = false,
+				disable_keymaps = false,
+				condition = function()
+					return false
+				end,
+			})
+		end,
+	},
 	{
 		"yetone/avante.nvim",
 		-- If you want to build from source then do `make BUILD_FROM_SOURCE=true`
@@ -7,7 +29,7 @@ return {
 		build = vim.fn.has("win32") ~= 0
 				and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
 			or "make",
-		event = "VeryLazy",
+		event = "InsertEnter",
 		version = false, -- Never set this value to "*"! Never!
 		---@module 'avante'
 		---@type avante.Config
