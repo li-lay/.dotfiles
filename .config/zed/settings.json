@@ -1,18 +1,11 @@
 {
-  "show_edit_predictions": false,
-  "languages": {
-    "JavaScript": {
-      "show_edit_predictions": false
-    }
-  },
   "agent": {
     "default_model": {
-      "provider": "deepseek",
-      "model": "deepseek-reasoner"
+      "provider": "openrouter",
+      "model": "qwen/qwen3-coder-flash"
     },
-    "model_parameters": [],
-    "default_profile": "write",
-    "version": "2"
+    "always_allow_tool_actions": true,
+    "model_parameters": []
   },
   "auto_update": false,
   "telemetry": {
@@ -24,7 +17,6 @@
     "default_mode": "normal",
     "toggle_relative_line_numbers": false,
     "use_system_clipboard": "always",
-    "use_multiline_find": false,
     "use_smartcase_find": false,
     "highlight_on_yank_duration": 100,
     "custom_digraphs": {},
