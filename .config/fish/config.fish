@@ -27,16 +27,8 @@ alias lt='eza -aT --color=always --group-directories-first --icons' # tree listi
 alias l.="eza -a | grep -e '^\.'" # show only dotfiles
 
 # Common use
-alias please="sudo" # LOL
-alias vim="nvim" # Best editor
-alias tmnew="tmux new -s lilay" # My default tmux session
-alias tmssh="tmux new -s ssh" # Session for ssh
-alias tmcode="tmux new -s code" # Session for coding
-alias fetch="fastfetch"
-alias lg="lazygit"
-alias tm="tmux"
-alias tma="tmux a -t"
-alias c="clear"
+alias please="sudo"
+alias vim="nvim"
 alias cat="bat --theme='gruvbox-dark'"
 alias tarnow='tar -acf '
 alias untar='tar -zxvf '
