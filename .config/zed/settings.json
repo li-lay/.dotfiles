@@ -1,14 +1,15 @@
 {
-  "disable_ai": true,
+  "agent_buffer_font_size": 18.0,
+  "agent_ui_font_size": 18.0,
   "agent": {
     "default_model": {
       "provider": "openrouter",
-      "model": "qwen/qwen3-coder-flash"
+      "model": "google/gemini-2.5-flash"
     },
     "always_allow_tool_actions": true,
     "model_parameters": []
   },
-  "auto_update": false,
+  "auto_update": true,
   "telemetry": {
     "metrics": false,
     "diagnostics": false
@@ -33,9 +34,9 @@
   "relative_line_numbers": "enabled",
   "buffer_font_family": "Iosevka Nerd Font",
   "buffer_font_fallbacks": [],
-  "buffer_font_size": 18,
+  "buffer_font_size": 22.0,
   "buffer_font_weight": 400,
-  "buffer_line_height": "comfortable",
+  "buffer_line_height": "standard",
   "ui_font_family": ".ZedSans",
   "ui_font_fallbacks": null,
   "ui_font_weight": 400,
