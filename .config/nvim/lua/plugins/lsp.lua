@@ -43,6 +43,19 @@ return {
 			ts_ls = {},
 		}
 
+		-- kubernetes and github-workflow yaml config
+		vim.lsp.config("yamlls", {
+			settings = {
+				yaml = {
+					schemas = {
+						kubernetes = "*.yaml",
+						["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*.yml",
+						["https://json.schemastore.org/github-action.json"] = "/.github/action.yml",
+					},
+				},
+			},
+		})
+
 		vim.api.nvim_create_autocmd("LspAttach", {
 			group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
 			callback = function(event)
