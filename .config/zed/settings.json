@@ -1,10 +1,79 @@
 {
+  "show_edit_predictions": false,
+  "context_servers": {
+    "mcp-server-context7": {
+      "source": "extension",
+      "enabled": false,
+      "settings": {
+        "context7_api_key": ""
+      }
+    }
+  },
   "agent_buffer_font_size": 18.0,
   "agent_ui_font_size": 18.0,
   "agent": {
+    "profiles": {
+      "ask": {
+        "name": "Ask",
+        "tools": {
+          "diagnostics": true,
+          "fetch": true,
+          "list_directory": true,
+          "project_notifications": false,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "open": true,
+          "grep": true,
+          "thinking": true,
+          "web_search": true
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {
+          "mcp-server-context7": {
+            "tools": {
+              "resolve-library-id": true,
+              "get-library-docs": true
+            }
+          }
+        }
+      },
+      "write": {
+        "name": "Write",
+        "tools": {
+          "copy_path": true,
+          "create_directory": true,
+          "delete_path": true,
+          "diagnostics": true,
+          "edit_file": true,
+          "fetch": true,
+          "list_directory": true,
+          "project_notifications": false,
+          "move_path": true,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "open": true,
+          "grep": true,
+          "terminal": true,
+          "thinking": true,
+          "web_search": true
+        },
+        "enable_all_context_servers": true,
+        "context_servers": {
+          "mcp-server-context7": {
+            "tools": {
+              "get-library-docs": true
+            }
+          }
+        }
+      }
+    },
+    "enable_feedback": false,
+    "default_profile": "write",
     "default_model": {
       "provider": "openrouter",
-      "model": "google/gemini-2.5-flash"
+      "model": "z-ai/glm-4.6"
     },
     "always_allow_tool_actions": true,
     "model_parameters": []
