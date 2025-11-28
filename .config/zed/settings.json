@@ -1,122 +1,26 @@
 {
-  "show_edit_predictions": false,
-  "context_servers": {
-    "mcp-server-context7": {
-      "source": "extension",
-      "enabled": false,
-      "settings": {
-        "context7_api_key": ""
-      }
-    }
-  },
-  "agent_buffer_font_size": 18.0,
-  "agent_ui_font_size": 18.0,
-  "agent": {
-    "profiles": {
-      "ask": {
-        "name": "Ask",
-        "tools": {
-          "diagnostics": true,
-          "fetch": true,
-          "list_directory": true,
-          "project_notifications": false,
-          "now": true,
-          "find_path": true,
-          "read_file": true,
-          "open": true,
-          "grep": true,
-          "thinking": true,
-          "web_search": true
-        },
-        "enable_all_context_servers": false,
-        "context_servers": {
-          "mcp-server-context7": {
-            "tools": {
-              "resolve-library-id": true,
-              "get-library-docs": true
-            }
-          }
-        }
-      },
-      "write": {
-        "name": "Write",
-        "tools": {
-          "copy_path": true,
-          "create_directory": true,
-          "delete_path": true,
-          "diagnostics": true,
-          "edit_file": true,
-          "fetch": true,
-          "list_directory": true,
-          "project_notifications": false,
-          "move_path": true,
-          "now": true,
-          "find_path": true,
-          "read_file": true,
-          "open": true,
-          "grep": true,
-          "terminal": true,
-          "thinking": true,
-          "web_search": true
-        },
-        "enable_all_context_servers": true,
-        "context_servers": {
-          "mcp-server-context7": {
-            "tools": {
-              "get-library-docs": true
-            }
-          }
-        }
-      }
-    },
-    "enable_feedback": false,
-    "default_profile": "write",
-    "default_model": {
-      "provider": "openrouter",
-      "model": "z-ai/glm-4.6"
-    },
-    "always_allow_tool_actions": true,
-    "model_parameters": []
-  },
-  "auto_update": true,
   "telemetry": {
-    "metrics": false,
-    "diagnostics": false
+    "diagnostics": false,
+    "metrics": false
   },
+
   "vim_mode": true,
   "vim": {
-    "default_mode": "normal",
-    "toggle_relative_line_numbers": false,
-    "use_system_clipboard": "always",
-    "use_smartcase_find": false,
-    "highlight_on_yank_duration": 100,
-    "custom_digraphs": {},
-    "cursor_shape": {}
+    "use_system_clipboard": "always"
   },
-  "theme": "Gruvbox Dark Hard",
-  "icon_theme": "Zed (Default)",
-  "base_keymap": "VSCode",
-  "features": {
-    "edit_prediction_provider": "zed"
-  },
+
   "tab_size": 2,
   "relative_line_numbers": "enabled",
-  "buffer_font_family": "Iosevka Nerd Font",
-  "buffer_font_fallbacks": [],
-  "buffer_font_size": 22.0,
-  "buffer_font_weight": 400,
+  "ui_font_size": 18.0,
   "buffer_line_height": "standard",
-  "ui_font_family": ".ZedSans",
-  "ui_font_fallbacks": null,
-  "ui_font_weight": 400,
-  "ui_font_size": 18,
-  "pane_split_direction_horizontal": "down",
-  "pane_split_direction_vertical": "right",
-  "restore_on_startup": "none",
-  "when_closing_with_no_tabs": "keep_window_open",
+  "buffer_font_size": 22.0,
+  "buffer_font_family": "Iosevka Nerd Font Mono",
+  "agent_ui_font_size": 22.0,
+  "theme": "Gruvbox Dark Hard",
   "cursor_blink": false,
-  "cursor_shape": null,
-  "redact_private_values": false,
+  "cursor_shape": "bar",
+
+  "redact_private_values": true,
   "private_files": [
     "**/.env*",
     "**/*.pem",
@@ -125,43 +29,60 @@
     "**/*.crt",
     "**/secrets.yml"
   ],
-  "show_whitespaces": "none",
-  "toolbar": {
-    "breadcrumbs": false,
-    "quick_actions": false,
-    "selections_menu": true,
-    "agent_review": true,
-    "code_actions": false
+
+  "agent": {
+    "always_allow_tool_actions": true,
+    "model_parameters": []
   },
+
+  "preview_tabs": {
+    "enable_preview_from_file_finder": true
+  },
+
   "title_bar": {
     "show_branch_icon": true,
     "show_branch_name": true,
-    "show_project_items": true,
-    "show_onboarding_banner": true,
-    "show_user_picture": false,
-    "show_sign_in": true
+    "show_user_picture": false
   },
-  "scrollbar": {
-    "show": "auto",
-    "cursors": false,
-    "git_diff": true,
-    "search_results": true,
-    "selected_text": true,
-    "selected_symbol": true,
-    "diagnostics": "all"
-  },
+
   "tabs": {
     "file_icons": true
   },
-  "terminal": {
-    "shell": "system",
-    "default_width": 640,
-    "default_height": 320,
-    "copy_on_select": false
+
+  "search": {
+    "center_on_match": true
   },
-  "auto_install_extensions": {
-    "html": true,
-    "dockerfile": true,
-    "lua": true
+
+  "use_smartcase_search": true,
+  "prettier": {
+    "allowed": true
+  },
+
+  "toolbar": {
+    "agent_review": true,
+    "selections_menu": true,
+    "quick_actions": false,
+    "breadcrumbs": false
+  },
+
+  "scrollbar": {
+    "show": "auto",
+    "cursors": false
+  },
+
+  "collaboration_panel": {
+    "button": false
+  },
+
+  "outline_panel": {
+    "button": false
+  },
+
+  "notification_panel": {
+    "button": false
+  },
+
+  "terminal": {
+    "button": false
   }
 }
