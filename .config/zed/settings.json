@@ -1,4 +1,5 @@
 {
+  "auto_update": false,
   "show_edit_predictions": false,
   "telemetry": {
     "diagnostics": false,
@@ -18,7 +19,7 @@
   "buffer_font_family": "Iosevka Nerd Font Mono",
   "agent_ui_font_size": 22.0,
   "theme": "Gruvbox Dark Hard",
-  "cursor_blink": false,
+  "cursor_blink": true,
   "cursor_shape": "bar",
 
   "redact_private_values": true,
