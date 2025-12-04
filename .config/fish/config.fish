@@ -1,3 +1,8 @@
+# Start in /home/lilay
+if status is-interactive
+    cd /home/lilay
+end
+
 # Fish greeting
 set fish_greeting ""
 
