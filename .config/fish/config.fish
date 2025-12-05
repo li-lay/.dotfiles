@@ -1,6 +1,6 @@
-# Start in /home/lilay
+# Start in home path
 if status is-interactive
-    cd /home/lilay
+    cd $HOME
 end
 
 # Fish greeting
@@ -66,13 +66,6 @@ end
 
 # Brew
 fish_add_path /home/linuxbrew/.linuxbrew/bin
-
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
-
-# opencode
-fish_add_path /home/lilay/.opencode/bin
 
 # dotnet tools
 fish_add_path /home/lilay/.dotnet/tools
