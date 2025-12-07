@@ -1,6 +1,6 @@
 {
   "auto_update": false,
-  "show_edit_predictions": false,
+  "show_edit_predictions": true,
   "telemetry": {
     "diagnostics": false,
     "metrics": false
@@ -16,10 +16,10 @@
   "ui_font_size": 18.0,
   "buffer_line_height": "standard",
   "buffer_font_size": 22.0,
-  "buffer_font_family": "Iosevka Nerd Font Mono",
-  "agent_ui_font_size": 22.0,
+  "buffer_font_family": "Iosevka Nerd Font",
+  "agent_ui_font_size": 20.0,
   "theme": "Gruvbox Dark Hard",
-  "cursor_blink": true,
+  "cursor_blink": false,
   "cursor_shape": "bar",
 
   "redact_private_values": true,
@@ -32,30 +32,66 @@
     "**/secrets.yml"
   ],
 
+  "tab_bar": {
+    "show": true
+  },
+  "debugger": {
+    "button": false
+  },
+  "status_bar": {
+    "cursor_position_button": true,
+    "active_language_button": true
+  },
+  "project_panel": {
+    "button": true
+  },
+  "colorize_brackets": true,
+  "gutter": {
+    "folds": false,
+    "breakpoints": false,
+    "runnables": false
+  },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "rounded_selection": false,
+  "agent_buffer_font_size": 20.0,
+
   "agent": {
     "default_model": {
-      "provider": "deepseek",
-      "model": "deepseek-chat"
+      "provider": "openrouter",
+      "model": "kwaipilot/kat-coder-pro:free"
     },
     "always_allow_tool_actions": true,
     "model_parameters": []
   },
 
+  "agent_servers": {
+    "gemini": {
+      "ignore_system_version": false
+    }
+  },
+
   "preview_tabs": {
-    "enable_preview_from_file_finder": true
+    "enable_preview_from_file_finder": false
   },
 
   "title_bar": {
+    "show_sign_in": false,
     "show_branch_icon": true,
     "show_branch_name": true,
     "show_user_picture": false
   },
 
   "tabs": {
+    "git_status": false,
     "file_icons": true
   },
 
   "search": {
+    "button": false,
     "center_on_match": true
   },
 
