@@ -1,0 +1,22 @@
+return {
+	-- "https://gitlab.com/gitlab-org/editor-extensions/gitlab.vim.git",
+	-- event = { "BufReadPre", "BufNewFile" },
+	-- ft = { "javascript", "typescript", "typescriptreact", "javascriptreact", "markdown", "sh", "fish" },
+	-- config = function()
+	-- 	require("gitlab").setup({
+	-- 		statusline = {
+	-- 			enabled = false,
+	-- 		},
+	-- 		code_suggestions = {
+	-- 			ghost_text = {
+	-- 				enabled = true, -- ghost text is an experimental feature
+	-- 				toggle_enabled = "<C-h>",
+	-- 				accept_suggestion = "<C-l>",
+	-- 				clear_suggestions = "<C-k>",
+	-- 				stream = true,
+	-- 			},
+	-- 		},
+	-- 	})
+	-- 	return vim.env.GITLAB_TOKEN ~= nil and vim.env.GITLAB_TOKEN ~= ""
+	-- end,
+}
