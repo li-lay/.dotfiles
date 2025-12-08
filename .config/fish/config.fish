@@ -67,5 +67,8 @@ end
 # Brew
 fish_add_path /home/linuxbrew/.linuxbrew/bin
 
-# dotnet tools
-fish_add_path /home/lilay/.dotnet/tools
+# opencode
+fish_add_path /home/lilay/.opencode/bin
+
+# cargo
+fish_add_path /home/lilay/.cargo/bin
