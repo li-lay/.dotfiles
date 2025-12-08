@@ -8,8 +8,7 @@
 
     "vim_mode": true,
     "vim": {
-        "use_system_clipboard": "always",
-        "highlight_on_yank_duration": 200
+        "use_system_clipboard": "always"
     },
 
     "theme": "Gruvbox Baby",
@@ -22,8 +21,6 @@
     "agent_ui_font_size": 20.0,
     "agent_buffer_font_size": 20.0,
     "relative_line_numbers": "enabled",
-    "cursor_blink": true,
-    "cursor_shape": "bar",
     "colorize_brackets": true,
     "rounded_selection": false,
     "use_smartcase_search": true,

@@ -1,43 +1,37 @@
 [
-  {
-    "context": "Editor && VimControl && !VimWaiting && !menu",
-    "bindings": {
-      "ctrl-enter": "workspace::ToggleBottomDock",
-      "space j": "terminal_panel::ToggleFocus",
-      "space l a": "editor::ToggleCodeActions",
-      "space l r": "editor::Rename",
-      "space l f": "editor::Format",
-      "space l l": "diagnostics::Deploy",
-      "g c c": "editor::ToggleComments",
-      "space f": "file_finder::Toggle",
-      "space o": "tab_switcher::Toggle",
-      "space e": "workspace::ToggleLeftDock",
-      "space p": "outline::Toggle",
-      "space v": "editor::GoToDefinitionSplit",
-      "space a": "workspace::ToggleRightDock"
+    {
+        "context": "Editor && VimControl && !VimWaiting && !menu",
+        "bindings": {
+            "ctrl-enter": "workspace::ToggleBottomDock",
+            "space j": "terminal_panel::ToggleFocus",
+            "space f": "file_finder::Toggle",
+            "space t": "tab_switcher::Toggle",
+            "space e": "workspace::ToggleLeftDock",
+            "space o": "outline::Toggle",
+            "space a": "workspace::ToggleRightDock"
+        }
+    },
+    {
+        "context": "Editor && vim_mode == insert && !menu",
+        "bindings": {
+            "k j": "vim::NormalBefore"
+        }
+    },
+    {
+        "context": "Terminal",
+        "bindings": {
+            "ctrl-enter": "workspace::ToggleBottomDock",
+            "space k": "terminal_panel::ToggleFocus",
+            "ctrl-w": "pane::CloseActiveItem",
+            "ctrl-n": "workspace::NewTerminal"
+        }
+    },
+    {
+        "context": "Editor && vim_mode == normal && !menu",
+        "bindings": {
+            "ctrl-w": "pane::CloseActiveItem",
+            "ctrl-h": "pane::ActivatePreviousItem",
+            "ctrl-l": "pane::ActivateNextItem"
+        }
     }
-  },
-  {
-    "context": "Editor && vim_mode == insert && !menu",
-    "bindings": {
-      "k j": "vim::NormalBefore"
-    }
-  },
-  {
-    "context": "Terminal",
-    "bindings": {
-      "ctrl-enter": "workspace::ToggleBottomDock",
-      "space k": "terminal_panel::ToggleFocus",
-      "ctrl-w": "pane::CloseActiveItem",
-      "ctrl-n": "workspace::NewTerminal"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == normal && !menu",
-    "bindings": {
-      "ctrl-w": "pane::CloseActiveItem",
-      "ctrl-h": "pane::ActivatePreviousItem",
-      "ctrl-l": "pane::ActivateNextItem"
-    }
-  }
 ]
