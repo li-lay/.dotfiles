@@ -1,5 +1,5 @@
 {
-    "auto_update": false,
+    "auto_update": true,
     "show_edit_predictions": false,
     "telemetry": {
         "diagnostics": false,
@@ -71,11 +71,18 @@
 
     "agent": {
         "default_profile": "ask",
-        "default_model": {
-            "provider": "openrouter",
-            "model": "minimax/minimax-m2"
-        },
         "always_allow_tool_actions": true,
         "model_parameters": []
+    },
+    "agent_servers": {
+        "gemini": {
+            "ignore_system_version": false
+        },
+        "OpenCode": {
+            "default_mode": "plan",
+            "type": "custom",
+            "command": "opencode",
+            "args": ["acp"]
+        }
     }
 }

@@ -6,9 +6,10 @@
             "space j": "terminal_panel::ToggleFocus",
             "space f": "file_finder::Toggle",
             "space t": "tab_switcher::Toggle",
-            "space e": "workspace::ToggleLeftDock",
-            "space o": "outline::Toggle",
-            "space a": "workspace::ToggleRightDock"
+            "space e": "project_panel::ToggleFocus",
+            "space o": "outline_panel::ToggleFocus",
+            "space a": "agent::ToggleFocus",
+            "space b": "editor::ToggleFocus"
         }
     },
     {
@@ -20,7 +21,7 @@
     {
         "context": "Terminal",
         "bindings": {
-            "ctrl-enter": "workspace::ToggleBottomDock",
+            "ctrl-enter": "terminal_panel::Toggle",
             "space k": "terminal_panel::ToggleFocus",
             "ctrl-w": "pane::CloseActiveItem",
             "ctrl-n": "workspace::NewTerminal"
@@ -29,9 +30,17 @@
     {
         "context": "Editor && vim_mode == normal && !menu",
         "bindings": {
-            "ctrl-w": "pane::CloseActiveItem",
             "ctrl-h": "pane::ActivatePreviousItem",
             "ctrl-l": "pane::ActivateNextItem"
+        }
+    },
+    {
+        "context": "ProjectPanel && not_editing",
+        "bindings": {
+            "o": "project_panel::NewFile",
+            "r": "project_panel::Rename",
+            "d": "project_panel::Delete",
+            "g y": "workspace::CopyPath"
         }
     }
 ]
