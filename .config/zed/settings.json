@@ -1,6 +1,4 @@
 {
-    "auto_update": true,
-    "show_edit_predictions": false,
     "telemetry": {
         "diagnostics": false,
         "metrics": false
@@ -15,6 +13,7 @@
     "tab_size": 4,
     "buffer_line_height": { "custom": 1.4 },
     "buffer_font_family": "Iosevka Nerd Font Mono",
+    "buffer_font_fallbacks": [".ZedMono"],
     "buffer_font_features": { "calt": false },
     "buffer_font_size": 22.0,
     "ui_font_size": 18,
@@ -69,6 +68,14 @@
         "button": false
     },
 
+    "show_edit_predictions": true,
+    "features": {
+        "edit_prediction_provider": "supermaven"
+    },
+    "edit_predictions": {
+        "mode": "subtle"
+    },
+
     "agent": {
         "default_profile": "ask",
         "always_allow_tool_actions": true,
@@ -83,6 +90,16 @@
             "type": "custom",
             "command": "opencode",
             "args": ["acp"]
+        }
+    },
+
+    "lsp": {
+        "rust-analyzer": {
+            "initialization_options": {
+                "check": {
+                    "command": "clippy"
+                }
+            }
         }
     }
 }
