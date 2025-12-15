@@ -1,0 +1,7 @@
+[
+    (
+        expression: "35*4000",
+        outcome: "140000",
+        decimal_comma: false,
+    ),
+]
