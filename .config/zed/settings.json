@@ -70,7 +70,7 @@
 
     "show_edit_predictions": true,
     "features": {
-        "edit_prediction_provider": "supermaven"
+        "edit_prediction_provider": "zed"
     },
     "edit_predictions": {
         "mode": "subtle"
