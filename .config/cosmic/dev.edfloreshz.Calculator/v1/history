@@ -4,4 +4,34 @@
         outcome: "140000",
         decimal_comma: false,
     ),
+    (
+        expression: "8361*2840",
+        outcome: "23745240",
+        decimal_comma: false,
+    ),
+    (
+        expression: "23745240*23745240",
+        outcome: "5.638364227E14",
+        decimal_comma: false,
+    ),
+    (
+        expression: "2351*245",
+        outcome: "575995",
+        decimal_comma: false,
+    ),
+    (
+        expression: "575995-2348",
+        outcome: "573647",
+        decimal_comma: false,
+    ),
+    (
+        expression: "573647+3466",
+        outcome: "577113",
+        decimal_comma: false,
+    ),
+    (
+        expression: "577113/2",
+        outcome: "288556.5",
+        decimal_comma: false,
+    ),
 ]
