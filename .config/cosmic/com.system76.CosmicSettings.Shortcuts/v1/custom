@@ -3,13 +3,25 @@
         modifiers: [
             Super,
         ],
-        key: "f",
-    ): Disable,
+        key: "d",
+    ): NextWorkspace,
     (
         modifiers: [
             Super,
         ],
-        key: "space",
+        key: "a",
+    ): PreviousWorkspace,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "U200B",
+    ): System(InputSourceSwitch),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "f",
     ): Disable,
     (
         modifiers: [
@@ -17,12 +29,6 @@
         ],
         key: "BackSpace",
     ): Disable,
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "e",
-    ): System(HomeFolder),
     (
         modifiers: [
             Alt,
@@ -39,18 +45,12 @@
         modifiers: [
             Super,
         ],
-        key: "a",
-    ): PreviousWorkspace,
+        key: "e",
+    ): System(HomeFolder),
     (
         modifiers: [
             Super,
         ],
         key: "Return",
     ): System(Terminal),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "d",
-    ): NextWorkspace,
 }
