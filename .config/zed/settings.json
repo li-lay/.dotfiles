@@ -1,12 +1,12 @@
 {
     "telemetry": {
         "diagnostics": false,
-        "metrics": false
+        "metrics": false,
     },
 
     "vim_mode": true,
     "vim": {
-        "use_system_clipboard": "always"
+        "use_system_clipboard": "always",
     },
 
     "theme": "Gruvbox Baby",
@@ -31,75 +31,75 @@
         "**/*.pem",
         "**/*.key",
         "**/*.cert",
-        "**/*.crt"
+        "**/*.crt",
     ],
 
     "gutter": {
         "folds": false,
         "breakpoints": false,
-        "runnables": false
+        "runnables": false,
     },
 
     "title_bar": {
         "show_sign_in": false,
         "show_branch_icon": true,
         "show_branch_name": true,
-        "show_user_picture": false
+        "show_user_picture": false,
     },
 
     "tabs": {
-        "file_icons": true
+        "file_icons": true,
     },
 
     "toolbar": {
         "quick_actions": false,
-        "breadcrumbs": false
+        "breadcrumbs": false,
     },
 
     "scrollbar": {
-        "cursors": false
+        "cursors": false,
     },
 
     "collaboration_panel": {
-        "button": false
+        "button": false,
     },
 
     "notification_panel": {
-        "button": false
+        "button": false,
     },
 
     "show_edit_predictions": true,
     "features": {
-        "edit_prediction_provider": "zed"
+        "edit_prediction_provider": "zed",
     },
     "edit_predictions": {
-        "mode": "subtle"
+        "mode": "subtle",
     },
 
     "agent": {
         "default_profile": "ask",
         "always_allow_tool_actions": true,
-        "model_parameters": []
+        "model_parameters": [],
     },
     "agent_servers": {
         "gemini": {
-            "ignore_system_version": false
+            "ignore_system_version": false,
         },
         "OpenCode": {
             "default_mode": "plan",
             "type": "custom",
             "command": "opencode",
-            "args": ["acp"]
-        }
+            "args": ["acp"],
+        },
     },
 
     "lsp": {
         "rust-analyzer": {
             "initialization_options": {
                 "check": {
-                    "command": "clippy"
-                }
-            }
-        }
-    }
+                    "command": "clippy",
+                },
+            },
+        },
+    },
 }
