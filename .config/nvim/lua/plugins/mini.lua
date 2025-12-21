@@ -55,7 +55,6 @@ return {
 				{ mode = "n", keys = "<Leader>f", desc = "Telescope" },
 				{ mode = "n", keys = "<Leader>b", desc = "Buffer" },
 				{ mode = "n", keys = "<Leader>w", desc = "Window" },
-				{ mode = "n", keys = "<Leader>q", desc = "Quit" },
 				{ mode = "n", keys = "<Leader>y", desc = "Yank" },
 			},
 		})

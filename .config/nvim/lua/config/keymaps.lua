@@ -2,19 +2,13 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 -- Life Changing --
-vim.keymap.set("i", "jk", "<ESC>")
 vim.keymap.set("i", "kj", "<ESC>")
 
 -- Stuff I want --
 vim.keymap.set("n", "<leader>e", vim.cmd.Oil, { desc = "File Explorer" })
-vim.keymap.set("n", "<leader>ww", "<Cmd>w<CR>", { desc = "Save" })
-vim.keymap.set("n", "<Leader>qw", ":wq<CR>", { desc = "Quit and save" })
-vim.keymap.set("n", "<Leader>qf", ":q!<CR>", { desc = "Quit without saving" })
-vim.keymap.set("n", "<Leader>qq", ":q<CR>", { desc = "Quit" })
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-a>", "gg<S-v>G")
-vim.keymap.set("n", "<Leader>bm", ":RenderMarkdown toggle<CR>", { desc = "Render markdown" })
 
 -- Go to first char and last char of line --
 vim.keymap.set("n", "H", "^")
