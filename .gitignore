@@ -3,3 +3,7 @@
 .config/fish/conf.d/
 .config/yazi/flavors/
 Session.vim
+node_modules
+package.json
+package-lock.json
+bun.lock
