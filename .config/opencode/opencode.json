@@ -20,7 +20,11 @@
           "name": "Qwen3 32b"
         },
         "groq/moonshotai/kimi-k2-instruct-0905": {
-          "name": "Kimi K2 Instruct 0905"
+          "name": "Kimi K2 Instruct 0905",
+          "limit": {
+            "context": 262144,
+            "output": 16384
+          }
         }
       }
     }
