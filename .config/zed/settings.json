@@ -86,6 +86,7 @@
             "ignore_system_version": false,
         },
         "OpenCode": {
+            "default_model": "opencode/glm-4.7-free",
             "default_mode": "plan",
             "type": "custom",
             "command": "opencode",
