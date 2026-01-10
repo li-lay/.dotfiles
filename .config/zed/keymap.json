@@ -1,38 +1,23 @@
 [
     {
+        "context": "Editor && vim_mode == insert",
+        "bindings": {
+            "k j": "vim::NormalBefore",
+        },
+    },
+    {
         "context": "Editor && VimControl && !VimWaiting && !menu",
         "bindings": {
             "ctrl-enter": "workspace::ToggleBottomDock",
-            "space j": "terminal_panel::ToggleFocus",
-            "space f": "file_finder::Toggle",
-            "space t": "tab_switcher::Toggle",
-            "space e": "project_panel::ToggleFocus",
-            "space o": "outline_panel::ToggleFocus",
-            "space a": "agent::ToggleFocus",
-            "space b": "editor::ToggleFocus"
-        }
-    },
-    {
-        "context": "Editor && vim_mode == insert && !menu",
-        "bindings": {
-            "k j": "vim::NormalBefore"
-        }
+        },
     },
     {
         "context": "Terminal",
         "bindings": {
             "ctrl-enter": "terminal_panel::Toggle",
             "space k": "terminal_panel::ToggleFocus",
-            "ctrl-w": "pane::CloseActiveItem",
-            "ctrl-n": "workspace::NewTerminal"
-        }
-    },
-    {
-        "context": "Editor && vim_mode == normal && !menu",
-        "bindings": {
-            "ctrl-h": "pane::ActivatePreviousItem",
-            "ctrl-l": "pane::ActivateNextItem"
-        }
+            "ctrl-n": "workspace::NewTerminal",
+        },
     },
     {
         "context": "ProjectPanel && not_editing",
@@ -40,7 +25,7 @@
             "o": "project_panel::NewFile",
             "r": "project_panel::Rename",
             "d": "project_panel::Delete",
-            "g y": "workspace::CopyPath"
-        }
-    }
+            "g y": "workspace::CopyPath",
+        },
+    },
 ]
