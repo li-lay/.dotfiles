@@ -85,18 +85,6 @@
         "always_allow_tool_actions": true,
         "model_parameters": [],
     },
-    "agent_servers": {
-        "gemini": {
-            "ignore_system_version": false,
-        },
-        "OpenCode": {
-            "default_model": "opencode/glm-4.7-free",
-            "default_mode": "plan",
-            "type": "custom",
-            "command": "opencode",
-            "args": ["acp"],
-        },
-    },
 
     "lsp": {
         "rust-analyzer": {
