@@ -86,6 +86,14 @@
         "model_parameters": [],
     },
 
+    "agent_servers": {
+        "opencode": {
+            "type": "extension",
+            "default_model": "opencode/grok-code",
+            "default_mode": "plan",
+        },
+    },
+
     "lsp": {
         "rust-analyzer": {
             "initialization_options": {
