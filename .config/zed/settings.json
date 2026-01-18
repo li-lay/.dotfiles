@@ -1,106 +1,106 @@
 {
-    "telemetry": {
-        "diagnostics": false,
-        "metrics": false,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+
+  "vim_mode": true,
+  "vim": {
+    "use_system_clipboard": "always",
+  },
+
+  "theme": "Gruvbox Baby",
+  "tab_size": 2,
+  "buffer_line_height": { "custom": 1.4 },
+  "buffer_font_family": "Iosevka Nerd Font Mono",
+  "buffer_font_fallbacks": [".ZedMono"],
+  "buffer_font_features": { "calt": false },
+  "buffer_font_size": 22.0,
+  "ui_font_size": 18,
+  "agent_ui_font_size": 20.0,
+  "agent_buffer_font_size": 20.0,
+  "relative_line_numbers": "enabled",
+  "colorize_brackets": true,
+  "rounded_selection": false,
+  "use_smartcase_search": true,
+  "current_line_highlight": "none",
+
+  "redact_private_values": true,
+  "private_files": [
+    "**/.env*",
+    "**/*.pem",
+    "**/*.key",
+    "**/*.cert",
+    "**/*.crt",
+  ],
+
+  "gutter": {
+    "folds": false,
+    "breakpoints": false,
+    "runnables": false,
+  },
+
+  "title_bar": {
+    "show_sign_in": false,
+    "show_branch_icon": true,
+    "show_branch_name": true,
+    "show_user_picture": false,
+  },
+
+  "tabs": {
+    "file_icons": true,
+  },
+
+  "toolbar": {
+    "quick_actions": false,
+    "breadcrumbs": false,
+  },
+
+  "scrollbar": {
+    "cursors": false,
+  },
+
+  "collaboration_panel": {
+    "button": false,
+  },
+
+  "notification_panel": {
+    "button": false,
+  },
+
+  "show_edit_predictions": true,
+  "features": {
+    "edit_prediction_provider": "zed",
+  },
+  "edit_predictions": {
+    "mode": "subtle",
+  },
+
+  "agent": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini",
     },
+    "default_profile": "ask",
+    "always_allow_tool_actions": true,
+    "model_parameters": [],
+  },
 
-    "vim_mode": true,
-    "vim": {
-        "use_system_clipboard": "always",
+  "agent_servers": {
+    "opencode": {
+      "type": "extension",
+      "default_model": "opencode/grok-code",
+      "default_mode": "plan",
     },
+  },
 
-    "theme": "Gruvbox Baby",
-    "tab_size": 4,
-    "buffer_line_height": { "custom": 1.4 },
-    "buffer_font_family": "Iosevka Nerd Font Mono",
-    "buffer_font_fallbacks": [".ZedMono"],
-    "buffer_font_features": { "calt": false },
-    "buffer_font_size": 22.0,
-    "ui_font_size": 18,
-    "agent_ui_font_size": 20.0,
-    "agent_buffer_font_size": 20.0,
-    "relative_line_numbers": "enabled",
-    "colorize_brackets": true,
-    "rounded_selection": false,
-    "use_smartcase_search": true,
-    "current_line_highlight": "none",
-
-    "redact_private_values": true,
-    "private_files": [
-        "**/.env*",
-        "**/*.pem",
-        "**/*.key",
-        "**/*.cert",
-        "**/*.crt",
-    ],
-
-    "gutter": {
-        "folds": false,
-        "breakpoints": false,
-        "runnables": false,
-    },
-
-    "title_bar": {
-        "show_sign_in": false,
-        "show_branch_icon": true,
-        "show_branch_name": true,
-        "show_user_picture": false,
-    },
-
-    "tabs": {
-        "file_icons": true,
-    },
-
-    "toolbar": {
-        "quick_actions": false,
-        "breadcrumbs": false,
-    },
-
-    "scrollbar": {
-        "cursors": false,
-    },
-
-    "collaboration_panel": {
-        "button": false,
-    },
-
-    "notification_panel": {
-        "button": false,
-    },
-
-    "show_edit_predictions": true,
-    "features": {
-        "edit_prediction_provider": "zed",
-    },
-    "edit_predictions": {
-        "mode": "subtle",
-    },
-
-    "agent": {
-        "default_model": {
-            "provider": "copilot_chat",
-            "model": "gpt-5-mini",
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": {
+          "command": "clippy",
         },
-        "default_profile": "ask",
-        "always_allow_tool_actions": true,
-        "model_parameters": [],
+      },
     },
-
-    "agent_servers": {
-        "opencode": {
-            "type": "extension",
-            "default_model": "opencode/grok-code",
-            "default_mode": "plan",
-        },
-    },
-
-    "lsp": {
-        "rust-analyzer": {
-            "initialization_options": {
-                "check": {
-                    "command": "clippy",
-                },
-            },
-        },
-    },
+  },
 }
