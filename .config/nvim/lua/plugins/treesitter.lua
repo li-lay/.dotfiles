@@ -3,8 +3,8 @@ return {
 	build = ":TSUpdate",
 	event = { "BufReadPost", "BufNewFile" },
 	config = function()
-		local configs = require("nvim-treesitter.configs")
-		configs.setup({
+		local configs = require("nvim-treesitter")
+		configs.install({
 			highlight = { enable = true },
 			indent = { enable = true },
 			autotag = { enable = true },
