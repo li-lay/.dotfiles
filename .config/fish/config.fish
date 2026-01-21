@@ -1,7 +1,7 @@
 # Start in home path
-if status is-interactive
-    cd $HOME
-end
+# if status is-interactive
+#     cd $HOME
+# end
 
 # Fish greeting
 set fish_greeting ""
@@ -72,3 +72,10 @@ fish_add_path /home/lilay/.opencode/bin
 
 # cargo
 fish_add_path /home/lilay/.cargo/bin
+
+# pnpm
+set -gx PNPM_HOME "/home/lilay/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
