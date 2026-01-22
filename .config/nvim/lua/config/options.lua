@@ -29,11 +29,21 @@ vim.cmd("colorscheme retrobox") -- Set colorscheme
 vim.opt.laststatus = 3
 
 -- File handling
-vim.opt.backup = false -- Don't create backup files
-vim.opt.writebackup = false -- Don't create backup before writing
-vim.opt.swapfile = false -- Don't create swap files
+-- Create a central location for all "Vim State" files
+local prefix = vim.fn.expand("~/.local/state/nvim/")
+
+-- Create directories if they don't exist (prevents errors)
+for _, dir in ipairs({ "undo", "backup", "swap" }) do
+	vim.fn.mkdir(prefix .. dir, "p")
+end
+
+vim.opt.backup = true -- Create backup files
+vim.opt.writebackup = true -- Create backup before writing
+vim.opt.swapfile = true -- Create swap files
 vim.opt.undofile = true -- Persistent undo
-vim.opt.undodir = vim.fn.expand("~/.vim/undodir") -- Undo directory
+vim.opt.directory = prefix .. "swap//"
+vim.opt.undodir = prefix .. "undo"
+vim.opt.backupdir = prefix .. "backup"
 vim.opt.autoread = true -- Auto reload files changed outside vim
 vim.opt.autowrite = false -- Don't auto save
 vim.opt.confirm = true -- Confirm on exit
