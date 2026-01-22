@@ -3,10 +3,14 @@ return {
 	event = "VeryLazy",
 	---@type Flash.Config
 	opts = {
+		highlight = {
+			backdrop = false,
+		},
 		modes = {
 			search = {
 				enabled = true,
 			},
+			char = { highlight = { backdrop = false }, multi_line = false },
 		},
 	},
 	keys = {
