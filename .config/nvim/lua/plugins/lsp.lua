@@ -36,10 +36,10 @@ return {
 		})
 
 		-- Custom language servers configs
-		local servers = {
-			lua_ls = {},
-			ts_ls = {},
-		}
+		-- local servers = {
+		-- 	lua_ls = {},
+		-- 	vtsls = {},
+		-- }
 
 		-- kubernetes and github-workflow yaml config
 		vim.lsp.config("yamlls", {
