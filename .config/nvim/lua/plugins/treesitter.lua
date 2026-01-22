@@ -28,7 +28,7 @@ return {
 				"markdown",
 				"python",
 			},
-			auto_install = false,
+			auto_install = true,
 		})
 	end,
 }

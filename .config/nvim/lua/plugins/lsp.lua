@@ -20,12 +20,13 @@ return {
 
 			-- LSP
 			"lua-language-server",
-			"typescript-language-server",
+			-- "typescript-language-server",
 			"tailwindcss-language-server",
 			"yaml-language-server",
 			"json-lsp",
 			"pyright",
-			"gopls",
+			-- "gopls",
+			"vtsls",
 
 			-- Formatters
 			"stylua",
