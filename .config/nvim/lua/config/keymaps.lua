@@ -60,4 +60,4 @@ vim.keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
 vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
 
 -- Format Code
-vim.keymap.set("n", "<leader>bf", ":lua vim.lsp.buf.format()<CR>", { desc = "Format current buffer" })
+vim.keymap.set("n", "<leader>bf", ":lua vim.lsp.buf.format()<CR>", { desc = "Format current buffer", silent = true })

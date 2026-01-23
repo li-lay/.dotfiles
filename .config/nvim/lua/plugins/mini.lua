@@ -12,19 +12,19 @@ return {
 		require("mini.notify").setup({})
 
 		require("mini.jump2d").setup({
-			vim.keymap.set("n", "<leader>fj", ":lua MiniJump2d.start()<CR>", { desc = "Jump2d" }),
+			vim.keymap.set("n", "<leader>fj", ":lua MiniJump2d.start()<CR>", { desc = "Jump2d", silent = true }),
 		})
 
 		require("mini.files").setup({
-			vim.keymap.set("n", "<leader>e", ":lua MiniFiles.open()<CR>", { desc = "File Explorer" }),
+			vim.keymap.set("n", "<leader>e", ":lua MiniFiles.open()<CR>", { desc = "File Explorer", silent = true }),
 		})
 
 		require("mini.pick").setup({
-			vim.keymap.set("n", "<leader>ff", ":Pick files<CR>", { desc = "Find files" }),
-			vim.keymap.set("n", "<leader>fg", ":Pick grep_live<CR>", { desc = "Live grep" }),
-			vim.keymap.set("n", "<leader>fb", ":Pick buffers<CR>", { desc = "Buffers" }),
-			vim.keymap.set("n", "<leader>fh", ":Pick help<CR>", { desc = "Help tags" }),
-			vim.keymap.set("n", "<leader>fp", ":Pick resume<CR>", { desc = "Resume last pick" }),
+			vim.keymap.set("n", "<leader>ff", ":Pick files<CR>", { desc = "Find files", silent = true }),
+			vim.keymap.set("n", "<leader>fg", ":Pick grep_live<CR>", { desc = "Live grep", silent = true }),
+			vim.keymap.set("n", "<leader>fb", ":Pick buffers<CR>", { desc = "Buffers", silent = true }),
+			vim.keymap.set("n", "<leader>fh", ":Pick help<CR>", { desc = "Help tags", silent = true }),
+			vim.keymap.set("n", "<leader>fp", ":Pick resume<CR>", { desc = "Resume last pick", silent = true }),
 		})
 
 		require("mini.surround").setup({
