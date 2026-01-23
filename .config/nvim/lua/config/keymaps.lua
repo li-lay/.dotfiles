@@ -8,7 +8,7 @@ vim.keymap.set("i", "kj", "<ESC>")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-a>", "gg<S-v>G")
-vim.keymap.set("n", "<leader>ww", ":w<CR>", { desc = "Save", silent = true })
+vim.keymap.set("n", "<leader>ww", ":lua vim.lsp.buf.format()<CR> :w<CR>", { desc = "Save", silent = true })
 
 -- Go to first char and last char of line --
 vim.keymap.set("n", "H", "^")
