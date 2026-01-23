@@ -14,25 +14,25 @@ return {
 		"saghen/blink.cmp",
 	},
 	config = function()
+		-- SPECIAL CASE, manually enable basedpyright (install from uv)
+		vim.lsp.enable("basedpyright")
+
 		-- Ensure the servers and tools installed
 		local ensure_installed = vim.tbl_keys(servers or {})
 		vim.list_extend(ensure_installed, {
 
 			-- LSP
 			"lua-language-server",
-			-- "typescript-language-server",
 			"tailwindcss-language-server",
 			"yaml-language-server",
 			"json-lsp",
-			"pyright",
-			-- "gopls",
 			"vtsls",
 
 			-- Formatters
 			"stylua",
 			"prettier",
-			"black",
 			"isort",
+			"ruff",
 		})
 
 		-- Custom language servers configs
