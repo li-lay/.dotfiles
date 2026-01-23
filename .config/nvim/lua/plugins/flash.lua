@@ -1,42 +1,42 @@
 return {
-	"folke/flash.nvim",
-	event = "VeryLazy",
-	---@type Flash.Config
-	opts = {
-		highlight = {
-			backdrop = false,
-		},
-		modes = {
-			search = {
-				enabled = true,
-			},
-			char = { highlight = { backdrop = false }, multi_line = false },
-		},
-	},
-	keys = {
-		{
-			"S",
-			mode = { "n", "x", "o" },
-			function()
-				require("flash").treesitter()
-			end,
-			desc = "Flash Treesitter",
-		},
-		{
-			"r",
-			mode = "o",
-			function()
-				require("flash").remote()
-			end,
-			desc = "Remote Flash",
-		},
-		{
-			"R",
-			mode = { "o", "x" },
-			function()
-				require("flash").treesitter_search()
-			end,
-			desc = "Treesitter Search",
-		},
-	},
+	-- "folke/flash.nvim",
+	-- event = "VeryLazy",
+	-- ---@type Flash.Config
+	-- opts = {
+	-- 	highlight = {
+	-- 		backdrop = false,
+	-- 	},
+	-- 	modes = {
+	-- 		search = {
+	-- 			enabled = true,
+	-- 		},
+	-- 		char = { highlight = { backdrop = false }, multi_line = false },
+	-- 	},
+	-- },
+	-- keys = {
+	-- 	{
+	-- 		"S",
+	-- 		mode = { "n", "x", "o" },
+	-- 		function()
+	-- 			require("flash").treesitter()
+	-- 		end,
+	-- 		desc = "Flash Treesitter",
+	-- 	},
+	-- 	{
+	-- 		"r",
+	-- 		mode = "o",
+	-- 		function()
+	-- 			require("flash").remote()
+	-- 		end,
+	-- 		desc = "Remote Flash",
+	-- 	},
+	-- 	{
+	-- 		"R",
+	-- 		mode = { "o", "x" },
+	-- 		function()
+	-- 			require("flash").treesitter_search()
+	-- 		end,
+	-- 		desc = "Treesitter Search",
+	-- 	},
+	-- },
 }

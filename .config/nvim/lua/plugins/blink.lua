@@ -2,9 +2,9 @@ return {
 	{
 		"saghen/blink.cmp",
 		event = "InsertEnter",
-		dependencies = {
-			"rafamadriz/friendly-snippets",
-		},
+		-- dependencies = {
+		-- 	"rafamadriz/friendly-snippets",
+		-- },
 		version = "*",
 		config = function()
 			require("blink.cmp").setup({

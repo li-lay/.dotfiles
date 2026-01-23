@@ -11,6 +11,22 @@ return {
 		require("mini.pairs").setup({})
 		require("mini.notify").setup({})
 
+		require("mini.jump2d").setup({
+			vim.keymap.set("n", "<leader>fj", ":lua MiniJump2d.start()<CR>", { desc = "Jump2d" }),
+		})
+
+		require("mini.files").setup({
+			vim.keymap.set("n", "<leader>e", ":lua MiniFiles.open()<CR>", { desc = "File Explorer" }),
+		})
+
+		require("mini.pick").setup({
+			vim.keymap.set("n", "<leader>ff", ":Pick files<CR>", { desc = "Find files" }),
+			vim.keymap.set("n", "<leader>fg", ":Pick grep_live<CR>", { desc = "Live grep" }),
+			vim.keymap.set("n", "<leader>fb", ":Pick buffers<CR>", { desc = "Buffers" }),
+			vim.keymap.set("n", "<leader>fh", ":Pick help<CR>", { desc = "Help tags" }),
+			vim.keymap.set("n", "<leader>fp", ":Pick resume<CR>", { desc = "Resume last pick" }),
+		})
+
 		require("mini.surround").setup({
 			mappings = {
 				add = "sa",
@@ -50,8 +66,7 @@ return {
 				miniclue.gen_clues.g(),
 				miniclue.gen_clues.registers(),
 				miniclue.gen_clues.z(),
-				{ mode = "n", keys = "<Leader>h", desc = "Harpoon" },
-				{ mode = "n", keys = "<Leader>f", desc = "Telescope" },
+				{ mode = "n", keys = "<Leader>f", desc = "Picker" },
 				{ mode = "n", keys = "<Leader>b", desc = "Buffer" },
 				{ mode = "n", keys = "<Leader>w", desc = "Window" },
 				{ mode = "n", keys = "<Leader>y", desc = "Yank" },

@@ -5,7 +5,6 @@ vim.g.maplocalleader = "\\"
 vim.keymap.set("i", "kj", "<ESC>")
 
 -- Stuff I want --
-vim.keymap.set("n", "<leader>e", vim.cmd.Oil, { desc = "File Explorer" })
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-a>", "gg<S-v>G")
@@ -59,3 +58,6 @@ vim.keymap.set("n", "<leader>bd", ":bd<CR>", { noremap = true, silent = true, de
 -- Better indenting in visual mode --
 vim.keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
 vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
+
+-- Format Code
+vim.keymap.set("n", "<leader>bf", ":lua vim.lsp.buf.format()<CR>", { desc = "Format current buffer" })
