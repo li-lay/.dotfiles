@@ -1,7 +1,5 @@
 [
-    "foot",
+    "footclient",
     "brave-browser",
-    "dev.zed.Zed",
     "org.telegram.desktop",
-    "cef",
 ]
