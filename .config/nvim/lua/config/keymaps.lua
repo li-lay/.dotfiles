@@ -15,8 +15,8 @@ local termJob_id = 0
 vim.keymap.set("n", "<leader>wt", function()
 	vim.cmd.vnew()
 	vim.cmd.term()
-	vim.cmd.wincmd("J")
-	vim.api.nvim_win_set_height(0, 10)
+	vim.cmd.wincmd("L")
+	vim.api.nvim_win_set_width(0, 60)
 
 	local cwd = vim.fn.getcwd()
 
