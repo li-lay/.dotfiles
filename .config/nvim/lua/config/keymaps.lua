@@ -10,6 +10,23 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-a>", "gg<S-v>G")
 vim.keymap.set("n", "<leader>ww", ":lua vim.lsp.buf.format()<CR> :w<CR>", { desc = "Save", silent = true })
 
+-- Term
+local termJob_id = 0
+vim.keymap.set("n", "<leader>wt", function()
+	vim.cmd.vnew()
+	vim.cmd.term()
+	vim.cmd.wincmd("J")
+	vim.api.nvim_win_set_height(0, 10)
+
+	local cwd = vim.fn.getcwd()
+
+	termJob_id = vim.bo.channel
+	vim.fn.chansend(termJob_id, "cd " .. cwd .. "\n")
+	vim.fn.chansend(termJob_id, "clear \n")
+end, { desc = "Term", silent = true })
+
+vim.keymap.set("t", "<C-e>", "<C-\\><C-n>")
+
 -- Go to first char and last char of line --
 vim.keymap.set("n", "H", "^")
 vim.keymap.set("n", "L", "$")
