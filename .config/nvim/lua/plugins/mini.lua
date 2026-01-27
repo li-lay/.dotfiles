@@ -39,7 +39,7 @@ return {
     vim.keymap.set("n", "<leader>fh", pick("help"), { desc = "Help Tags" })
 
     -- Extra Pickers (LSP & Git)
-    vim.keymap.set("n", "<leader>fs", extra("lsp", { scope = "document_symbol" }), { desc = "LSP Symbols" })
+    vim.keymap.set("n", "<leader>fl", extra("lsp", { scope = "document_symbol" }), { desc = "LSP Symbols" })
     vim.keymap.set("n", "<leader>fd", extra("diagnostic"), { desc = "Diagnostics" })
     vim.keymap.set("n", "<leader>ft", extra("treesitter"), { desc = "Tree-sitter" })
     vim.keymap.set("n", "<leader>fc", extra("colorschemes"), { desc = "Colorschemes" })
@@ -60,6 +60,33 @@ return {
     })
     vim.keymap.set("n", "<leader>go", function() require("mini.diff").toggle_overlay(0) end,
       { desc = "Git Diff Overlay" })
+
+    require('mini.sessions').setup({
+      autoread = true,
+      autowrite = true,
+      directory = '', -- disabled
+    })
+    vim.keymap.set('n', '<leader>sw', function()
+      local name = vim.fn.input('Session name: ')
+      if name ~= "" then require("mini.sessions").write(name) end
+    end, { desc = 'Session: Write' })
+
+    vim.keymap.set('n', '<leader>sd', function()
+      local name = vim.fn.input('Session name: ')
+      if name ~= "" then require("mini.sessions").delete(name) end
+    end, { desc = 'Session: Delete' })
+
+    vim.keymap.set('n', '<leader>sc', function()
+      local session_path = vim.v.this_session
+      if session_path == "" then
+        vim.notify("No active session", vim.log.levels.WARN)
+      else
+        local name = vim.fn.fnamemodify(session_path, ":t")
+        vim.notify("Current session: " .. name, vim.log.levels.INFO)
+      end
+    end, { desc = 'Session: Current' })
+
+    vim.keymap.set('n', '<leader>sl', ":lua MiniSessions.select()<CR>", { desc = "Session: Load" })
 
     -- Complex Modules (Mini.Clue, Hipatterns, Statusline)
     local miniclue = require("mini.clue")
@@ -85,6 +112,7 @@ return {
         { mode = "n", keys = "<Leader>w", desc = "+Window" },
         { mode = "n", keys = "<Leader>y", desc = "+Yank" },
         { mode = "n", keys = "<Leader>g", desc = "+Git" },
+        { mode = "n", keys = "<Leader>s", desc = "+Sessions" },
       },
     })
 
