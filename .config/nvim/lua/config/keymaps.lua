@@ -9,6 +9,13 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-a>", "gg<S-v>G")
 vim.keymap.set("n", "<leader>ww", ":lua vim.lsp.buf.format()<CR> :w<CR>", { desc = "Save", silent = true })
+vim.keymap.set("n", "<leader>qq", ":qa<CR>", { desc = "Quit All", silent = true })
+vim.keymap.set(
+	"n",
+	"<leader>qw",
+	":lua vim.lsp.buf.format()<CR>:w<CR>:qa<CR>",
+	{ desc = "Save All and Quit", silent = true }
+)
 
 -- Term
 local termJob_id = 0
