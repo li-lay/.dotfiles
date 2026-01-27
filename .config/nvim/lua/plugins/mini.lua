@@ -4,6 +4,7 @@ return {
 	event = "VeryLazy",
 	config = function()
 		require("mini.ai").setup({})
+		require("mini.git").setup({})
 		require("mini.comment").setup({})
 		require("mini.icons").setup({})
 		require("mini.indentscope").setup({ symbol = "╎" })
