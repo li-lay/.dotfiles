@@ -38,7 +38,7 @@ return {
     vim.keymap.set("n", "<leader>fb", pick("buffers"), { desc = "Buffers" })
     vim.keymap.set("n", "<leader>fh", pick("help"), { desc = "Help Tags" })
 
-    -- Extra Pickers (LSP & Git)
+    -- Extra Pickers
     vim.keymap.set("n", "<leader>fl", extra("lsp", { scope = "document_symbol" }), { desc = "LSP Symbols" })
     vim.keymap.set("n", "<leader>fd", extra("diagnostic"), { desc = "Diagnostics" })
     vim.keymap.set("n", "<leader>ft", extra("treesitter"), { desc = "Tree-sitter" })
@@ -46,10 +46,14 @@ return {
     vim.keymap.set("n", "<leader>fk", extra("keymaps"), { desc = "Keymaps" })
     vim.keymap.set("n", "<leader>f'", extra("marks"), { desc = "Marks" })
     vim.keymap.set("n", "<leader>fr", extra("registers"), { desc = "Registers" })
-    vim.keymap.set("n", "<leader>gc", extra("git_commits"), { desc = "Git Commits" })
+    -- GitOps
+    vim.keymap.set("n", "<leader>gc", extra("git_commits"), { desc = "Git Get Commits" })
     vim.keymap.set("n", "<leader>gb", extra("git_branches"), { desc = "Git Branches" })
     vim.keymap.set("n", "<leader>gf", extra("git_files"), { desc = "Git Files" })
     vim.keymap.set("n", "<leader>gh", extra("git_hunks"), { desc = "Git Hunks" })
+    vim.keymap.set("n", "<leader>gd", ":Git diff<CR>", { desc = "Git Diff", silent = true })
+    vim.keymap.set("n", "<leader>gC", ":Git commit<CR>", { desc = "Git Commit", silent = true })
+    vim.keymap.set("n", "<leader>gp", ":Git pull<CR>", { desc = "Git Pull", silent = true })
 
     require("mini.surround").setup({
       mappings = { add = "sa", delete = "sd", find = "sf", find_left = "sF", highlight = "sh", replace = "sr", update_n_lines = "sn" },
