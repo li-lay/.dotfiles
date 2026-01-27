@@ -63,6 +63,32 @@ vim.opt.splitright = true -- Vertical splits go right
 vim.opt.redrawtime = 10000
 vim.opt.maxmempattern = 20000
 
+-- Session Options
+vim.opt.sessionoptions = "buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+vim.api.nvim_create_autocmd('VimEnter', {
+  callback = function()
+    -- Only trigger if nvim is opened without arguments
+    if vim.fn.argc() == 0 then
+      local session_file = vim.fn.getcwd() .. '/Session.vim'
+      if vim.fn.filereadable(session_file) == 1 then
+        vim.cmd('silent! source ' .. session_file)
+        vim.notify("Session loaded: " .. vim.fn.getcwd(), vim.log.levels.INFO, {
+          title = "Native Session"
+        })
+      end
+    end
+  end,
+})
+
+vim.api.nvim_create_autocmd('VimLeavePre', {
+  callback = function()
+    local session_file = vim.fn.getcwd() .. '/Session.vim'
+    if vim.fn.filereadable(session_file) == 1 then
+      vim.cmd('mksession! ' .. vim.fn.fnameescape(session_file))
+    end
+  end,
+})
+
 -- Highlight yanked text
 vim.api.nvim_create_autocmd("TextYankPost", {
   callback = function()
