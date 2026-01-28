@@ -9,7 +9,6 @@ return {
       comment = {},
       icons = {},
       move = {},
-      pairs = {},
       notify = {},
       bracketed = {},
       trailspace = {},
