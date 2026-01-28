@@ -3,6 +3,30 @@
         modifiers: [
             Super,
         ],
+        key: "Return",
+    ): System(Terminal),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "U200B",
+    ): System(InputSourceSwitch),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "f",
+    ): Fullscreen,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "e",
+    ): System(HomeFolder),
+    (
+        modifiers: [
+            Super,
+        ],
         key: "d",
     ): NextWorkspace,
     (
@@ -15,25 +39,7 @@
         modifiers: [
             Super,
         ],
-        key: "U200B",
-    ): System(InputSourceSwitch),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "f",
-    ): Disable,
-    (
-        modifiers: [
-            Super,
-        ],
         key: "BackSpace",
-    ): Disable,
-    (
-        modifiers: [
-            Alt,
-        ],
-        key: "U200B",
     ): Disable,
     (
         modifiers: [
@@ -43,14 +49,8 @@
     ): Disable,
     (
         modifiers: [
-            Super,
+            Alt,
         ],
-        key: "e",
-    ): System(HomeFolder),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "Return",
-    ): System(Terminal),
+        key: "U200B",
+    ): Disable,
 }
