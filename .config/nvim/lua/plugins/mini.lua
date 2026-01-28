@@ -12,6 +12,8 @@ return {
       pairs = {},
       notify = {},
       bracketed = {},
+      trailspace = {},
+      tabline = {},
       extra = {},
     }
     for mod, opts in pairs(simple_modules) do
