@@ -69,8 +69,10 @@
   },
 
   "show_edit_predictions": true,
+  "features": {
+    "edit_prediction_provider": "zed",
+  },
   "edit_predictions": {
-    "provider": "zed",
     "mode": "subtle",
   },
 
@@ -89,19 +91,6 @@
       "type": "extension",
       "default_model": "opencode/grok-code",
       "default_mode": "plan",
-    },
-  },
-
-  "file_types": {
-    "HTML": ["cshtml"],
-  },
-
-  "languages": {
-    "HTML": {
-      "language_servers": [
-        "tailwindcss-language-server",
-        "vscode-html-language-server",
-      ],
     },
   },
 
