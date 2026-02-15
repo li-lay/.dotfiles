@@ -11,6 +11,8 @@
 
   "theme": "Gruvbox Baby",
   "tab_size": 2,
+  "soft_wrap": "editor_width",
+  "format_on_save": "off",
   "buffer_line_height": { "custom": 1.4 },
   "buffer_font_family": "Iosevka Nerd Font Mono",
   "buffer_font_fallbacks": [".ZedMono"],
@@ -35,9 +37,9 @@
   ],
 
   "gutter": {
-    "folds": false,
-    "breakpoints": false,
-    "runnables": false,
+    "folds": true,
+    "breakpoints": true,
+    "runnables": true,
   },
 
   "title_bar": {
