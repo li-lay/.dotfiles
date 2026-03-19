@@ -82,16 +82,17 @@
       "model": "gpt-5-mini",
     },
     "default_profile": "ask",
-    "always_allow_tool_actions": true,
     "model_parameters": [],
   },
 
   "agent_servers": {
+    "gemini": {
+      "type": "registry"
+    },
     "opencode": {
       "type": "extension",
-      "default_model": "opencode/grok-code",
       "default_mode": "plan",
-    },
+    }
   },
 
   "file_types": {
