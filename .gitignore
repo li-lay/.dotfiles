@@ -7,5 +7,4 @@ node_modules
 package.json
 package-lock.json
 bun.lock
-opencode.json
 .config/cosmic/com.system76.CosmicPortal/v1/screenshot
