@@ -66,6 +66,7 @@ end
 
 # Brew
 fish_add_path /home/linuxbrew/.linuxbrew/bin
+fish_add_path /home/linuxbrew/.linuxbrew/sbin
 
 # opencode
 fish_add_path /home/lilay/.opencode/bin
