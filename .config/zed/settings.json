@@ -91,6 +91,7 @@
     },
     "opencode": {
       "type": "extension",
+      "default_model": "opencode-go/glm-5",
       "default_mode": "plan",
     }
   },
