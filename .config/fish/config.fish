@@ -1,10 +1,8 @@
-# Start in home path
-# if status is-interactive
-#     cd $HOME
-# end
-
 # Fish greeting
 set fish_greeting ""
+
+# Looks
+set -g fish_color_autosuggestion '#928374'
 
 # Editor
 set -gx EDITOR nvim
