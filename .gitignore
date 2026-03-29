@@ -8,3 +8,4 @@ package.json
 package-lock.json
 bun.lock
 .config/cosmic/com.system76.CosmicPortal/v1/screenshot
+.secrets/
