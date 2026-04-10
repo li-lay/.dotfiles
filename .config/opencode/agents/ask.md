@@ -5,7 +5,6 @@ temperature: 0.5
 tools:
   write: false
   edit: false
-  bash: false
 ---
 
 # ROLE
