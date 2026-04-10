@@ -71,15 +71,3 @@ fish_add_path /home/lilay/.opencode/bin
 
 # cargo
 fish_add_path /home/lilay/.cargo/bin
-
-# pnpm
-set -gx PNPM_HOME "/home/lilay/.local/share/pnpm"
-if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
-end
-# pnpm end
-
-# Added by LM Studio CLI (lms)
-set -gx PATH $PATH /var/home/lilay/.lmstudio/bin
-# End of LM Studio CLI section
-
