@@ -11,6 +11,9 @@ set -gx EDITOR nvim
 set -x MANROFFOPT -c
 set -x MANPAGER "sh -c 'col -bx | bat --theme='gruvbox-dark' -l man -p'"
 
+# Opencode
+set OPENCODE_ENABLE_EXA 1
+
 # Add ~/.local/bin to PATH
 if test -d ~/.local/bin
     if not contains -- ~/.local/bin $PATH
