@@ -73,7 +73,6 @@
   "show_edit_predictions": true,
   "edit_predictions": {
     "mode": "subtle",
-    "enabled_in_text_threads": true,
     "provider": "zed",
   },
 
@@ -95,9 +94,10 @@
       "type": "registry"
     },
     "opencode": {
-      "type": "extension",
-      "default_model": "opencode-go/glm-5",
-      "default_mode": "build",
+      "default_mode": "plan",
+      "type": "custom",
+      "command": "opencode",
+      "args": ["acp"],
     }
   },
 
