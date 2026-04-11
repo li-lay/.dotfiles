@@ -11,8 +11,5 @@
         "CONTEXT7_API_KEY": "{file:~/.config/opencode/.secrets/context7-key}"
       }
     }
-  },
-  "permission": {
-    "websearch": "allow"
   }
 }
