@@ -1,4 +1,7 @@
 {
+  "edit_predictions": {
+    "provider": "zed"
+  },
   "telemetry": {
     "diagnostics": false,
     "metrics": false,
@@ -71,10 +74,6 @@
   },
 
   "show_edit_predictions": true,
-  "edit_predictions": {
-    "mode": "subtle",
-    "provider": "zed",
-  },
 
   "agent": {
     "use_modifier_to_send": false,
