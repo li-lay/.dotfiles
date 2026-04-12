@@ -11,5 +11,9 @@
         "CONTEXT7_API_KEY": "{file:~/.config/opencode/.secrets/context7-key}"
       }
     }
-  }
+  },
+  "plugin": [
+    "@tarquinen/opencode-dcp@latest",
+    "@mohak34/opencode-notifier@latest"
+  ]
 }
