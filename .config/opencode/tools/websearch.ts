@@ -1,6 +1,6 @@
 import { tool } from "@opencode-ai/plugin"
 
-export default tool({
+export const v1 = tool({
   description: "Search engine to search the web using private SearXNG instance",
   args: {
     query: tool.schema.string().describe("The search query to look up"),
