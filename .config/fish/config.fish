@@ -3,6 +3,7 @@ set fish_greeting ""
 
 # Looks
 set -g fish_color_autosuggestion '#928374'
+set -g fish_autosuggestion_enabled 0
 
 # Editor
 set -gx EDITOR nvim
