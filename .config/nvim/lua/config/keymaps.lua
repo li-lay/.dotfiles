@@ -11,25 +11,25 @@ vim.keymap.set("n", "<C-a>", "gg<S-v>G")
 vim.keymap.set("n", "<leader>ww", ":lua vim.lsp.buf.format()<CR> :w<CR>", { desc = "Save", silent = true })
 vim.keymap.set("n", "<leader>qq", ":qa<CR>", { desc = "Quit All", silent = true })
 vim.keymap.set(
-	"n",
-	"<leader>qw",
-	":lua vim.lsp.buf.format()<CR>:w<CR>:qa<CR>",
-	{ desc = "Save All and Quit", silent = true }
+  "n",
+  "<leader>qw",
+  ":lua vim.lsp.buf.format()<CR>:w<CR>:qa<CR>",
+  { desc = "Save All and Quit", silent = true }
 )
 
 -- Term
 local termJob_id = 0
 vim.keymap.set("n", "<leader>wt", function()
-	vim.cmd.vnew()
-	vim.cmd.term()
-	vim.cmd.wincmd("L")
-	vim.api.nvim_win_set_width(0, 60)
+  vim.cmd.vnew()
+  vim.cmd.term()
+  vim.cmd.wincmd("L")
+  vim.api.nvim_win_set_width(0, 60)
 
-	local cwd = vim.fn.getcwd()
+  local cwd = vim.fn.getcwd()
 
-	termJob_id = vim.bo.channel
-	vim.fn.chansend(termJob_id, "cd " .. cwd .. "\n")
-	vim.fn.chansend(termJob_id, "clear \n")
+  termJob_id = vim.bo.channel
+  vim.fn.chansend(termJob_id, "cd " .. cwd .. "\n")
+  vim.fn.chansend(termJob_id, "clear \n")
 end, { desc = "Term", silent = true })
 
 vim.keymap.set("t", "<C-e>", "<C-\\><C-n>")
@@ -48,22 +48,22 @@ vim.keymap.set("n", "<leader>wj", "<cmd>resize -5<cr>", { desc = "Resize down" }
 
 -- Tmux --
 local function move_or_tmux(key)
-	local dir_map = {
-		["<C-h>"] = { win_cmd = "h", tmux_cmd = "L" },
-		["<C-j>"] = { win_cmd = "j", tmux_cmd = "D" },
-		["<C-k>"] = { win_cmd = "k", tmux_cmd = "U" },
-		["<C-l>"] = { win_cmd = "l", tmux_cmd = "R" },
-	}
+  local dir_map = {
+    ["<C-h>"] = { win_cmd = "h", tmux_cmd = "L" },
+    ["<C-j>"] = { win_cmd = "j", tmux_cmd = "D" },
+    ["<C-k>"] = { win_cmd = "k", tmux_cmd = "U" },
+    ["<C-l>"] = { win_cmd = "l", tmux_cmd = "R" },
+  }
 
-	return function()
-		local current_win = vim.api.nvim_get_current_win()
-		vim.cmd("wincmd " .. dir_map[key].win_cmd)
+  return function()
+    local current_win = vim.api.nvim_get_current_win()
+    vim.cmd("wincmd " .. dir_map[key].win_cmd)
 
-		if vim.api.nvim_get_current_win() == current_win then
-			-- Didn't move in Neovim, fallback to tmux
-			vim.fn.system({ "tmux", "select-pane", "-" .. dir_map[key].tmux_cmd })
-		end
-	end
+    if vim.api.nvim_get_current_win() == current_win then
+      -- Didn't move in Neovim, fallback to tmux
+      vim.fn.system({ "tmux", "select-pane", "-" .. dir_map[key].tmux_cmd })
+    end
+  end
 end
 vim.keymap.set("n", "<C-h>", move_or_tmux("<C-h>"), { noremap = true, silent = true })
 vim.keymap.set("n", "<C-j>", move_or_tmux("<C-j>"), { noremap = true, silent = true })
