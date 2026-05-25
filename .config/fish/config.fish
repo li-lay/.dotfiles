@@ -63,6 +63,12 @@ function y
     rm -f -- "$tmp"
 end
 
+# prioritize system bins
+fish_add_path -m /usr/bin
+
+# pnpm
+fish_add_path /home/lilay/.local/share/pnpm/bin
+
 # Brew
 fish_add_path /home/linuxbrew/.linuxbrew/bin
 fish_add_path /home/linuxbrew/.linuxbrew/sbin
