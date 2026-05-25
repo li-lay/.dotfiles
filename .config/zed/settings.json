@@ -1,4 +1,13 @@
 {
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "edit_predictions": {
     "provider": "zed"
   },
@@ -66,6 +75,7 @@
   },
 
   "collaboration_panel": {
+    "dock": "left",
     "button": false,
   },
 
@@ -76,6 +86,7 @@
   "show_edit_predictions": true,
 
   "agent": {
+    "dock": "right",
     "use_modifier_to_send": false,
     "show_turn_stats": true,
     "play_sound_when_agent_done": true,
