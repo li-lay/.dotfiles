@@ -1,7 +1,9 @@
 (
     chart_visible: false,
-    label_visible: true,
-    chart: Ring,
+    value_visible: true,
+    label_visible: false,
+    icon_visible: true,
+    chart: Line,
     colors: (
         ring: (
             background: (
@@ -158,5 +160,5 @@
     ),
     percentage: false,
     show_allocated: false,
-    stack_labels: false,
+    stack_values: false,
 )
