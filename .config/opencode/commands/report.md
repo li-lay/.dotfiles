@@ -10,7 +10,7 @@ Rule: Check the time, if it's morning put the sentences in the morning and keep 
 Content {
 Today technical reports of {modify this block to current date}:
 + Morning
-- {The generated activity sentence}
+- {The generated activity sentence, break them into multiple points if it's many tasks}
 + Afternoon
-- {The generated activity sentence}
+- {The generated activity sentence, break them into multiple points if it's many tasks}
 }
