@@ -1,8 +1,8 @@
 ---
 description: Primary engineering coordinator and workflow manager.
 mode: primary
-model: deepseek-v4-pro
-permission:
+model: opencode-go/deepseek-v4-pro
+permissions:
   - action: edit
     resource: "*"
     effect: deny
@@ -13,9 +13,6 @@ permission:
     resource: "*"
     effect: allow
   - action: subagent
-    resource: "*"
-    effect: allow
-  - action: task
     resource: "*"
     effect: allow
 ---

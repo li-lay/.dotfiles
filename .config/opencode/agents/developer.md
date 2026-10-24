@@ -1,14 +1,26 @@
 ---
 description: MUST use this subagent to write, implement, edit, or refactor code and run tests/builds. Implementation worker.
 mode: subagent
-model: claude-haiku-5-5
-permission:
-  edit: allow
-  bash: allow
-  read: allow
-  task: deny
-  grep: allow
-  glob: allow
+model: opencode-go/claude-haiku-5-5
+permissions:
+  - action: edit
+    resource: "*"
+    effect: allow
+  - action: shell
+    resource: "*"
+    effect: allow
+  - action: read
+    resource: "*"
+    effect: allow
+  - action: subagent
+    resource: "*"
+    effect: deny
+  - action: grep
+    resource: "*"
+    effect: allow
+  - action: glob
+    resource: "*"
+    effect: allow
 ---
 
 You are a senior software developer.

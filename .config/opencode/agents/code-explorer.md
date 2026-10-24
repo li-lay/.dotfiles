@@ -1,7 +1,7 @@
 ---
 description: MUST use this subagent before modifying any code to trace cross-file dependencies, find symbol definitions, locate call sites, and inspect directory architecture. Read-only search engine.
 mode: subagent
-model: muse-spark-1.3-contributor
+model: opencode-go/muse-spark-1.3-contributor
 permissions:
   - action: edit
     resource: "*"

@@ -1,7 +1,7 @@
 ---
 description: MUST use this subagent after writing, modifying, or refactoring code to check for edge cases, performance bottlenecks, race conditions, and syntax regressions.
 mode: subagent
-model: claude-haiku-5-5
+model: opencode-go/claude-haiku-5-5
 permissions:
   - action: edit
     resource: "*"
