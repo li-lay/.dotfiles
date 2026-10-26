@@ -10,3 +10,4 @@ bun.lock
 .config/cosmic/com.system76.CosmicPortal/v1/screenshot
 .secrets/
 .config/opencode/service.json
+.config/zellij/config.kdl.bak*
