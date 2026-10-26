@@ -1,17 +1,20 @@
 layout {
-  default_tab_template {
-    children
-    pane size=1 borderless=true {
-      plugin location="zellij:status-bar"
-    }
+default_tab_template {
+  pane size=1 borderless=true {
+    plugin location="zellij:tab-bar"
   }
-  tab name="Dev" {
+  children
+  pane size=1 borderless=true {
+    plugin location="zellij:status-bar"
+  }
+}
+  tab name="Development" {
     pane split_direction="vertical" {
       pane size="60%" name="Agents" command="opencode"
-      pane split_direction="horizontal" {
-        pane name="Term"
-        pane name="Monitor" command="htop"
-      }
+      pane name="Term"
     }
+  }
+  tab name="Editor" {
+    pane name="Term"
   }
 }
