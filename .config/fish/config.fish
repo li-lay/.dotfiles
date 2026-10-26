@@ -41,6 +41,7 @@ alias grep='grep --color=auto'
 alias linutil="curl -fsSL https://christitus.com/linux | sh" # Cool utility
 alias ports='nmap localhost'
 alias hg='history | grep $1' # Search history
+alias zl='zellij'
 
 # Git
 alias gs='git status'
