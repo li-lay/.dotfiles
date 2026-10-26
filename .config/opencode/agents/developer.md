@@ -1,7 +1,7 @@
 ---
 description: MUST use this subagent to write, implement, edit, or refactor code and run tests/builds. Implementation worker.
 mode: subagent
-model: opencode-go/claude-haiku-5-5
+model: deepseek/deepseek-v4-pro
 permissions:
   - action: edit
     resource: "*"

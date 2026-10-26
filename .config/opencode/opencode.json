@@ -1,7 +1,19 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "autoupdate": "notify",
+  "update": "auto",
   "default_agent": "orchestrator",
+  "shell": "/bin/bash",
+  "formatter": true,
+  "websearch": {
+    "provider": "random"
+  },
+  "compaction": {
+    "auto": true,
+    "keep": {
+      "tokens": 60000
+    },
+    "buffer": 40000
+  },
   "mcp": {
     "context7": {
       "type": "remote",
@@ -11,8 +23,5 @@
         "CONTEXT7_API_KEY": "{file:~/.config/opencode/.secrets/context7-key}"
       }
     }
-  },
-  "plugins": [
-    "@tarquinen/opencode-dcp@latest"
-  ]
+  }
 }

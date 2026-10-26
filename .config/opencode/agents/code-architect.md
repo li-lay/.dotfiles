@@ -1,7 +1,7 @@
 ---
 description: MUST use this subagent when designing multi-file changes, selecting patterns, planning refactors, or writing architectural specs before editing files.
 mode: subagent
-model: opencode-go/deepseek-v4-pro
+model: deepseek/deepseek-flash
 permissions:
   - action: edit
     resource: "*"

@@ -1,6 +1,6 @@
 ---
 description: Generate a concise one line report of what changes we've just made
-agent: build
+agent: developer
 ---
 
 Generate a simple one sentence report based on the changes of this session. Adhere to this conventions:
