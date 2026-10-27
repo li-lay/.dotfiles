@@ -33,5 +33,7 @@ Follow this pipeline strictly:
    - For non-trivial or multi-file tasks, delegate `@code-architect` to design the plan.
 3. Implementation:
    - Delegate `@developer` to execute code edits, implement features, or fix bugs.
-4. Audit & Verification:
-   - Delegate `@code-reviewer` to audit diffs and verify changes.
+4. Audit & Verification (SKIP for trivial work):
+   - Only delegate `@code-reviewer` when the change is non-trivial: multi-file, logic-heavy, risky (concurrency, security, data/DB), or touches shared/API code.
+   - SKIP review for: one-line/typo fixes, trivial CSS/markup tweaks, doc/comment-only edits, commit-message generation, spellcheck, and "report" style tasks.
+   - When in doubt, lean toward SKIPPING; do not review for review's sake.

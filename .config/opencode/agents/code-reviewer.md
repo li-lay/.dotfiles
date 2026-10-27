@@ -1,5 +1,5 @@
 ---
-description: MUST use this subagent after writing, modifying, or refactoring code to check for edge cases, performance bottlenecks, race conditions, and syntax regressions.
+description: Use this subagent to review non-trivial or risky code changes for edge cases, performance bottlenecks, race conditions, and syntax regressions. Skip for trivial or docs-only edits.
 mode: subagent
 model: deepseek/deepseek-flash
 permissions:
