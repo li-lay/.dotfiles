@@ -14,13 +14,6 @@ hl.monitor({
     scale    = 1,
 })
 
-hl.monitor({
-    output   = "",
-    mode     = "1680x1050",
-    position = "auto",
-    scale    = 1,
-})
-
 
 ---------------------
 ---- MY PROGRAMS ----
@@ -39,7 +32,6 @@ local browser     = "brave-origin"
 -- See https://wiki.hypr.land/configuring/core/autostart/
 hl.on("hyprland.start", function ()
     hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
-    -- Launch polkit agent directly into graphical session (avoids systemd session ID mismatch crash)
     hl.exec_cmd("/usr/libexec/hyprpolkitagent")
     hl.exec_cmd("udiskie")
     hl.exec_cmd("waybar")
@@ -57,11 +49,8 @@ end)
 -- See https://wiki.hypr.land/configuring/core/environment-variables/
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
-hl.env("LIBVA_DRIVER_NAME", "nvidia")
-hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
 hl.env("HYPRSHOT_DIR", "Pictures/Screenshots")
 hl.env("GTK_THEME", "Gruvbox-Dark")
-hl.env("HYPRLAND_TRACE", "1")
 
 
 -----------------------
@@ -229,15 +218,12 @@ end
 hl.bind(mainMod .. " + mouse_down", function() zoom_by(1.1) end)
 hl.bind(mainMod .. " + mouse_up",   function() zoom_by(0.9) end)
 
-hl.bind(mainMod .. " + equal",       function() zoom_by(1.1) end, { repeating = true })
-hl.bind(mainMod .. " + minus",       function() zoom_by(0.9) end, { repeating = true })
-hl.bind(mainMod .. " + KP_ADD",      function() zoom_by(1.1) end, { repeating = true })
-hl.bind(mainMod .. " + KP_SUBTRACT", function() zoom_by(0.9) end, { repeating = true })
+hl.bind(mainMod .. " + equal", function() zoom_by(1.1) end, { repeating = true })
+hl.bind(mainMod .. " + minus", function() zoom_by(0.9) end, { repeating = true })
 
-hl.bind(mainMod .. " + SHIFT + mouse_down",  zoom_reset)
-hl.bind(mainMod .. " + SHIFT + mouse_up",    zoom_reset)
-hl.bind(mainMod .. " + SHIFT + minus",       zoom_reset)
-hl.bind(mainMod .. " + SHIFT + KP_SUBTRACT", zoom_reset)
+hl.bind(mainMod .. " + SHIFT + mouse_down", zoom_reset)
+hl.bind(mainMod .. " + SHIFT + mouse_up",   zoom_reset)
+hl.bind(mainMod .. " + SHIFT + minus",      zoom_reset)
 
 -- Move focus with mainMod + hjkl / arrow keys
 hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "left" }))
@@ -251,8 +237,8 @@ hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 
 -- Change active window in a tabbed group
-hl.bind(mainMod .. " + l", hl.dsp.group.next())
-hl.bind(mainMod .. " + h", hl.dsp.group.prev())
+hl.bind(mainMod .. " + ALT + l", hl.dsp.group.next())
+hl.bind(mainMod .. " + ALT + h", hl.dsp.group.prev())
 
 -- Move window with mainMod + SHIFT + hjkl
 hl.bind(mainMod .. " + SHIFT + h", hl.dsp.window.move({ direction = "left" }))
