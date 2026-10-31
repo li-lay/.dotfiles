@@ -10,7 +10,7 @@ default_tab_template {
 }
   tab name="Development" {
     pane split_direction="vertical" {
-      pane size="60%" name="Agents" command="opencode"
+      pane size="60%" name="Agents"
       pane name="Term"
     }
   }
