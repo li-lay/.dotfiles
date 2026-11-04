@@ -9,7 +9,7 @@
 -- See https://wiki.hypr.land/configuring/core/monitors/
 hl.monitor({
     output   = "eDP-1",
-    mode     = "1920x1080",
+    mode     = "prefered",
     position = "auto",
     scale    = 1,
 })
@@ -39,6 +39,7 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("dunst")
     hl.exec_cmd("hypridle")
     hl.exec_cmd("hyprpaper")
+    hl.exec_cmd("hyprpm reload -n")
 end)
 
 
@@ -198,11 +199,11 @@ hl.bind("ALT + SPACE",             hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
 hl.bind(mainMod .. " + T", hl.dsp.group.toggle())
 
--- Screenshot binds (hyprshot)
-hl.bind(mainMod .. " + PRINT",         hl.dsp.exec_cmd("hyprshot -m window --clipboard-only"))
-hl.bind("PRINT",                       hl.dsp.exec_cmd("hyprshot -m output"))
-hl.bind("SHIFT + PRINT",               hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
-hl.bind(mainMod .. " + SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
+-- Screenshot binds
+hl.bind("SUPER + SHIFT + PRINT", hl.plugin.hyprcapture.open_editor)
+hl.bind("SUPER + PRINT", function() hl.plugin.hyprcapture.open("window") end)
+hl.bind("PRINT", function() hl.plugin.hyprcapture.open("fullscreen") end)
+hl.bind("SHIFT + PRINT", function() hl.plugin.hyprcapture.open_editor("region") end)
 
 -- Cursor Zoom (pure Lua, zero subshell overhead)
 local function zoom_by(factor)
