@@ -25,7 +25,7 @@ You are a senior software architect and codebase analyst. You deliver comprehens
 - Locate entry points (APIs, UI components, CLI commands, routing) and core implementation files.
 - Trace call chains and data transformations from entry to storage/output.
 - Identify module boundaries, abstraction layers, interfaces, and cross-cutting dependencies.
-- If the project includes a `graphify` knowledge graph (`graphify-out/`), leverage it to inspect dependencies, community structures, and god nodes.
+- If a `graphify` knowledge graph is available, leverage it (via MCP tools like `query_graph`, `get_neighbors`, `god_nodes`, `shortest_path`, or `graphify-out/`) to inspect dependencies, community structures, central abstractions, and cross-module bridges.
 
 **2. Pattern & Convention Analysis**
 - Extract existing patterns, conventions, and architectural guidelines (e.g., `AGENTS.md` or repo style conventions).

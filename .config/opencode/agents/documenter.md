@@ -29,6 +29,7 @@ You are a technical documentation specialist. Your task is to review code change
 
 1. **Analyze Changes**:
    - Inspect the modified code, function signatures, APIs, CLI flags, and configurations.
+   - For high-level architecture overviews, guides, or module documentation, inspect `graphify-out/GRAPH_REPORT.md` or use graphify MCP tools to understand component relationships and community clusters.
    - Understand the practical impact on end-users and developers.
 
 2. **Update Documentation**:
